@@ -626,7 +626,7 @@
             <!-- Title -->
             <h1>
               <i class="fa fa-circle-o-notch fa-spin"></i>
-              <a href="../..">Modes</a>
+              <a href="../..">모드</a>
             </h1>
           </div>
 
@@ -635,17 +635,17 @@
               <div class="search-plus" id="book-search-results">
                 <div class="search-noresults">
                   <section class="normal markdown-section">
-                    <h1 id="interaction-modes">Interaction Modes</h1>
+                    <h1 id="interaction-modes">상호작용 모드</h1>
                     <p>
-                      When configuring interaction with the graph via hover or
-                      tooltips, a number of different modes are available.
+                      호버 또는 툴팁을 통하여 그래프 상호작용을 설정할 때, 사용
+                      가능한 몇개의 다른 모드가 있습니다.
                     </p>
                     <p>
-                      The modes are detailed below and how they behave in
-                      conjunction with the <code>intersect</code> setting.
+                      아래에 모드와 <code>intersect</code> 설정 방법과 관련하여
+                      동작하는 방법이 자세히 나와있습니다.
                     </p>
                     <h2 id="point">point</h2>
-                    <p>Finds all of the items that intersect the point.</p>
+                    <p>점과 교차하는 모든 항목들을 찾습니다.</p>
                     <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> chart = <span class="hljs-keyword">new</span> Chart(ctx, {
     type: <span class="hljs-string">&apos;line&apos;</span>,
     data: data,
@@ -658,15 +658,14 @@
 </code></pre>
                     <h2 id="nearest">nearest</h2>
                     <p>
-                      Gets the items that are at the nearest distance to the
-                      point. The nearest item is determined based on the
-                      distance to the center of the chart item (point, bar). You
-                      can use the <code>axis</code> setting to define which
-                      directions are used in distance calculation. If
-                      <code>intersect</code> is true, this is only triggered
-                      when the mouse position intersects an item in the graph.
-                      This is very useful for combo charts where points are
-                      hidden behind bars.
+                      점과 가장 가까운 거리에 있는 항목들을 가져옵니다. 가장
+                      가까운 항목은 차트 항목 (점, 막대)의 가운데 거리를
+                      기반으로 알아냅니다.
+                      <code>axis</code> 설정을 정의하여 거리 계산에 사용되는
+                      방향을 사용할 수 있습니다. 만약 <code>intersect</code>가
+                      true이면, 마우스 위치가 그래프 항목을 교차할 때만
+                      트리거됩니다. 여러 차트를 사용하여 점이 막대 뒤에 숨겨졌을
+                      때 매우 유용합니다.
                     </p>
                     <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> chart = <span class="hljs-keyword">new</span> Chart(ctx, {
     type: <span class="hljs-string">&apos;line&apos;</span>,
@@ -680,19 +679,19 @@
 </code></pre>
                     <h2 id="single-deprecated">single (deprecated)</h2>
                     <p>
-                      Finds the first item that intersects the point and returns
-                      it. Behaves like <code>&apos;nearest&apos;</code> mode
-                      with <code>intersect = true</code>.
+                      점과 그것을 반환하는 첫번짹 항목을 찾습니다. 동작은
+                      <code>intersect = true</code>이면서
+                      <code>&apos;nearest&apos;</code>모드일 때와 같습니다.
                     </p>
                     <h2 id="label-deprecated">label (deprecated)</h2>
-                    <p>See <code>&apos;index&apos;</code> mode.</p>
+                    <p><code>&apos;index&apos;</code> 모드를 확인해주세요.</p>
                     <h2 id="index">index</h2>
                     <p>
-                      Finds item at the same index. If the
-                      <code>intersect</code> setting is true, the first
-                      intersecting item is used to determine the index in the
-                      data. If <code>intersect</code> false the nearest item, in
-                      the x direction, is used to determine the index.
+                      같은 인데스인 항복을 찾습니다. 만약
+                      <code>intersect</code> 설정이 true이면, 첫번째 교차 항목은
+                      데이터 안의 인덱스를 결정하는데 사용됩니다. 만약
+                      <code>intersect</code> 설정이 false이면 x 축으로 가장
+                      가까운 항목이 인덱스를 결정하는데 사용됩니다.
                     </p>
                     <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> chart = <span class="hljs-keyword">new</span> Chart(ctx, {
     type: <span class="hljs-string">&apos;line&apos;</span>,
@@ -705,11 +704,10 @@
 });
 </code></pre>
                     <p>
-                      To use index mode in a chart like the horizontal bar
-                      chart, where we search along the y direction, you can use
-                      the <code>axis</code> setting introduced in v2.7.0. By
-                      setting this value to <code>&apos;y&apos;</code> on the y
-                      direction is used.
+                      y 축을 따라 검색하는 가로 막대형 차트와 같은 차트에서
+                      인데스 모드를 사용하려면 v2.7.0에 소개된
+                      <code>axis</code> 설정을 사용할 수 있습니다. y 방향에서 이
+                      값을 <code>&apos;y&apos;</code>로 설정하여 사용합니다.
                     </p>
                     <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> chart = <span class="hljs-keyword">new</span> Chart(ctx, {
     type: <span class="hljs-string">&apos;horizontalBar&apos;</span>,
@@ -724,16 +722,17 @@
 </code></pre>
                     <h2 id="x-axis-deprecated">x-axis (deprecated)</h2>
                     <p>
-                      Behaves like <code>&apos;index&apos;</code> mode with
-                      <code>intersect = false</code>.
+                      <code>intersect = false</code>이면서
+                      <code>&apos;index&apos;</code> 모드일 때와 같이
+                      동작합니다.
                     </p>
                     <h2 id="dataset">dataset</h2>
                     <p>
-                      Finds items in the same dataset. If the
-                      <code>intersect</code> setting is true, the first
-                      intersecting item is used to determine the index in the
-                      data. If <code>intersect</code> false the nearest item is
-                      used to determine the index.
+                      같은 데이터 그룹인 항목을 찾습니다.
+                      <code>intersect</code> 설정이 true이면, 첫번째 교차 항목은
+                      데이터 인덱스를 결정하는데 사용됩니다. 만약
+                      <code>intersect</code>이 false이면 가장 가까운 항목이
+                      인덱스를 결정하는데 사용됩니다.
                     </p>
                     <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> chart = <span class="hljs-keyword">new</span> Chart(ctx, {
     type: <span class="hljs-string">&apos;line&apos;</span>,
@@ -747,10 +746,9 @@
 </code></pre>
                     <h2 id="x">x</h2>
                     <p>
-                      Returns all items that would intersect based on the
-                      <code>X</code> coordinate of the position only. Would be
-                      useful for a vertical cursor implementation. Note that
-                      this only applies to cartesian charts.
+                      위치의 <code>X</code> 좌표를 기반으로만 교차할 모든
+                      항목들을 반환합니다. 새로방향 커서 구현을 위해 유용할
+                      것입니다. 데카르트 차트에서만 적용됨을 주의하세요.
                     </p>
                     <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> chart = <span class="hljs-keyword">new</span> Chart(ctx, {
     type: <span class="hljs-string">&apos;line&apos;</span>,
@@ -764,10 +762,9 @@
 </code></pre>
                     <h2 id="y">y</h2>
                     <p>
-                      Returns all items that would intersect based on the
-                      <code>Y</code> coordinate of the position. This would be
-                      useful for a horizontal cursor implementation. Note that
-                      this only applies to cartesian charts.
+                      위치의 <code>Y</code> 좌표를 기준으로 교차할 모든 항목들을
+                      반환합니다. 가로 방향 커서를 구현할 때 매우 유용할
+                      것입니다. 데카르트 차트일 때만 적용됨을 주의해주세요.
                     </p>
                     <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> chart = <span class="hljs-keyword">new</span> Chart(ctx, {
     type: <span class="hljs-string">&apos;line&apos;</span>,
@@ -822,7 +819,7 @@
         gitbook.push(function() {
           gitbook.page.hasChanged({
             page: {
-              title: "Modes",
+              title: "모드",
               level: "1.4.4.2",
               depth: 3,
               next: {
@@ -834,7 +831,7 @@
                 articles: []
               },
               previous: {
-                title: "Events",
+                title: "이벤트",
                 level: "1.4.4.1",
                 depth: 3,
                 path: "general/interactions/events.md",
@@ -927,7 +924,7 @@
                 summary: "SUMMARY.md"
               },
               variables: {},
-              title: "Chart.js documentation",
+              title: "Chart.js 문서",
               gitbook: "3.2.2"
             },
             file: {
