@@ -92,7 +92,7 @@
                   data-path="../getting-started/installation.html"
                 >
                   <a href="../getting-started/installation.html">
-                    설치하기
+                    설치
                   </a>
                 </li>
 
@@ -102,7 +102,7 @@
                   data-path="../getting-started/integration.html"
                 >
                   <a href="../getting-started/integration.html">
-                    통합하기
+                    통합
                   </a>
                 </li>
 
@@ -200,7 +200,7 @@
 
                 <li class="chapter" data-level="1.4.7" data-path="fonts.html">
                   <a href="fonts.html">
-                    색상
+                    폰트
                   </a>
                 </li>
 
@@ -611,7 +611,7 @@
             <!-- Title -->
             <h1>
               <i class="fa fa-circle-o-notch fa-spin"></i>
-              <a href="..">Performance</a>
+              <a href="..">성능</a>
             </h1>
           </div>
 
@@ -620,119 +620,112 @@
               <div class="search-plus" id="book-search-results">
                 <div class="search-noresults">
                   <section class="normal markdown-section">
-                    <h1 id="performance">Performance</h1>
+                    <h1 id="performance">성능</h1>
                     <p>
-                      Chart.js charts are rendered on
-                      <code>canvas</code> elements, which makes rendering quite
-                      fast. For large datasets or performance sensitive
-                      applications, you may wish to consider the tips below.
+                      Chart.js 차트들은 <code>canvas</code> 요소에 렌더링되므로,
+                      빠르게 렌더링 됩니다. 큰 데이터집합이나 성능이 예민한
+                      애플리케이션을 위해, 아래의 팁들을 고려해볼 수 있습니다.
                     </p>
-                    <h2 id="tick-calculation">Tick Calculation</h2>
-                    <h3 id="rotation">Rotation</h3>
+                    <h2 id="tick-calculation">눈금 계산</h2>
+                    <h3 id="rotation">회전</h3>
                     <p>
+                      <code>minRotation</code>과 <code>maxRotation</code>에 같은
+                      값으로
                       <a
                         href="https://www.chartjs.org/docs/latest/axes/cartesian/#tick-configuration"
                         target="_blank"
-                        >Specify a rotation value</a
-                      >
-                      by setting <code>minRotation</code> and
-                      <code>maxRotation</code> to the same value, which avoids
-                      the chart from having to automatically determine a value
-                      to use.
+                        >회전 값을 지정</a
+                      >하면, 차트에 사용할 값을 자동으로 지정하지 않습니다..
                     </p>
-                    <h3 id="sampling">Sampling</h3>
+                    <h3 id="sampling">샘플링</h3>
                     <p>
-                      Set the
                       <a href="../axes/cartesian/#tick-configuration"
                         ><code>ticks.sampleSize</code></a
                       >
-                      option. This will determine how large your labels are by
-                      looking at only a subset of them in order to render axes
-                      more quickly. This works best if there is not a large
-                      variance in the size of your labels.
+                      옵션을 지정하세요. 이 옵션은 축을 더 빠르게 렌더링하기
+                      위해 하위 집합만 보고 레이블의 크기를 지정할 것입니다. 이
+                      동작은 만약 래이블이 큰 변동을 가지지 않을 때 가장
+                      좋습니다.
                     </p>
-                    <h2 id="disable-animations">Disable Animations</h2>
+                    <h2 id="disable-animations">애니메이션 비활성화</h2>
                     <p>
-                      If your charts have long render times, it is a good idea
-                      to disable animations. Doing so will mean that the chart
-                      needs to only be rendered once during an update instead of
-                      multiple times. This will have the effect of reducing CPU
-                      usage and improving general page performance.
+                      만약 차트가 긴 렌더링 시간을 가진다면, 애니메이션을
+                      사용하지 않는 것이 좋은 방안입니다. 차트는 여러번
+                      렌더링하는 대신 업데이트되는 동안 한번만 렌더링이
+                      필요하다는 의미와 같습니다. CPU 사용량을 줄이고 전체적인
+                      페이지 성능을 향상하는데 효과적일 것입니다.
                     </p>
-                    <p>To disable animations</p>
+                    <p>애니메이션 비활성화 하려면</p>
                     <pre><code class="lang-javascript"><span class="hljs-keyword">new</span> Chart(ctx, {
     type: <span class="hljs-string">&apos;line&apos;</span>,
     data: data,
     options: {
         animation: {
-            duration: <span class="hljs-number">0</span> <span class="hljs-comment">// general animation time</span>
+            duration: <span class="hljs-number">0</span> <span class="hljs-comment">// 일반적 애니메이션 시간</span>
         },
         hover: {
-            animationDuration: <span class="hljs-number">0</span> <span class="hljs-comment">// duration of animations when hovering an item</span>
+            animationDuration: <span class="hljs-number">0</span> <span class="hljs-comment">// 항목을 호버했을 때 애니메이션 지속 시간</span>
         },
-        responsiveAnimationDuration: <span class="hljs-number">0</span> <span class="hljs-comment">// animation duration after a resize</span>
+        responsiveAnimationDuration: <span class="hljs-number">0</span> <span class="hljs-comment">// 크기 변경 후 애니메이션 지속 시간</span>
     }
 });
 </code></pre>
-                    <h2 id="data-decimation">Data Decimation</h2>
+                    <h2 id="data-decimation">데이터 데시메이션</h2>
                     <p>
-                      Decimating your data will achieve the best results. When
-                      there is a lot of data to display on the graph, it
-                      doesn&apos;t make sense to show tens of thousands of data
-                      points on a graph that is only a few hundred pixels wide.
+                      데이터 데시메이션은 가장 좋은 결과를 얻을 수 있을
+                      것입니다. 그래프에 많은 데이터를 보여줘야할 때, 수백 픽셀
+                      넓이의 그래프에 수만개의 데이터 포인트를 보여주는 것은
+                      이치에 맞지 않습니다.
                     </p>
                     <p>
-                      There are many approaches to data decimation and selection
-                      of an algorithm will depend on your data and the results
-                      you want to achieve. For instance,
+                      데이터 데시메이션에 접근하는 많은 방법들이 있고 알고리즘의
+                      선택은 데이터와 원하는 결과에 따라 다릅니다. 예를 들어,
                       <a
                         href="https://digital.ni.com/public.nsf/allkb/F694FFEEA0ACF282862576020075F784"
                         target="_blank"
-                        >min/max</a
+                        >최소/최대</a
                       >
-                      decimation will preserve peaks in your data but could
-                      require up to 4 points for each pixel. This type of
-                      decimation would work well for a very noisy signal where
-                      you need to see data peaks.
+                      데시메이션은 데이터의 끝을 보존하지만 각 픽셀에 4 포인트를
+                      필요로 합니다. 이 데시메이션 유형은 데이터 끝을 봐야하는
+                      곳에 잡읍이 많은 신호에서 잘 동작할 것입니다.
                     </p>
-                    <h2 id="line-charts">Line Charts</h2>
-                    <h3 id="disable-bezier-curves">Disable Bezier Curves</h3>
+                    <h2 id="line-charts">선형 차트</h2>
+                    <h3 id="disable-bezier-curves">베지어 곡선 비활성화</h3>
                     <p>
-                      If you are drawing lines on your chart, disabling bezier
-                      curves will improve render times since drawing a straight
-                      line is more performant than a bezier curve.
+                      만약 선형 차트를 그릴 때, 직선을 그리는 것이 베지어 곡선을
+                      그리는 것보다 더 성능이 좋으므로 베지어 곡선을 비활성화
+                      하면 렌더링 시간이 향상될 것입니다.
                     </p>
-                    <p>To disable bezier curves for an entire chart:</p>
+                    <p>전체 차트에 베지어 곡선을 비활성화하려면:</p>
                     <pre><code class="lang-javascript"><span class="hljs-keyword">new</span> Chart(ctx, {
     type: <span class="hljs-string">&apos;line&apos;</span>,
     data: data,
     options: {
         elements: {
             line: {
-                tension: <span class="hljs-number">0</span> <span class="hljs-comment">// disables bezier curves</span>
+                tension: <span class="hljs-number">0</span> <span class="hljs-comment">// 베지어 곡선 비활성화</span>
             }
         }
     }
 });
 </code></pre>
-                    <h3 id="disable-line-drawing">Disable Line Drawing</h3>
+                    <h3 id="disable-line-drawing">선 그리기 비활성화</h3>
                     <p>
-                      If you have a lot of data points, it can be more
-                      performant to disable rendering of the line for a dataset
-                      and only draw points. Doing this means that there is less
-                      to draw on the canvas which will improve render
-                      performance.
+                      만약 많은 데이터 포인트를 가지고 있다면, 데이터집합의 선
+                      렌더링을 비활성화 하고 포인트만 그리는 것이 더 성능이 좋을
+                      것입니다. 캔버스에 더 적게 그려저서 렌더링 성능을 향상시킬
+                      것이라는 의미와 같습니다.
                     </p>
-                    <p>To disable lines:</p>
+                    <p>선을 비활성화 하려면:</p>
                     <pre><code class="lang-javascript"><span class="hljs-keyword">new</span> Chart(ctx, {
     type: <span class="hljs-string">&apos;line&apos;</span>,
     data: {
         datasets: [{
-            showLine: <span class="hljs-literal">false</span> <span class="hljs-comment">// disable for a single dataset</span>
+            showLine: <span class="hljs-literal">false</span> <span class="hljs-comment">// 단일 데이터그룹 비활성화</span>
         }]
     },
     options: {
-        showLines: <span class="hljs-literal">false</span> <span class="hljs-comment">// disable for all datasets</span>
+        showLines: <span class="hljs-literal">false</span> <span class="hljs-comment">// 모든 데이터그룹 비활성화</span>
     }
 });
 </code></pre>
@@ -779,18 +772,18 @@
         gitbook.push(function () {
           gitbook.page.hasChanged({
             page: {
-              title: "Performance",
+              title: "성능",
               level: "1.4.8",
               depth: 2,
               next: {
-                title: "Configuration",
+                title: "설정",
                 level: "1.5",
                 depth: 1,
                 path: "configuration/README.md",
                 ref: "configuration/README.md",
                 articles: [
                   {
-                    title: "Animations",
+                    title: "애니메이션",
                     level: "1.5.1",
                     depth: 2,
                     path: "configuration/animations.md",
@@ -798,7 +791,7 @@
                     articles: [],
                   },
                   {
-                    title: "Layout",
+                    title: "레이아웃",
                     level: "1.5.2",
                     depth: 2,
                     path: "configuration/layout.md",
@@ -806,7 +799,7 @@
                     articles: [],
                   },
                   {
-                    title: "Legend",
+                    title: "레전드",
                     level: "1.5.3",
                     depth: 2,
                     path: "configuration/legend.md",
@@ -814,7 +807,7 @@
                     articles: [],
                   },
                   {
-                    title: "Title",
+                    title: "제목",
                     level: "1.5.4",
                     depth: 2,
                     path: "configuration/title.md",
@@ -822,7 +815,7 @@
                     articles: [],
                   },
                   {
-                    title: "Tooltip",
+                    title: "툴팁",
                     level: "1.5.5",
                     depth: 2,
                     path: "configuration/tooltip.md",
@@ -830,7 +823,7 @@
                     articles: [],
                   },
                   {
-                    title: "Elements",
+                    title: "엘리먼트",
                     level: "1.5.6",
                     depth: 2,
                     path: "configuration/elements.md",
@@ -840,7 +833,7 @@
                 ],
               },
               previous: {
-                title: "Fonts",
+                title: "폰트",
                 level: "1.4.7",
                 depth: 2,
                 path: "general/fonts.md",
@@ -933,7 +926,7 @@
                 summary: "SUMMARY.md",
               },
               variables: {},
-              title: "Chart.js documentation",
+              title: "Chart.js 문서",
               gitbook: "3.2.2",
             },
             file: {

@@ -92,7 +92,7 @@
                   data-path="../getting-started/installation.html"
                 >
                   <a href="../getting-started/installation.html">
-                    설치하기
+                    설치
                   </a>
                 </li>
 
@@ -102,7 +102,7 @@
                   data-path="../getting-started/integration.html"
                 >
                   <a href="../getting-started/integration.html">
-                    통합하기
+                    통합
                   </a>
                 </li>
 
@@ -626,15 +626,15 @@
                   <section class="normal markdown-section">
                     <h1 id="fonts">폰트</h1>
                     <p>
-                      There are 4 special global settings that can change all of
-                      the fonts on the chart. These options are in
-                      <code>Chart.defaults.global</code>. The global font
-                      settings only apply when more specific options are not
-                      included in the config.
+                      차트의 모든 폰트를 바꿀 수 있는 4개의 특별한 전역 설정이
+                      있습니다. 이 옵션들은
+                      <code>Chart.defaults.global</code> 안에 있습니다. 전역
+                      폰트 설정은 오직 설정에 포함되어있지 않은 더 특정한
+                      옵션들만 적용할 수 있습니다.
                     </p>
                     <p>
-                      For example, in this chart the text will all be red except
-                      for the labels in the legend.
+                      예를 들어, 이 차트에서 레전드 안의 래이블들을 제외한
+                      텍스트는 모두 빨간색이 될 것입니다.
                     </p>
                     <pre><code class="lang-javascript">Chart.defaults.global.defaultFontColor = <span class="hljs-string">&apos;red&apos;</span>;
 <span class="hljs-keyword">let</span> chart = <span class="hljs-keyword">new</span> Chart(ctx, {
@@ -643,7 +643,7 @@
     options: {
         legend: {
             labels: {
-                <span class="hljs-comment">// This more specific font property overrides the global property</span>
+                <span class="hljs-comment">// 이 더 특정한 폰트 속성은 전역 속성을 덮어씁니다</span>
                 fontColor: <span class="hljs-string">&apos;black&apos;</span>
             }
         }
@@ -653,10 +653,10 @@
                     <table>
                       <thead>
                         <tr>
-                          <th>Name</th>
-                          <th>Type</th>
-                          <th>Default</th>
-                          <th>Description</th>
+                          <th>이름</th>
+                          <th>형식</th>
+                          <th>기본 값</th>
+                          <th>설명</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -664,7 +664,7 @@
                           <td><code>defaultFontColor</code></td>
                           <td><code>Color</code></td>
                           <td><code>&apos;#666&apos;</code></td>
-                          <td>Default font color for all text.</td>
+                          <td>모든 텍스트의 기본 색상을 지정합니다.</td>
                         </tr>
                         <tr>
                           <td><code>defaultFontFamily</code></td>
@@ -676,15 +676,15 @@
                               sans-serif&quot;</code
                             >
                           </td>
-                          <td>Default font family for all text.</td>
+                          <td>모든 텍스트의 기본 폰트 패밀리를 지정합니다.</td>
                         </tr>
                         <tr>
                           <td><code>defaultFontSize</code></td>
                           <td><code>number</code></td>
                           <td><code>12</code></td>
                           <td>
-                            Default font size (in px) for text. Does not apply
-                            to radialLinear scale point labels.
+                            텍스트의 기본 폰트 크기(픽셀 단위)를 지정합니다.
+                            방사선형 스케일 포인트 래이블엔 적용되지 않습니다.
                           </td>
                         </tr>
                         <tr>
@@ -692,25 +692,25 @@
                           <td><code>string</code></td>
                           <td><code>&apos;normal&apos;</code></td>
                           <td>
-                            Default font style. Does not apply to tooltip title
-                            or footer. Does not apply to chart title.
+                            기본 폰트 스타일을 지정합니다. 툴팁 제목이나
+                            꼬리말에는 적용되지 않습니다. 차트 제목에는 적용되지
+                            않습니다.
                           </td>
                         </tr>
                       </tbody>
                     </table>
-                    <h2 id="missing-fonts">Missing Fonts</h2>
+                    <h2 id="missing-fonts">없는 폰트</h2>
                     <p>
-                      If a font is specified for a chart that does exist on the
-                      system, the browser will not apply the font when it is
-                      set. If you notice odd fonts appearing in your charts,
-                      check that the font you are applying exists on your
-                      system. See
+                      만약 폰트가 차트에 명시되어있는데 시스템에 존재하지
+                      않는다면, 브라우저는 준비될때까지 폰트를 적용하지 않을
+                      것입니다. 만약 차트에 이상한 폰트가 나타난다면, 시스템에
+                      존재하는 폰트를 적용했는지 확인해보세요.
+
                       <a
                         href="https://github.com/chartjs/Chart.js/issues/3318"
                         target="_blank"
-                        >issue 3318</a
-                      >
-                      for more details.
+                        >이슈 3318</a
+                      >에서 더 자세한 사항을 확인하세요.
                     </p>
                   </section>
                 </div>
@@ -755,11 +755,11 @@
         gitbook.push(function () {
           gitbook.page.hasChanged({
             page: {
-              title: "Fonts",
+              title: "폰트",
               level: "1.4.7",
               depth: 2,
               next: {
-                title: "Performance",
+                title: "성능",
                 level: "1.4.8",
                 depth: 2,
                 path: "general/performance.md",
@@ -767,7 +767,7 @@
                 articles: [],
               },
               previous: {
-                title: "Colors",
+                title: "색상",
                 level: "1.4.6",
                 depth: 2,
                 path: "general/colors.md",
@@ -860,7 +860,7 @@
                 summary: "SUMMARY.md",
               },
               variables: {},
-              title: "Chart.js documentation",
+              title: "Chart.js 문서",
               gitbook: "3.2.2",
             },
             file: {
