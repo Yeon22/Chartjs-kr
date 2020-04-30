@@ -230,7 +230,7 @@
 
             <li class="chapter active" data-level="1.5" data-path="./">
               <a href="./">
-                Configuration
+                설정
               </a>
 
               <ul class="articles">
@@ -240,31 +240,31 @@
                   data-path="animations.html"
                 >
                   <a href="animations.html">
-                    Animations
+                    애니메이션
                   </a>
                 </li>
 
                 <li class="chapter" data-level="1.5.2" data-path="layout.html">
                   <a href="layout.html">
-                    Layout
+                    레이아웃
                   </a>
                 </li>
 
                 <li class="chapter" data-level="1.5.3" data-path="legend.html">
                   <a href="legend.html">
-                    Legend
+                    레전드
                   </a>
                 </li>
 
                 <li class="chapter" data-level="1.5.4" data-path="title.html">
                   <a href="title.html">
-                    Title
+                    제목
                   </a>
                 </li>
 
                 <li class="chapter" data-level="1.5.5" data-path="tooltip.html">
                   <a href="tooltip.html">
-                    Tooltip
+                    툴팁
                   </a>
                 </li>
 
@@ -274,7 +274,7 @@
                   data-path="elements.html"
                 >
                   <a href="elements.html">
-                    Elements
+                    엘리먼트
                   </a>
                 </li>
               </ul>
@@ -607,7 +607,7 @@
             <!-- Title -->
             <h1>
               <i class="fa fa-circle-o-notch fa-spin"></i>
-              <a href="..">Configuration</a>
+              <a href="..">설정</a>
             </h1>
           </div>
 
@@ -616,89 +616,88 @@
               <div class="search-plus" id="book-search-results">
                 <div class="search-noresults">
                   <section class="normal markdown-section">
-                    <h1 id="configuration">Configuration</h1>
+                    <h1 id="configuration">설정</h1>
                     <p>
-                      The configuration is used to change how the chart behaves.
-                      There are properties to control styling, fonts, the
-                      legend, etc.
+                      설정은 차트의 동작을 변경합니다. 스타일링, 폰트, 레전드
+                      등을 제어할 수 있는 속성들을 제공합니다.
                     </p>
-                    <h2 id="global-configuration">Global Configuration</h2>
+                    <h2 id="global-configuration">전역 설정</h2>
                     <p>
-                      This concept was introduced in Chart.js 1.0 to keep
-                      configuration
+                      이 개념은
                       <a
                         href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself"
                         target="_blank"
                         >DRY</a
-                      >, and allow for changing options globally across chart
-                      types, avoiding the need to specify options for each
-                      instance, or the default for a particular chart type.
+                      >
+                      설정을 유지하기 위해 Char.js 1.0 부터 소개되었으며, 각
+                      인스턴스에 대한 옵션들을 지정하거나 특정 차트 유형에 대한
+                      기본 값을 지정할 필요 없이 차트 유형에 따라 옵션을
+                      전체적으로 변경할 수 있습니다.
                     </p>
                     <p>
-                      Chart.js merges the options object passed to the chart
-                      with the global configuration using chart type defaults
-                      and scales defaults appropriately. This way you can be as
-                      specific as you would like in your individual chart
-                      configuration, while still changing the defaults for all
-                      chart types where applicable. The global general options
-                      are defined in <code>Chart.defaults.global</code>. The
-                      defaults for each chart type are discussed in the
-                      documentation for that chart type.
+                      Chart.js는 차트 유형 기본 값을 사용하여 차트에 전달된 옵션
+                      객체들을 전역 설정과 병합하고 기본 값을 적절히 조정합니다.
+                      이 방법은 각 차트 설정을 원하는대로 특정하게 설정할 수
+                      있으며, 적용되는 모든 차트 형식들에 기본 값을 계속 변경할
+                      수 있습니다. 전역 일반 옵션들은
+                      <code>Chart.defaults.global</code>에 정의되어 있습니다. 각
+                      차트 형식의 기본 값들은 해당 차트 유형 문서에 논의되어
+                      있습니다.
                     </p>
                     <p>
-                      The following example would set the hover mode to
-                      &apos;nearest&apos; for all charts where this was not
-                      overridden by the chart type defaults or the options
-                      passed to the constructor on creation.
+                      다음의 예제는 차트 형식 기본 값에 의해 무시되지 않거나
+                      생성자의 의해 생성시 옵션으로 값이 넘어가지 않았다면 모든
+                      차트들에 호버 모드를 &apos;nearest&apos;로 설정할
+                      것입니다.
                     </p>
                     <pre><code class="lang-javascript">Chart.defaults.global.hover.mode = <span class="hljs-string">&apos;nearest&apos;</span>;
 
-<span class="hljs-comment">// Hover mode is set to nearest because it was not overridden here</span>
+<span class="hljs-comment">// 호버 모드가 nearest로 설정됩니다. 왜냐하면 값이 대체되지 않았기 때문입니다</span>
 <span class="hljs-keyword">var</span> chartHoverModeNearest = <span class="hljs-keyword">new</span> Chart(ctx, {
     type: <span class="hljs-string">&apos;line&apos;</span>,
     data: data
 });
 
-<span class="hljs-comment">// This chart would have the hover mode that was passed in</span>
+<span class="hljs-comment">// 이 차트는 넘겨진 값으로 호버 모드를 가질 것입니다</span>
 <span class="hljs-keyword">var</span> chartDifferentHoverMode = <span class="hljs-keyword">new</span> Chart(ctx, {
     type: <span class="hljs-string">&apos;line&apos;</span>,
     data: data,
     options: {
         hover: {
-            <span class="hljs-comment">// Overrides the global setting</span>
+            <span class="hljs-comment">// 전역 설정을 무시합니다</span>
             mode: <span class="hljs-string">&apos;index&apos;</span>
         }
     }
 });
 </code></pre>
-                    <h2 id="dataset-configuration">Dataset Configuration</h2>
+                    <h2 id="dataset-configuration">데이터집합 설정</h2>
                     <p>
-                      Options may be configured directly on the dataset. The
-                      dataset options can be changed at 3 different levels and
-                      are evaluated with the following priority:
+                      옵션들은 아마 데이터집합에 직접 설정됩니다. 데이터집합
+                      옵션들은 3가지 다른 레벨로 변경될 수 있으며, 다음의
+                      우선순위로 평가됩니다:
                     </p>
                     <ul>
-                      <li>per dataset: dataset.*</li>
-                      <li>per chart: options.datasets[type].*</li>
+                      <li>데이터 집합당: dataset.*</li>
+                      <li>차트당: options.datasets[type].*</li>
                       <li>
-                        or globally: Chart.defaults.global.datasets[type].*
+                        또는 전역으로: Chart.defaults.global.datasets[type].*
                       </li>
                     </ul>
-                    <p>where type corresponds to the dataset type.</p>
+                    <p>여기서 type은 데이터집합 유형에 해당합니다.</p>
                     <p>
-                      <em>Note:</em> dataset options take precedence over
-                      element options.
+                      <em>주의:</em> 데이터집합 옵션은 엘리먼트 옵션보다
+                      우선합니다.
                     </p>
                     <p>
-                      The following example would set the
-                      <code>showLine</code> option to &apos;false&apos; for all
-                      line datasets except for those overridden by options
-                      passed to the dataset on creation.
+                      다음의 예제는 데이터집합 생성시 옵션이 전달되어 값이
+                      무시되는 선형 데이터집합을 제외한 모든
+                      <code>showLine</code> 옵션을 &apos;false&apos;로 설정할
+                      것입니다
                     </p>
-                    <pre><code class="lang-javascript"><span class="hljs-comment">// Do not show lines for all datasets by default</span>
+                    <pre><code class="lang-javascript"><span class="hljs-comment">// 모든 데이터집합은 기본적으로 선을 보이지 않습니다</span>
 Chart.defaults.global.datasets.line.showLine = <span class="hljs-literal">false</span>;
 
-<span class="hljs-comment">// This chart would show a line only for the third dataset</span>
+<span class="hljs-comment">// 이 차트는 오직 3번째 데이터집합만 선이 보일 것입니다</span>
 <span class="hljs-keyword">var</span> chart = <span class="hljs-keyword">new</span> Chart(ctx, {
     type: <span class="hljs-string">&apos;line&apos;</span>,
     data: {
@@ -708,9 +707,9 @@ Chart.defaults.global.datasets.line.showLine = <span class="hljs-literal">false<
             data: [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>]
         }, {
             data: [<span class="hljs-number">1</span>, <span class="hljs-number">0</span>],
-            showLine: <span class="hljs-literal">true</span> <span class="hljs-comment">// overrides the `line` dataset default</span>
+            showLine: <span class="hljs-literal">true</span> <span class="hljs-comment">// `선형` 데이터 집합 기본 값을 덮어씁니다</span>
         }, {
-            type: <span class="hljs-string">&apos;scatter&apos;</span>, <span class="hljs-comment">// &apos;line&apos; dataset default does not affect this dataset since it&apos;s a &apos;scatter&apos;</span>
+            type: <span class="hljs-string">&apos;scatter&apos;</span>, <span class="hljs-comment">// &apos;선형&apos; 데이터집합 기본 값이 &apos;scatter&apos; 이므로 영향을 받지 않습니다</span>
             data: [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>]
         }]
     }
