@@ -618,25 +618,25 @@
                   <section class="normal markdown-section">
                     <h1 id="animations">애니메이션</h1>
                     <p>
-                      Chart.js animates charts out of the box. A number of
-                      options are provided to configure how the animation looks
-                      and how long it takes.
+                      Char.js는 즉시 차트에 애니메이션을 적용합니다.
+                      애니메이션을 어떻게 보이게할지와 얼마나 지속할지 설정하기
+                      위한 몇 개의 옵션들을 제공합니다.
                     </p>
                     <h2 id="animation-configuration">
-                      Animation Configuration
+                      애니메이션 설정
                     </h2>
                     <p>
-                      The following animation options are available. The global
-                      options for are defined in
-                      <code>Chart.defaults.global.animation</code>.
+                      다음의 애니메이션 옵션들을 이용할 수 있습니다. 전역 옵션은
+                      <code>Chart.defaults.global.animation</code>에 정의되어
+                      있습니다.
                     </p>
                     <table>
                       <thead>
                         <tr>
-                          <th>Name</th>
-                          <th>Type</th>
-                          <th>Default</th>
-                          <th>Description</th>
+                          <th>이름</th>
+                          <th>형식</th>
+                          <th>기본 값</th>
+                          <th>설명</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -645,7 +645,7 @@
                           <td><code>number</code></td>
                           <td><code>1000</code></td>
                           <td>
-                            The number of milliseconds an animation takes.
+                            애니메이션에 걸리는 시간(밀리 초) 입니다.
                           </td>
                         </tr>
                         <tr>
@@ -653,8 +653,8 @@
                           <td><code>string</code></td>
                           <td><code>&apos;easeOutQuart&apos;</code></td>
                           <td>
-                            Easing function to use.
-                            <a href="#easing">more...</a>
+                            Easing 기능을 사용합니다.
+                            <a href="#easing">더보기...</a>
                           </td>
                         </tr>
                         <tr>
@@ -662,8 +662,8 @@
                           <td><code>function</code></td>
                           <td><code>null</code></td>
                           <td>
-                            Callback called on each step of an animation.
-                            <a href="#animation-callbacks">more...</a>
+                            각 애니메이션 단계마다 호출됩니다.
+                            <a href="#animation-callbacks">더보기...</a>
                           </td>
                         </tr>
                         <tr>
@@ -671,14 +671,14 @@
                           <td><code>function</code></td>
                           <td><code>null</code></td>
                           <td>
-                            Callback called at the end of an animation.
-                            <a href="#animation-callbacks">more...</a>
+                            애니메이션 끝에 호출됩니다.
+                            <a href="#animation-callbacks">더보기...</a>
                           </td>
                         </tr>
                       </tbody>
                     </table>
                     <h2 id="easing">Easing</h2>
-                    <p>Available options are:</p>
+                    <p>이용 가능한 욥션들은:</p>
                     <ul>
                       <li><code>&apos;linear&apos;</code></li>
                       <li><code>&apos;easeInQuad&apos;</code></li>
@@ -713,45 +713,44 @@
                       <li><code>&apos;easeInOutBounce&apos;</code></li>
                     </ul>
                     <p>
-                      See
                       <a href="http://robertpenner.com/easing/" target="_blank"
-                        >Robert Penner&apos;s easing equations</a
-                      >.
+                        >Robert Penner의 easing 방정식을</a
+                      >
+                      확인해보세요.
                     </p>
-                    <h2 id="animation-callbacks">Animation Callbacks</h2>
+                    <h2 id="animation-callbacks">애니메이션 콜백</h2>
                     <p>
-                      The <code>onProgress</code> and
-                      <code>onComplete</code> callbacks are useful for
-                      synchronizing an external draw to the chart animation. The
-                      callback is passed a
-                      <code>Chart.Animation</code> instance:
+                      <code>onProgress</code>와 <code>onComplete</code> 콜백은
+                      외부에서 그린 것을 차트 애니메이션에 동기화할 때
+                      유용합니다. 콜백에는
+                      <code>Chart.Animation</code> 인스턴스를 넘깁니다:
                     </p>
                     <pre><code class="lang-javascript">{
-    <span class="hljs-comment">// Chart object</span>
+    <span class="hljs-comment">// 차트 객체</span>
     chart: Chart,
 
-    <span class="hljs-comment">// Current Animation frame number</span>
+    <span class="hljs-comment">// 현재 애니메이션 프레임 수</span>
     currentStep: number,
 
-    <span class="hljs-comment">// Number of animation frames</span>
+    <span class="hljs-comment">// 애니메이션 프레임들의 수</span>
     numSteps: number,
 
-    <span class="hljs-comment">// Animation easing to use</span>
+    <span class="hljs-comment">// easing 애니메이션 사용</span>
     easing: string,
 
-    <span class="hljs-comment">// Function that renders the chart</span>
+    <span class="hljs-comment">// 차트 렌더링 기능</span>
     render: <span class="hljs-function"><span class="hljs-keyword">function</span>,
 
-    // <span class="hljs-title">User</span> <span class="hljs-title">callback</span>
+    // <span class="hljs-title">사용자</span> <span class="hljs-title">콜백</span>
     <span class="hljs-title">onAnimationProgress</span>: <span class="hljs-title">function</span>,
 
-    // <span class="hljs-title">User</span> <span class="hljs-title">callback</span>
+    // <span class="hljs-title">사용자</span> <span class="hljs-title">콜백</span>
     <span class="hljs-title">onAnimationComplete</span>: <span class="hljs-title">function</span>
 }
 </span></code></pre>
                     <p>
-                      The following example fills a progress bar during the
-                      chart animation.
+                      다음의 예제 파일은 차트 애니메이션 동안 진행 막대를
+                      채웁니다.
                     </p>
                     <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> chart = <span class="hljs-keyword">new</span> Chart(ctx, {
     type: <span class="hljs-string">&apos;line&apos;</span>,
@@ -766,13 +765,13 @@
 });
 </code></pre>
                     <p>
-                      Another example usage of these callbacks can be found on
+                      이 콜백들의 다른 예제 사용법은
                       <a
                         href="https://github.com/chartjs/Chart.js/blob/master/samples/advanced/progress-bar.html"
                         target="_blank"
                         >Github</a
-                      >: this sample displays a progress bar showing how far
-                      along the animation is.
+                      >에서 찾을 수 있습니다: 이 예시는 애니메이션이 얼마나
+                      남았는지를 진행 막대로 보여줍니다.
                     </p>
                   </section>
                 </div>
@@ -817,11 +816,11 @@
         gitbook.push(function () {
           gitbook.page.hasChanged({
             page: {
-              title: "Animations",
+              title: "애니메이션",
               level: "1.5.1",
               depth: 2,
               next: {
-                title: "Layout",
+                title: "레이아웃",
                 level: "1.5.2",
                 depth: 2,
                 path: "configuration/layout.md",
@@ -829,14 +828,14 @@
                 articles: [],
               },
               previous: {
-                title: "Configuration",
+                title: "설정",
                 level: "1.5",
                 depth: 1,
                 path: "configuration/README.md",
                 ref: "configuration/README.md",
                 articles: [
                   {
-                    title: "Animations",
+                    title: "애니메이션",
                     level: "1.5.1",
                     depth: 2,
                     path: "configuration/animations.md",
@@ -844,7 +843,7 @@
                     articles: [],
                   },
                   {
-                    title: "Layout",
+                    title: "레이아웃",
                     level: "1.5.2",
                     depth: 2,
                     path: "configuration/layout.md",
@@ -852,7 +851,7 @@
                     articles: [],
                   },
                   {
-                    title: "Legend",
+                    title: "레전드",
                     level: "1.5.3",
                     depth: 2,
                     path: "configuration/legend.md",
@@ -860,7 +859,7 @@
                     articles: [],
                   },
                   {
-                    title: "Title",
+                    title: "제목",
                     level: "1.5.4",
                     depth: 2,
                     path: "configuration/title.md",
@@ -868,7 +867,7 @@
                     articles: [],
                   },
                   {
-                    title: "Tooltip",
+                    title: "툴팁",
                     level: "1.5.5",
                     depth: 2,
                     path: "configuration/tooltip.md",
@@ -876,7 +875,7 @@
                     articles: [],
                   },
                   {
-                    title: "Elements",
+                    title: "엘리먼트",
                     level: "1.5.6",
                     depth: 2,
                     path: "configuration/elements.md",
