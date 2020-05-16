@@ -17,15 +17,15 @@
 
 ## 문서
 
-- [소개](https://www.chartjs.org/docs/latest/)
-- [시작하기](https://www.chartjs.org/docs/latest/getting-started/)
-- [일반적 사용법](https://www.chartjs.org/docs/latest/general/)
-- [설정](https://www.chartjs.org/docs/latest/configuration/)
-- [차트](https://www.chartjs.org/docs/latest/charts/)
-- [축](https://www.chartjs.org/docs/latest/axes/)
-- [개발자용](https://www.chartjs.org/docs/latest/developers/)
+- [소개](https://yeon22.github.io/Chartjs-kr/docs/latest/)
+- [시작하기](https://yeon22.github.io/Chartjs-kr/docs/latest/getting-started/)
+- [일반적 사용법](https://yeon22.github.io/Chartjs-kr/docs/latest/general/)
+- [설정](https://yeon22.github.io/Chartjs-kr/docs/latest/configuration/)
+- [차트](https://yeon22.github.io/Chartjs-kr/docs/latest/charts/)
+- [축](https://yeon22.github.io/Chartjs-kr/docs/latest/axes/)
+- [개발자용](https://yeon22.github.io/Chartjs-kr/docs/latest/developers/)
 - [인기있는 확장 라이브러리](https://github.com/chartjs/awesome)
-- [샘플](https://www.chartjs.org/samples/)
+- [샘플](https://yeon22.github.io/Chartjs-kr/samples/)
 
 ## 기여하기
 
