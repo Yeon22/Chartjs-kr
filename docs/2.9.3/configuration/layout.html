@@ -256,7 +256,7 @@
 
                 <li class="chapter" data-level="1.5.3" data-path="legend.html">
                   <a href="legend.html">
-                    레전드
+                    범례
                   </a>
                 </li>
 
@@ -611,7 +611,7 @@
             <!-- Title -->
             <h1>
               <i class="fa fa-circle-o-notch fa-spin"></i>
-              <a href="..">Layout</a>
+              <a href="..">레이아웃</a>
             </h1>
           </div>
 
@@ -620,21 +620,20 @@
               <div class="search-plus" id="book-search-results">
                 <div class="search-noresults">
                   <section class="normal markdown-section">
-                    <h1 id="layout-configuration">Layout Configuration</h1>
+                    <h1 id="layout-configuration">레이아웃 설정</h1>
                     <p>
-                      The layout configuration is passed into the
-                      <code>options.layout</code>
-                      namespace. The global options for the chart layout is
-                      defined in
-                      <code>Chart.defaults.global.layout</code>.
+                      레이아웃 설정은 <code>options.layout</code> 네임스페이스로
+                      전답됩니다. 차트 레이아웃에 대한 전역 옵션은
+                      <code>Chart.defaults.global.layout</code>에 정의되어
+                      있습니다.
                     </p>
                     <table>
                       <thead>
                         <tr>
-                          <th>Name</th>
-                          <th>Type</th>
-                          <th>Default</th>
-                          <th>Description</th>
+                          <th>이름</th>
+                          <th>유형</th>
+                          <th>기본 값</th>
+                          <th>설명</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -643,24 +642,24 @@
                           <td><code>number|object</code></td>
                           <td><code>0</code></td>
                           <td>
-                            The padding to add inside the chart.
-                            <a href="#padding">more...</a>
+                            차트 안에 패딩을 추가합니다.
+                            <a href="#padding">더보기...</a>
                           </td>
                         </tr>
                       </tbody>
                     </table>
-                    <h2 id="padding">Padding</h2>
+                    <h2 id="padding">패딩</h2>
                     <p>
-                      If this value is a number, it is applied to all sides of
-                      the chart (left, top, right, bottom). If this value is an
-                      object, the <code>left</code> property defines the left
-                      padding. Similarly the <code>right</code>,
-                      <code>top</code> and <code>bottom</code> properties can
-                      also be specified.
+                      이 값이 숫자라면, 차트의 모든 부분(왼쪽, 위, 오른쪽,
+                      아래)에 적용됩니다. 만약 이 값이 객체라면,
+                      <code>left</code> 속성에 왼쪽 패딩을 정의합니다.
+                      <code>right</code>, <code>top</code> 그리고
+                      <code>bottom</code> 속성들도 또한 비슷하게 지정할 수
+                      있습니다.
                     </p>
                     <p>
-                      Lets say you wanted to add 50px of padding to the left
-                      side of the chart canvas, you would do:
+                      차트 캔버스의 왼쪽 부분에 50px 패딩 값을 추가하고 싶다면,
+                      이렇게 해야합니다:
                     </p>
                     <pre><code class="lang-javascript"><span class="hljs-keyword">let</span> chart = <span class="hljs-keyword">new</span> Chart(ctx, {
     type: <span class="hljs-string">&apos;line&apos;</span>,
@@ -720,11 +719,11 @@
         gitbook.push(function () {
           gitbook.page.hasChanged({
             page: {
-              title: "Layout",
+              title: "레이아웃",
               level: "1.5.2",
               depth: 2,
               next: {
-                title: "Legend",
+                title: "범례",
                 level: "1.5.3",
                 depth: 2,
                 path: "configuration/legend.md",
@@ -732,7 +731,7 @@
                 articles: [],
               },
               previous: {
-                title: "Animations",
+                title: "애니메이션",
                 level: "1.5.1",
                 depth: 2,
                 path: "configuration/animations.md",
@@ -825,7 +824,7 @@
                 summary: "SUMMARY.md",
               },
               variables: {},
-              title: "Chart.js documentation",
+              title: "Chart.js 문서",
               gitbook: "3.2.2",
             },
             file: {
