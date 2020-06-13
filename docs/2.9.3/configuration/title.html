@@ -611,7 +611,7 @@
             <!-- Title -->
             <h1>
               <i class="fa fa-circle-o-notch fa-spin"></i>
-              <a href="..">Title</a>
+              <a href="..">제목</a>
             </h1>
           </div>
 
@@ -620,25 +620,23 @@
               <div class="search-plus" id="book-search-results">
                 <div class="search-noresults">
                   <section class="normal markdown-section">
-                    <h1 id="title">Title</h1>
+                    <h1 id="title">제목</h1>
                     <p>
-                      The chart title defines text to draw at the top of the
-                      chart.
+                      차트 제목은 차트 위에 텍스트로 정의됩니다.
                     </p>
-                    <h2 id="title-configuration">Title Configuration</h2>
+                    <h2 id="title-configuration">제목 설정</h2>
                     <p>
-                      The title configuration is passed into the
-                      <code>options.title</code> namespace. The global options
-                      for the chart title is defined in
-                      <code>Chart.defaults.global.title</code>.
+                      제목 설정은 <code>options.title</code> 네임스페이스 안에
+                      넘깁니다. 차트 제목에 대한 전역 옵션은
+                      <code>Chart.defaults.global.title</code> 안에 정의합니다.
                     </p>
                     <table>
                       <thead>
                         <tr>
-                          <th>Name</th>
-                          <th>Type</th>
-                          <th>Default</th>
-                          <th>Description</th>
+                          <th>이름</th>
+                          <th>유형</th>
+                          <th>기본 값</th>
+                          <th>설명</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -646,21 +644,21 @@
                           <td><code>display</code></td>
                           <td><code>boolean</code></td>
                           <td><code>false</code></td>
-                          <td>Is the title shown?</td>
+                          <td>제목을 보여줄까요?</td>
                         </tr>
                         <tr>
                           <td><code>position</code></td>
                           <td><code>string</code></td>
                           <td><code>&apos;top&apos;</code></td>
                           <td>
-                            Position of title. <a href="#position">more...</a>
+                            제목의 위치. <a href="#position">더보기...</a>
                           </td>
                         </tr>
                         <tr>
                           <td><code>fontSize</code></td>
                           <td><code>number</code></td>
                           <td><code>12</code></td>
-                          <td>Font size.</td>
+                          <td>폰트 크기.</td>
                         </tr>
                         <tr>
                           <td><code>fontFamily</code></td>
@@ -672,27 +670,26 @@
                               sans-serif&quot;</code
                             >
                           </td>
-                          <td>Font family for the title text.</td>
+                          <td>제목 텍스트에 대한 폰트 글꼴.</td>
                         </tr>
                         <tr>
                           <td><code>fontColor</code></td>
                           <td><code>Color</code></td>
                           <td><code>&apos;#666&apos;</code></td>
-                          <td>Font color.</td>
+                          <td>폰트 색상.</td>
                         </tr>
                         <tr>
                           <td><code>fontStyle</code></td>
                           <td><code>string</code></td>
                           <td><code>&apos;bold&apos;</code></td>
-                          <td>Font style.</td>
+                          <td>폰트 스타일.</td>
                         </tr>
                         <tr>
                           <td><code>padding</code></td>
                           <td><code>number</code></td>
                           <td><code>10</code></td>
                           <td>
-                            Number of pixels to add above and below the title
-                            text.
+                            제목 텍스트 위와 아래에 추가할 픽셀.
                           </td>
                         </tr>
                         <tr>
@@ -700,12 +697,13 @@
                           <td><code>number|string</code></td>
                           <td><code>1.2</code></td>
                           <td>
-                            Height of an individual line of text. See
+                            텍스트 각 라인의 높이.
                             <a
                               href="https://developer.mozilla.org/en-US/docs/Web/CSS/line-height"
                               target="_blank"
                               >MDN</a
-                            >.
+                            >
+                            보기.
                           </td>
                         </tr>
                         <tr>
@@ -713,24 +711,24 @@
                           <td><code>string|string[]</code></td>
                           <td><code>&apos;&apos;</code></td>
                           <td>
-                            Title text to display. If specified as an array,
-                            text is rendered on multiple lines.
+                            보여줄 제목 텍스트. 만약 배열로서 특수하다면,
+                            텍스트는 여러 줄로 렌더링됩니다.
                           </td>
                         </tr>
                       </tbody>
                     </table>
-                    <h3 id="position">Position</h3>
-                    <p>Possible title position values are:</p>
+                    <h3 id="position">위치</h3>
+                    <p>제목 위치로 가능한 값은:</p>
                     <ul>
                       <li><code>&apos;top&apos;</code></li>
                       <li><code>&apos;left&apos;</code></li>
                       <li><code>&apos;bottom&apos;</code></li>
                       <li><code>&apos;right&apos;</code></li>
                     </ul>
-                    <h2 id="example-usage">Example Usage</h2>
+                    <h2 id="example-usage">사용법 예시</h2>
                     <p>
-                      The example below would enable a title of &apos;Custom
-                      Chart Title&apos; on the chart that is created.
+                      아래의 예시는 &apos;사용자 정의 제목&apos; 이라는 제목으로
+                      차트에 생성됩니다.
                     </p>
                     <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> chart = <span class="hljs-keyword">new</span> Chart(ctx, {
     type: <span class="hljs-string">&apos;line&apos;</span>,
