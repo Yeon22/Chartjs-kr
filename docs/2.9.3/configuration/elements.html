@@ -510,52 +510,45 @@
                   <section class="normal markdown-section">
                     <h1 id="elements">엘리먼트</h1>
                     <p>
-                      While chart types provide settings to configure the
-                      styling of each dataset, you sometimes want to style
-                      <strong>all datasets the same way</strong>. A common
-                      example would be to stroke all of the bars in a bar chart
-                      with the same colour but change the fill per dataset.
-                      Options can be configured for four different types of
-                      elements:
+                      각 데이터집합의 스타일링 설정을 위해 차트 유형 세팅을 제공하는 동안, 간혹
+                      <strong>모든 데이터 집합에 같은 스타일</strong>을 지정하고 싶을 수 있습니다.
+                      흔한 예시로 막대 차트 안에 모든 막대들의 선을 같은 색깔로 하는 대신 각 데이터집합에 따라
+                      채우기 색상을 다르게 하고 싶은 경우입니다.
+                      4가지 유형의 엘리먼트에 대해 옵션을 구성할 수 있습니다:
                       <strong><a href="#arc-configuration">arc</a></strong
                       >, <strong><a href="#line-configuration">lines</a></strong
                       >,
                       <strong><a href="#point-configuration">points</a></strong
-                      >, and
+                      >, 그리고
                       <strong
                         ><a href="#rectangle-configuration"
                           >rectangles</a
                         ></strong
-                      >. When set, these options apply to all objects of that
-                      type unless specifically overridden by the configuration
-                      attached to a dataset.
+                      >. 이 옵션을 설정하면, 데이터집합에 특별한 설정을 추가하지 않는 한 해당 유형의 모든 객체에 적용됩니다.
                     </p>
-                    <h2 id="global-configuration">Global Configuration</h2>
+                    <h2 id="global-configuration">전역 설정</h2>
                     <p>
-                      The element options can be specified per chart or
-                      globally. The global options for elements are defined in
-                      <code>Chart.defaults.global.elements</code>. For example,
-                      to set the border width of all bar charts globally you
-                      would do:
+                      엘리먼트 옵션은 차트 또는 전역적으로 지정할 수 있습니다.
+                      전역 설정은 <code>Chart.defaults.global.elements</code> 에 정의할 수 있습니다. 예를 들어,
+                      모든 막대 차트에 전역으로 선 두께를 지정하고 싶다면:
                     </p>
                     <pre><code class="lang-javascript">Chart.defaults.global.elements.rectangle.borderWidth = <span class="hljs-number">2</span>;
 </code></pre>
-                    <h2 id="point-configuration">Point Configuration</h2>
+                    <h2 id="point-configuration">포인트 설정</h2>
                     <p>
-                      Point elements are used to represent the points in a line,
-                      radar or bubble chart.
+                      포인트 엘리먼트는 레이더 또는 버블 차트의 선 안에 포인트를 표현할 때 사용합니다.
                     </p>
                     <p>
-                      Global point options:
+                      전역 포인트 옵션:
                       <code>Chart.defaults.global.elements.point</code>.
                     </p>
                     <table>
                       <thead>
                         <tr>
-                          <th>Name</th>
-                          <th>Type</th>
-                          <th>Default</th>
-                          <th>Description</th>
+                          <th>이름</th>
+                          <th>유형</th>
+                          <th>기본 값</th>
+                          <th>설명</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -563,7 +556,7 @@
                           <td><code>radius</code></td>
                           <td><code>number</code></td>
                           <td><code>3</code></td>
-                          <td>Point radius.</td>
+                          <td>포인트 반지름.</td>
                         </tr>
                         <tr>
                           <td>
@@ -571,57 +564,56 @@
                           </td>
                           <td><code>string|Image</code></td>
                           <td><code>&apos;circle&apos;</code></td>
-                          <td>Point style.</td>
+                          <td>포인트 스타일.</td>
                         </tr>
                         <tr>
                           <td><code>rotation</code></td>
                           <td><code>number</code></td>
                           <td><code>0</code></td>
-                          <td>Point rotation (in degrees).</td>
+                          <td>포인트 회전정도 (도 단위).</td>
                         </tr>
                         <tr>
                           <td><code>backgroundColor</code></td>
                           <td><code>Color</code></td>
                           <td><code>&apos;rgba(0, 0, 0, 0.1)&apos;</code></td>
-                          <td>Point fill color.</td>
+                          <td>포인트 채우기 색상.</td>
                         </tr>
                         <tr>
                           <td><code>borderWidth</code></td>
                           <td><code>number</code></td>
                           <td><code>1</code></td>
-                          <td>Point stroke width.</td>
+                          <td>포인트 선 두께.</td>
                         </tr>
                         <tr>
                           <td><code>borderColor</code></td>
                           <td><code>Color</code></td>
                           <td><code>&apos;rgba(0, 0, 0, 0.1)&apos;</code></td>
-                          <td>Point stroke color.</td>
+                          <td>포인트 선 색상.</td>
                         </tr>
                         <tr>
                           <td><code>hitRadius</code></td>
                           <td><code>number</code></td>
                           <td><code>1</code></td>
                           <td>
-                            Extra radius added to point radius for hit
-                            detection.
+                            클릭이 감지되었을 때 적용할 추가 포인트 반지름 설정입니다.
                           </td>
                         </tr>
                         <tr>
                           <td><code>hoverRadius</code></td>
                           <td><code>number</code></td>
                           <td><code>4</code></td>
-                          <td>Point radius when hovered.</td>
+                          <td>호버되었을 때 포인트 반지름.</td>
                         </tr>
                         <tr>
                           <td><code>hoverBorderWidth</code></td>
                           <td><code>number</code></td>
                           <td><code>1</code></td>
-                          <td>Stroke width when hovered.</td>
+                          <td>호버되었을 때 선 두께.</td>
                         </tr>
                       </tbody>
                     </table>
-                    <h3 id="point-styles">Point Styles</h3>
-                    <p>The following values are supported:</p>
+                    <h3 id="point-styles">포인트 스타일</h3>
+                    <p>다음의 값들이 지원됩니다:</p>
                     <ul>
                       <li><code>&apos;circle&apos;</code></li>
                       <li><code>&apos;cross&apos;</code></li>
@@ -635,30 +627,28 @@
                       <li><code>&apos;triangle&apos;</code></li>
                     </ul>
                     <p>
-                      If the value is an image, that image is drawn on the
-                      canvas using
+                      만약 값이 이미지라면, 그 이미지는 캔버스의
                       <a
                         href="https://developer.mozilla.org/en/docs/Web/API/CanvasRenderingContext2D/drawImage"
                         target="_blank"
                         >drawImage</a
-                      >.
+                      >를 사용하여 그려집니다.
                     </p>
-                    <h2 id="line-configuration">Line Configuration</h2>
+                    <h2 id="line-configuration">선 설정</h2>
                     <p>
-                      Line elements are used to represent the line in a line
-                      chart.
+                      선 엘리먼트는 선 차트의 선을 표현하기 위해 사용됩니다.
                     </p>
                     <p>
-                      Global line options:
+                      전역 선 옵션:
                       <code>Chart.defaults.global.elements.line</code>.
                     </p>
                     <table>
                       <thead>
                         <tr>
-                          <th>Name</th>
-                          <th>Type</th>
-                          <th>Default</th>
-                          <th>Description</th>
+                          <th>이름</th>
+                          <th>유형</th>
+                          <th>기본 값</th>
+                          <th>설명</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -667,39 +657,38 @@
                           <td><code>number</code></td>
                           <td><code>0.4</code></td>
                           <td>
-                            B&#xE9;zier curve tension (<code>0</code> for no
-                            B&#xE9;zier curves).
+                            베지에 곡선 장력 (베지에 곡선이 없을 때 <code>0</code>).
                           </td>
                         </tr>
                         <tr>
                           <td><code>backgroundColor</code></td>
                           <td><code>Color</code></td>
                           <td><code>&apos;rgba(0, 0, 0, 0.1)&apos;</code></td>
-                          <td>Line fill color.</td>
+                          <td>선 채우기 색상.</td>
                         </tr>
                         <tr>
                           <td><code>borderWidth</code></td>
                           <td><code>number</code></td>
                           <td><code>3</code></td>
-                          <td>Line stroke width.</td>
+                          <td>선 두께.</td>
                         </tr>
                         <tr>
                           <td><code>borderColor</code></td>
                           <td><code>Color</code></td>
                           <td><code>&apos;rgba(0, 0, 0, 0.1)&apos;</code></td>
-                          <td>Line stroke color.</td>
+                          <td>선 색상.</td>
                         </tr>
                         <tr>
                           <td><code>borderCapStyle</code></td>
                           <td><code>string</code></td>
                           <td><code>&apos;butt&apos;</code></td>
                           <td>
-                            Line cap style. See
+                            선 캡 스타일.
                             <a
                               href="https://developer.mozilla.org/en/docs/Web/API/CanvasRenderingContext2D/lineCap"
                               target="_blank"
                               >MDN</a
-                            >.
+                            >을 확인해주세요.
                           </td>
                         </tr>
                         <tr>
@@ -707,12 +696,12 @@
                           <td><code>number[]</code></td>
                           <td><code>[]</code></td>
                           <td>
-                            Line dash. See
+                            점선.
                             <a
                               href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/setLineDash"
                               target="_blank"
                               >MDN</a
-                            >.
+                            >을 확인해주세요.
                           </td>
                         </tr>
                         <tr>
@@ -720,12 +709,12 @@
                           <td><code>number</code></td>
                           <td><code>0.0</code></td>
                           <td>
-                            Line dash offset. See
+                            점선 오프셋.
                             <a
                               href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineDashOffset"
                               target="_blank"
                               >MDN</a
-                            >.
+                            >을 확인해주세요.
                           </td>
                         </tr>
                         <tr>
@@ -733,12 +722,12 @@
                           <td><code>string</code></td>
                           <td><code>&apos;miter&apos;</code></td>
                           <td>
-                            Line join style. See
+                            선 조인 스타일.
                             <a
                               href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineJoin"
                               target="_blank"
                               >MDN</a
-                            >.
+                            >을 확인해주세요.
                           </td>
                         </tr>
                         <tr>
@@ -746,8 +735,8 @@
                           <td><code>boolean</code></td>
                           <td><code>true</code></td>
                           <td>
-                            <code>true</code> to keep B&#xE9;zier control inside
-                            the chart, <code>false</code> for no restriction.
+                            <code>true</code>이면 차트내에 베지에 제어를 유지합니다,
+                            <code>false</code>때는 제한이 없습니다.
                           </td>
                         </tr>
                         <tr>
@@ -755,9 +744,9 @@
                           <td><code>string</code></td>
                           <td><code>&apos;default&apos;</code></td>
                           <td>
-                            Interpolation mode to apply.
+                            삽입 모드 적용을 위한 설정.
                             <a href="../charts/line.html#cubicinterpolationmode"
-                              >See more...</a
+                              >더보기...</a
                             >
                           </td>
                         </tr>
@@ -766,10 +755,10 @@
                           <td><code>boolean|string</code></td>
                           <td><code>true</code></td>
                           <td>
-                            How to fill the area under the line. See
+                            선 아래 영역을 어떻게 채울지 설정.
                             <a href="../charts/area.html#filling-modes"
-                              >area charts</a
-                            >.
+                              >영역 차트</a
+                            >를 확인해주세요.
                           </td>
                         </tr>
                         <tr>
@@ -777,30 +766,29 @@
                           <td><code>boolean</code></td>
                           <td><code>false</code></td>
                           <td>
-                            <code>true</code> to show the line as a stepped line
-                            (<code>tension</code> will be ignored).
+                            <code>true</code>이면 층계가 있는 선을 보여줍니다
+                            (<code>tension</code>은 무시됩니다).
                           </td>
                         </tr>
                       </tbody>
                     </table>
                     <h2 id="rectangle-configuration">
-                      Rectangle Configuration
+                      직사각형 설정
                     </h2>
                     <p>
-                      Rectangle elements are used to represent the bars in a bar
-                      chart.
+                      직사각형 엘리먼트는 막대 차트안의 막대를 표현할 때 사용됩니다.
                     </p>
                     <p>
-                      Global rectangle options:
+                      전역 직사각형 옵션:
                       <code>Chart.defaults.global.elements.rectangle</code>.
                     </p>
                     <table>
                       <thead>
                         <tr>
-                          <th>Name</th>
-                          <th>Type</th>
-                          <th>Default</th>
-                          <th>Description</th>
+                          <th>이름</th>
+                          <th>유형</th>
+                          <th>기본 값</th>
+                          <th>설명</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -808,49 +796,49 @@
                           <td><code>backgroundColor</code></td>
                           <td><code>Color</code></td>
                           <td><code>&apos;rgba(0, 0, 0, 0.1)&apos;</code></td>
-                          <td>Bar fill color.</td>
+                          <td>막대 채우기 색상.</td>
                         </tr>
                         <tr>
                           <td><code>borderWidth</code></td>
                           <td><code>number</code></td>
                           <td><code>0</code></td>
-                          <td>Bar stroke width.</td>
+                          <td>막대 선 두께.</td>
                         </tr>
                         <tr>
                           <td><code>borderColor</code></td>
                           <td><code>Color</code></td>
                           <td><code>&apos;rgba(0, 0, 0, 0.1)&apos;</code></td>
-                          <td>Bar stroke color.</td>
+                          <td>막대 선 색상.</td>
                         </tr>
                         <tr>
                           <td><code>borderSkipped</code></td>
                           <td><code>string</code></td>
                           <td><code>&apos;bottom&apos;</code></td>
                           <td>
-                            Skipped (excluded) border:
+                            (제외된) 선 생략:
                             <code>&apos;bottom&apos;</code>,
                             <code>&apos;left&apos;</code>,
-                            <code>&apos;top&apos;</code> or
+                            <code>&apos;top&apos;</code> 또는
                             <code>&apos;right&apos;</code>.
                           </td>
                         </tr>
                       </tbody>
                     </table>
-                    <h2 id="arc-configuration">Arc Configuration</h2>
+                    <h2 id="arc-configuration">원호 설정</h2>
                     <p>
-                      Arcs are used in the polar area, doughnut and pie charts.
+                      원호는 극좌표, 도넛 그리고 파이 차트에서 사용됩니다.
                     </p>
                     <p>
-                      Global arc options:
+                      전역 원호 옵션:
                       <code>Chart.defaults.global.elements.arc</code>.
                     </p>
                     <table>
                       <thead>
                         <tr>
-                          <th>Name</th>
-                          <th>Type</th>
-                          <th>Default</th>
-                          <th>Description</th>
+                          <th>이름</th>
+                          <th>유형</th>
+                          <th>기본 값</th>
+                          <th>설명</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -858,31 +846,31 @@
                           <td><code>angle</code> - for polar only</td>
                           <td><code>number</code></td>
                           <td><code>circumference / (arc count)</code></td>
-                          <td>Arc angle to cover.</td>
+                          <td>커버할 원호 각도.</td>
                         </tr>
                         <tr>
                           <td><code>backgroundColor</code></td>
                           <td><code>Color</code></td>
                           <td><code>&apos;rgba(0, 0, 0, 0.1)&apos;</code></td>
-                          <td>Arc fill color.</td>
+                          <td>원호 채우기 색상.</td>
                         </tr>
                         <tr>
                           <td><code>borderAlign</code></td>
                           <td><code>string</code></td>
                           <td><code>&apos;center&apos;</code></td>
-                          <td>Arc stroke alignment.</td>
+                          <td>원호 선 정렬.</td>
                         </tr>
                         <tr>
                           <td><code>borderColor</code></td>
                           <td><code>Color</code></td>
                           <td><code>&apos;#fff&apos;</code></td>
-                          <td>Arc stroke color.</td>
+                          <td>원호 선 색상.</td>
                         </tr>
                         <tr>
                           <td><code>borderWidth</code></td>
                           <td><code>number</code></td>
                           <td><code>2</code></td>
-                          <td>Arc stroke width.</td>
+                          <td>원호 선 두께.</td>
                         </tr>
                       </tbody>
                     </table>
@@ -929,18 +917,18 @@
         gitbook.push(function () {
           gitbook.page.hasChanged({
             page: {
-              title: "Elements",
+              title: "엘리먼트",
               level: "1.5.6",
               depth: 2,
               next: {
-                title: "Charts",
+                title: "차트",
                 level: "1.6",
                 depth: 1,
                 path: "charts/README.md",
                 ref: "charts/README.md",
                 articles: [
                   {
-                    title: "Line",
+                    title: "선형",
                     level: "1.6.1",
                     depth: 2,
                     path: "charts/line.md",
@@ -948,7 +936,7 @@
                     articles: [],
                   },
                   {
-                    title: "Bar",
+                    title: "막대형",
                     level: "1.6.2",
                     depth: 2,
                     path: "charts/bar.md",
@@ -956,7 +944,7 @@
                     articles: [],
                   },
                   {
-                    title: "Radar",
+                    title: "레이더형",
                     level: "1.6.3",
                     depth: 2,
                     path: "charts/radar.md",
@@ -964,7 +952,7 @@
                     articles: [],
                   },
                   {
-                    title: "Doughnut & Pie",
+                    title: "도넛 & 파이형",
                     level: "1.6.4",
                     depth: 2,
                     path: "charts/doughnut.md",
@@ -972,7 +960,7 @@
                     articles: [],
                   },
                   {
-                    title: "Polar Area",
+                    title: "극좌표형",
                     level: "1.6.5",
                     depth: 2,
                     path: "charts/polar.md",
@@ -980,7 +968,7 @@
                     articles: [],
                   },
                   {
-                    title: "Bubble",
+                    title: "버블형",
                     level: "1.6.6",
                     depth: 2,
                     path: "charts/bubble.md",
@@ -988,7 +976,7 @@
                     articles: [],
                   },
                   {
-                    title: "Scatter",
+                    title: "도표형",
                     level: "1.6.7",
                     depth: 2,
                     path: "charts/scatter.md",
@@ -996,7 +984,7 @@
                     articles: [],
                   },
                   {
-                    title: "Area",
+                    title: "영역형",
                     level: "1.6.8",
                     depth: 2,
                     path: "charts/area.md",
@@ -1004,7 +992,7 @@
                     articles: [],
                   },
                   {
-                    title: "Mixed",
+                    title: "혼합형",
                     level: "1.6.9",
                     depth: 2,
                     path: "charts/mixed.md",
@@ -1014,7 +1002,7 @@
                 ],
               },
               previous: {
-                title: "Tooltip",
+                title: "툴팁",
                 level: "1.5.5",
                 depth: 2,
                 path: "configuration/tooltip.md",
