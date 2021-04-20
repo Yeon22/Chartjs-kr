@@ -915,132 +915,132 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="radar">Radar</h1>
-<p>A radar chart is a way of showing multiple data points and the variation between them.</p>
+                                <h1 id="radar">레이더</h1>
+<p>레이더 차트는 여러 데이터 지점들과 그들 사이의 변화를 보여주는 방법입니다.</p>
 <p>They are often useful for comparing the points of two or more different data sets.</p>
 <p><div class="chartjs-wrapper"><canvas id="chartjs-3" class="chartjs" width="undefined" height="undefined"></canvas><script>new Chart(document.getElementById("chartjs-3"),{"type":"radar","data":{"labels":["Eating","Drinking","Sleeping","Designing","Coding","Cycling","Running"],"datasets":[{"label":"My First Dataset","data":[65,59,90,81,56,55,40],"fill":true,"backgroundColor":"rgba(255, 99, 132, 0.2)","borderColor":"rgb(255, 99, 132)","pointBackgroundColor":"rgb(255, 99, 132)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgb(255, 99, 132)"},{"label":"My Second Dataset","data":[28,48,40,19,96,27,100],"fill":true,"backgroundColor":"rgba(54, 162, 235, 0.2)","borderColor":"rgb(54, 162, 235)","pointBackgroundColor":"rgb(54, 162, 235)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgb(54, 162, 235)"}]},"options":{"elements":{"line":{"tension":0,"borderWidth":3}}}});</script></div></p>
-<h2 id="example-usage">Example Usage</h2>
+<h2 id="example-usage">사용 예시</h2>
 <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> myRadarChart = <span class="hljs-keyword">new</span> Chart(ctx, {
     type: <span class="hljs-string">&apos;radar&apos;</span>,
     data: data,
     options: options
 });
 </code></pre>
-<h2 id="dataset-properties">Dataset Properties</h2>
-<p>The radar chart allows a number of properties to be specified for each dataset. These are used to set display properties for a specific dataset. For example, the colour of a line is generally set this way.</p>
+<h2 id="dataset-properties">데이터집합 속성들</h2>
+<p>레이더 차트는 각 데이터집합에 대해 속성들을 특장할 수 있습니다. 특정 데이터집합에 대한 속성들을 보여줄 때 사용됩니다. 예를 들어, 선의 색상은 일반적으로 이 방법으로 설정됩니다.</p>
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Type</th>
-<th style="text-align:center"><a href="../general/options.html#scriptable-options">Scriptable</a></th>
-<th style="text-align:center"><a href="../general/options.html#indexable-options">Indexable</a></th>
-<th>Default</th>
+<th>이름</th>
+<th>유형</th>
+<th style="text-align:center"><a href="../general/options.html#scriptable-options">스크립트 할 수 있는지 여부</a></th>
+<th style="text-align:center"><a href="../general/options.html#indexable-options">인덱스 할 수 있는지 여부</a></th>
+<th>기본 값</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><a href="#line-styling"><code>backgroundColor</code></a></td>
 <td><a href="../general/colors.html"><code>Color</code></a></td>
-<td style="text-align:center">Yes</td>
+<td style="text-align:center">예</td>
 <td style="text-align:center">-</td>
 <td><code>&apos;rgba(0, 0, 0, 0.1)&apos;</code></td>
 </tr>
 <tr>
 <td><a href="#line-styling"><code>borderCapStyle</code></a></td>
 <td><code>string</code></td>
-<td style="text-align:center">Yes</td>
+<td style="text-align:center">예</td>
 <td style="text-align:center">-</td>
 <td><code>&apos;butt&apos;</code></td>
 </tr>
 <tr>
 <td><a href="#line-styling"><code>borderColor</code></a></td>
 <td><a href="../general/colors.html"><code>Color</code></a></td>
-<td style="text-align:center">Yes</td>
+<td style="text-align:center">예</td>
 <td style="text-align:center">-</td>
 <td><code>&apos;rgba(0, 0, 0, 0.1)&apos;</code></td>
 </tr>
 <tr>
 <td><a href="#line-styling"><code>borderDash</code></a></td>
 <td><code>number[]</code></td>
-<td style="text-align:center">Yes</td>
+<td style="text-align:center">예</td>
 <td style="text-align:center">-</td>
 <td><code>[]</code></td>
 </tr>
 <tr>
 <td><a href="#line-styling"><code>borderDashOffset</code></a></td>
 <td><code>number</code></td>
-<td style="text-align:center">Yes</td>
+<td style="text-align:center">예</td>
 <td style="text-align:center">-</td>
 <td><code>0.0</code></td>
 </tr>
 <tr>
 <td><a href="#line-styling"><code>borderJoinStyle</code></a></td>
 <td><code>string</code></td>
-<td style="text-align:center">Yes</td>
+<td style="text-align:center">예</td>
 <td style="text-align:center">-</td>
 <td><code>&apos;miter&apos;</code></td>
 </tr>
 <tr>
 <td><a href="#line-styling"><code>borderWidth</code></a></td>
 <td><code>number</code></td>
-<td style="text-align:center">Yes</td>
+<td style="text-align:center">예</td>
 <td style="text-align:center">-</td>
 <td><code>3</code></td>
 </tr>
 <tr>
 <td><a href="#line-styling"><code>hoverBackgroundColor</code></a></td>
 <td><a href="../general/colors.html"><code>Color</code></a></td>
-<td style="text-align:center">Yes</td>
+<td style="text-align:center">예</td>
 <td style="text-align:center">-</td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
 <td><a href="#line-styling"><code>hoverBorderCapStyle</code></a></td>
 <td><code>string</code></td>
-<td style="text-align:center">Yes</td>
+<td style="text-align:center">예</td>
 <td style="text-align:center">-</td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
 <td><a href="#line-styling"><code>hoverBorderColor</code></a></td>
 <td><a href="../general/colors.html"><code>Color</code></a></td>
-<td style="text-align:center">Yes</td>
+<td style="text-align:center">예</td>
 <td style="text-align:center">-</td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
 <td><a href="#line-styling"><code>hoverBorderDash</code></a></td>
 <td><code>number[]</code></td>
-<td style="text-align:center">Yes</td>
+<td style="text-align:center">예</td>
 <td style="text-align:center">-</td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
 <td><a href="#line-styling"><code>hoverBorderDashOffset</code></a></td>
 <td><code>number</code></td>
-<td style="text-align:center">Yes</td>
+<td style="text-align:center">예</td>
 <td style="text-align:center">-</td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
 <td><a href="#line-styling"><code>hoverBorderJoinStyle</code></a></td>
 <td><code>string</code></td>
-<td style="text-align:center">Yes</td>
+<td style="text-align:center">예</td>
 <td style="text-align:center">-</td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
 <td><a href="#line-styling"><code>hoverBorderWidth</code></a></td>
 <td><code>number</code></td>
-<td style="text-align:center">Yes</td>
+<td style="text-align:center">예</td>
 <td style="text-align:center">-</td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
 <td><a href="#line-styling"><code>fill</code></a></td>
 <td><code>boolean|string</code></td>
-<td style="text-align:center">Yes</td>
+<td style="text-align:center">예</td>
 <td style="text-align:center">-</td>
 <td><code>true</code></td>
 </tr>
@@ -1068,78 +1068,78 @@
 <tr>
 <td><a href="#point-styling"><code>pointBackgroundColor</code></a></td>
 <td><code>Color</code></td>
-<td style="text-align:center">Yes</td>
-<td style="text-align:center">Yes</td>
+<td style="text-align:center">예</td>
+<td style="text-align:center">예</td>
 <td><code>&apos;rgba(0, 0, 0, 0.1)&apos;</code></td>
 </tr>
 <tr>
 <td><a href="#point-styling"><code>pointBorderColor</code></a></td>
 <td><code>Color</code></td>
-<td style="text-align:center">Yes</td>
-<td style="text-align:center">Yes</td>
+<td style="text-align:center">예</td>
+<td style="text-align:center">예</td>
 <td><code>&apos;rgba(0, 0, 0, 0.1)&apos;</code></td>
 </tr>
 <tr>
 <td><a href="#point-styling"><code>pointBorderWidth</code></a></td>
 <td><code>number</code></td>
-<td style="text-align:center">Yes</td>
-<td style="text-align:center">Yes</td>
+<td style="text-align:center">예</td>
+<td style="text-align:center">예</td>
 <td><code>1</code></td>
 </tr>
 <tr>
 <td><a href="#point-styling"><code>pointHitRadius</code></a></td>
 <td><code>number</code></td>
-<td style="text-align:center">Yes</td>
-<td style="text-align:center">Yes</td>
+<td style="text-align:center">예</td>
+<td style="text-align:center">예</td>
 <td><code>1</code></td>
 </tr>
 <tr>
 <td><a href="#interactions"><code>pointHoverBackgroundColor</code></a></td>
 <td><code>Color</code></td>
-<td style="text-align:center">Yes</td>
-<td style="text-align:center">Yes</td>
+<td style="text-align:center">예</td>
+<td style="text-align:center">예</td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
 <td><a href="#interactions"><code>pointHoverBorderColor</code></a></td>
 <td><code>Color</code></td>
-<td style="text-align:center">Yes</td>
-<td style="text-align:center">Yes</td>
+<td style="text-align:center">예</td>
+<td style="text-align:center">예</td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
 <td><a href="#interactions"><code>pointHoverBorderWidth</code></a></td>
 <td><code>number</code></td>
-<td style="text-align:center">Yes</td>
-<td style="text-align:center">Yes</td>
+<td style="text-align:center">예</td>
+<td style="text-align:center">예</td>
 <td><code>1</code></td>
 </tr>
 <tr>
 <td><a href="#interactions"><code>pointHoverRadius</code></a></td>
 <td><code>number</code></td>
-<td style="text-align:center">Yes</td>
-<td style="text-align:center">Yes</td>
+<td style="text-align:center">예</td>
+<td style="text-align:center">예</td>
 <td><code>4</code></td>
 </tr>
 <tr>
 <td><a href="#point-styling"><code>pointRadius</code></a></td>
 <td><code>number</code></td>
-<td style="text-align:center">Yes</td>
-<td style="text-align:center">Yes</td>
+<td style="text-align:center">예</td>
+<td style="text-align:center">예</td>
 <td><code>3</code></td>
 </tr>
 <tr>
 <td><a href="#point-styling"><code>pointRotation</code></a></td>
 <td><code>number</code></td>
-<td style="text-align:center">Yes</td>
-<td style="text-align:center">Yes</td>
+<td style="text-align:center">예</td>
+<td style="text-align:center">예</td>
 <td><code>0</code></td>
 </tr>
 <tr>
 <td><a href="#point-styling"><code>pointStyle</code></a></td>
 <td><code>string|Image</code></td>
-<td style="text-align:center">Yes</td>
-<td style="text-align:center">Yes</td>
+<td style="text-align:center">예</td>
+<td style="text-align:center">예</td>
 <td><code>&apos;circle&apos;</code></td>
 </tr>
 <tr>
@@ -1151,156 +1151,156 @@
 </tr>
 </tbody>
 </table>
-<h3 id="general">General</h3>
+<h3 id="general">일반적 속성들</h3>
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Description</th>
+<th>이름</th>
+<th>설명</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>label</code></td>
-<td>The label for the dataset which appears in the legend and tooltips.</td>
+<td>범례와 툴팁에 나타나는 데이터집합에 대한 라벨을 지정합니다.</td>
 </tr>
 <tr>
 <td><code>order</code></td>
-<td>The drawing order of dataset.</td>
+<td>데이터집합이 그려지는 순서를 지정합니다.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="point-styling">Point Styling</h3>
-<p>The style of each point can be controlled with the following properties:</p>
+<h3 id="point-styling">포인트 스타일링</h3>
+<p>각 포인트의 스타일은 다음의 속성들로 제어할 수 있습니다:</p>
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Description</th>
+<th>이름</th>
+<th>설명</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>pointBackgroundColor</code></td>
-<td>The fill color for points.</td>
+<td>포인트 채우기 색상.</td>
 </tr>
 <tr>
 <td><code>pointBorderColor</code></td>
-<td>The border color for points.</td>
+<td>포인트 테두리 색상.</td>
 </tr>
 <tr>
 <td><code>pointBorderWidth</code></td>
-<td>The width of the point border in pixels.</td>
+<td>포인트 테두리 넓이. 픽셀단위.</td>
 </tr>
 <tr>
 <td><code>pointHitRadius</code></td>
-<td>The pixel size of the non-displayed point that reacts to mouse events.</td>
+<td>마우스 이벤트에 대한 반응인 안 보이는 포인트의 픽셀 사이즈.</td>
 </tr>
 <tr>
 <td><code>pointRadius</code></td>
-<td>The radius of the point shape. If set to 0, the point is not rendered.</td>
+<td>포인트 모양의 반지름. 0으로 설정하면, 포인트는 그려지지 않습니다.</td>
 </tr>
 <tr>
 <td><code>pointRotation</code></td>
-<td>The rotation of the point in degrees.</td>
+<td>포인트의 회전 정도.</td>
 </tr>
 <tr>
 <td><code>pointStyle</code></td>
-<td>Style of the point. <a href="../configuration/elements#point-styles">more...</a></td>
+<td>포인트의 스타일. <a href="../configuration/elements#point-styles">더보기...</a></td>
 </tr>
 </tbody>
 </table>
-<p>All these values, if <code>undefined</code>, fallback first to the dataset options then to the associated <a href="../configuration/elements.html#point-configuration"><code>elements.point.*</code></a> options.</p>
-<h3 id="line-styling">Line Styling</h3>
-<p>The style of the line can be controlled with the following properties:</p>
+<p>이 모든 값들이 만약 <code>undefined</code>이면, 첫번째 데이터집합의 옵션으로 대체된 다음 연관된 <a href="../configuration/elements.html#point-configuration"><code>elements.point.*</code></a> 옵션으로 대채됩니다.</p>
+<h3 id="line-styling">선 스타일링</h3>
+<p>선의 스타일은 다음의 속성들로 제어할 수 있습니다:</p>
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Description</th>
+<th>이름</th>
+<th>설명</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>backgroundColor</code></td>
-<td>The line fill color.</td>
+<td>선 채우기 색상.</td>
 </tr>
 <tr>
 <td><code>borderCapStyle</code></td>
-<td>Cap style of the line. See <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineCap" target="_blank">MDN</a>.</td>
+<td>선의 캡 스타일. <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineCap" target="_blank">MDN</a> 보기.</td>
 </tr>
 <tr>
 <td><code>borderColor</code></td>
-<td>The line color.</td>
+<td>선 색상.</td>
 </tr>
 <tr>
 <td><code>borderDash</code></td>
-<td>Length and spacing of dashes. See <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/setLineDash" target="_blank">MDN</a>.</td>
+<td>대시의 길이와 간격. <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/setLineDash" target="_blank">MDN</a> 보기.</td>
 </tr>
 <tr>
 <td><code>borderDashOffset</code></td>
-<td>Offset for line dashes. See <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineDashOffset" target="_blank">MDN</a>.</td>
+<td>선 대시에 대한 오프셋. <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineDashOffset" target="_blank">MDN</a> 보기.</td>
 </tr>
 <tr>
 <td><code>borderJoinStyle</code></td>
-<td>Line joint style. See <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineJoin" target="_blank">MDN</a>.</td>
+<td>선 조인트 스타일. <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineJoin" target="_blank">MDN</a> 보기.</td>
 </tr>
 <tr>
 <td><code>borderWidth</code></td>
-<td>The line width (in pixels).</td>
+<td>선 넓이 (픽셀).</td>
 </tr>
 <tr>
 <td><code>fill</code></td>
-<td>How to fill the area under the line. See <a href="area.html">area charts</a>.</td>
+<td>선 아래 영역을 어떻게 채울지. <a href="area.html">영역 차트</a> 보기.</td>
 </tr>
 <tr>
 <td><code>lineTension</code></td>
-<td>Bezier curve tension of the line. Set to 0 to draw straightlines.</td>
+<td>선의 베지어 곡선 장력. 0으로 설정하면 직선을 그립니다.</td>
 </tr>
 <tr>
 <td><code>spanGaps</code></td>
-<td>If true, lines will be drawn between points with no or null data. If false, points with <code>NaN</code> data will create a break in the line.</td>
+<td>true이면, 선은 데이터가 없거나 null인 포인트 사이에 그려집니다. false이면, 포인트는 <code>NaN</code> 데이터일 때 끊깁니다.</td>
 </tr>
 </tbody>
 </table>
-<p>If the value is <code>undefined</code>, <code>spanGaps</code> fallback to the associated <a href="#configuration-options">chart configuration options</a>. The rest of the values fallback to the associated <a href="../configuration/elements.html#line-configuration"><code>elements.line.*</code></a> options.</p>
-<h3 id="interactions">Interactions</h3>
-<p>The interaction with each point can be controlled with the following properties:</p>
+<p>값이 <code>undefined</code>이면, <code>spanGaps</code>은 <a href="#configuration-options">차트 설정 옵션</a>으로 대체됩니다. 남은 값들은 연관된<a href="../configuration/elements.html#line-configuration"><code>elements.line.*</code></a> 옵션으로 대체됩니다.</p>
+<h3 id="interactions">상호작용</h3>
+<p>각 포인트에 대한 상호작용은 다음의 속성들로 제어할 수 있습니다:</p>
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Description</th>
+<th>이름</th>
+<th>설명</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>pointHoverBackgroundColor</code></td>
-<td>Point background color when hovered.</td>
+<td>호버했을 때 포인트 배경 색.</td>
 </tr>
 <tr>
 <td><code>pointHoverBorderColor</code></td>
-<td>Point border color when hovered.</td>
+<td>호버했을 때 포인터 테두리 색.</td>
 </tr>
 <tr>
 <td><code>pointHoverBorderWidth</code></td>
-<td>Border width of point when hovered.</td>
+<td>호버했을 때 포인트 테두리 넓이.</td>
 </tr>
 <tr>
 <td><code>pointHoverRadius</code></td>
-<td>The radius of the point when hovered.</td>
+<td>호버했을 때 포인트의 반지름.</td>
 </tr>
 </tbody>
 </table>
-<h2 id="configuration-options">Configuration Options</h2>
-<p>The radar chart defines the following configuration options. These options are merged with the global chart configuration options, <code>Chart.defaults.global</code>, to form the options passed to the chart.</p>
+<h2 id="configuration-options">설정 옵션</h2>
+<p>레이더 차트는 다음의 설정 옵션들로 정의합니다. 이 옵션들은 차트를 형성하는 옵션인 <code>Chart.defaults.global</code> 전역 차트 설정 옵션과 합쳐집니다.</p>
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Type</th>
-<th>Default</th>
-<th>Description</th>
+<th>이름</th>
+<th>유형</th>
+<th>기본 값</th>
+<th>설명</th>
 </tr>
 </thead>
 <tbody>
@@ -1308,13 +1308,12 @@
 <td><code>spanGaps</code></td>
 <td><code>boolean</code></td>
 <td><code>false</code></td>
-<td>If false, NaN data causes a break in the line.</td>
+<td>false이면, NaN 데이터로 인해 선이 끊깁니다.</td>
 </tr>
 </tbody>
 </table>
-<h2 id="scale-options">Scale Options</h2>
-<p>The radar chart supports only a single scale. The options for this scale are defined in the <code>scale</code> property.
-The options for this scale are defined in the <code>scale</code> property, which can be referenced from the <a href="../axes/radial/linear">Linear Radial Axis page</a>.</p>
+<h2 id="scale-options">확장 옵션</h2>
+<p>레이더 차트는 단일 확장만 지원합니다. 이 확장에 대한 옵션들은 <a href="../axes/radial/linear">선형 근축 페이지</a>에서 참조할 수 있는 <code>scale</code> 속성에 정의됩니다.</p>
 <pre><code class="lang-javascript">options = {
     scale: {
         angleLines: {
@@ -1327,13 +1326,13 @@ The options for this scale are defined in the <code>scale</code> property, which
     }
 };
 </code></pre>
-<h2 id="default-options">Default Options</h2>
-<p>It is common to want to apply a configuration setting to all created radar charts. The global radar chart settings are stored in <code>Chart.defaults.radar</code>. Changing the global options only affects charts created after the change. Existing charts are not changed.</p>
-<h2 id="data-structure">Data Structure</h2>
-<p>The <code>data</code> property of a dataset for a radar chart is specified as an array of numbers. Each point in the data array corresponds to the label at the same index.</p>
+<h2 id="default-options">기본 옵션</h2>
+<p>일반적으로 생성된 모든 레이더 차트에 대해 적용되는 설정입니다. 전역 레이더 차트 설정은 <code>Chart.defaults.radar</code>에 저장되어 있습니다. 전역 옵션이 변경된 것은 변경된 이후에 생성된 차트에게만 영향을 미칩니다. 존재하던 차트들은 변하지 않습니다.</p>
+<h2 id="data-structure">데이터 구조</h2>
+<p>레이더 차트에 대한 데이터집합의 <code>data</code> 속성은 숫자 배열로 지정됩니다. 데이터 배열의 각 포인트는 같은 인덱스의 라벨과 연결됩니다.</p>
 <pre><code class="lang-javascript">data: [<span class="hljs-number">20</span>, <span class="hljs-number">10</span>]
 </code></pre>
-<p>For a radar chart, to provide context of what each point means, we include an array of strings that show around each point in the chart.</p>
+<p>레이더 차트에 대해, 각 포인트가 무엇을 의미하는지 맥락을 제공하는 것은, 각 차트 포인트 주변을 보여주는 문자열 배열에 포함됩니다.</p>
 <pre><code class="lang-javascript">data: {
     labels: [<span class="hljs-string">&apos;Running&apos;</span>, <span class="hljs-string">&apos;Swimming&apos;</span>, <span class="hljs-string">&apos;Eating&apos;</span>, <span class="hljs-string">&apos;Cycling&apos;</span>],
     datasets: [{
