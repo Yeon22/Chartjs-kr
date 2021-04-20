@@ -248,19 +248,19 @@
             </li>
 
             <li class="chapter" data-level="1.6" data-path="./">
-              <a href="./"> Charts </a>
+              <a href="./"> 차트 </a>
 
               <ul class="articles">
                 <li class="chapter" data-level="1.6.1" data-path="line.html">
-                  <a href="line.html"> Line </a>
+                  <a href="line.html"> 선형 </a>
                 </li>
 
                 <li class="chapter" data-level="1.6.2" data-path="bar.html">
-                  <a href="bar.html"> Bar </a>
+                  <a href="bar.html"> 막대형 </a>
                 </li>
 
                 <li class="chapter" data-level="1.6.3" data-path="radar.html">
-                  <a href="radar.html"> Radar </a>
+                  <a href="radar.html"> 레이더형 </a>
                 </li>
 
                 <li
@@ -268,19 +268,19 @@
                   data-level="1.6.4"
                   data-path="doughnut.html"
                 >
-                  <a href="doughnut.html"> Doughnut & Pie </a>
+                  <a href="doughnut.html"> 도넛 & 파이형 </a>
                 </li>
 
                 <li class="chapter" data-level="1.6.5" data-path="polar.html">
-                  <a href="polar.html"> Polar Area </a>
+                  <a href="polar.html"> 극좌표형 </a>
                 </li>
 
                 <li class="chapter" data-level="1.6.6" data-path="bubble.html">
-                  <a href="bubble.html"> Bubble </a>
+                  <a href="bubble.html"> 버블형 </a>
                 </li>
 
                 <li class="chapter" data-level="1.6.7" data-path="scatter.html">
-                  <a href="scatter.html"> Scatter </a>
+                  <a href="scatter.html"> 도표형 </a>
                 </li>
 
                 <li
@@ -288,11 +288,11 @@
                   data-level="1.6.8"
                   data-path="area.html"
                 >
-                  <a href="area.html"> Area </a>
+                  <a href="area.html"> 영역형 </a>
                 </li>
 
                 <li class="chapter" data-level="1.6.9" data-path="mixed.html">
-                  <a href="mixed.html"> Mixed </a>
+                  <a href="mixed.html"> 혼합형 </a>
                 </li>
               </ul>
             </li>
@@ -711,51 +711,51 @@
         gitbook.push(function () {
           gitbook.page.hasChanged({
             page: {
-              title: "Area",
-              level: "1.6.8",
+              title: 'Area',
+              level: '1.6.8',
               depth: 2,
               next: {
-                title: "Mixed",
-                level: "1.6.9",
+                title: 'Mixed',
+                level: '1.6.9',
                 depth: 2,
-                path: "charts/mixed.md",
-                ref: "charts/mixed.md",
+                path: 'charts/mixed.md',
+                ref: 'charts/mixed.md',
                 articles: [],
               },
               previous: {
-                title: "Scatter",
-                level: "1.6.7",
+                title: 'Scatter',
+                level: '1.6.7',
                 depth: 2,
-                path: "charts/scatter.md",
-                ref: "charts/scatter.md",
+                path: 'charts/scatter.md',
+                ref: 'charts/scatter.md',
                 articles: [],
               },
-              dir: "ltr",
+              dir: 'ltr',
             },
             config: {
               plugins: [
-                "-lunr",
-                "-search",
-                "search-plus",
-                "anchorjs",
-                "chartjs",
-                "ga",
-                "redirect",
+                '-lunr',
+                '-search',
+                'search-plus',
+                'anchorjs',
+                'chartjs',
+                'ga',
+                'redirect',
               ],
-              root: "./docs",
+              root: './docs',
               styles: {
-                website: "style.css",
-                pdf: "styles/pdf.css",
-                epub: "styles/epub.css",
-                mobi: "styles/mobi.css",
-                ebook: "styles/ebook.css",
-                print: "styles/print.css",
+                website: 'style.css',
+                pdf: 'styles/pdf.css',
+                epub: 'styles/epub.css',
+                mobi: 'styles/mobi.css',
+                ebook: 'styles/ebook.css',
+                print: 'styles/print.css',
               },
               pluginsConfig: {
                 chartjs: { defaults: null },
-                fontsettings: { theme: "white", family: "sans", size: 2 },
+                fontsettings: { theme: 'white', family: 'sans', size: 2 },
                 highlight: {},
-                ga: { configuration: "auto", token: "UA-28909194-3" },
+                ga: { configuration: 'auto', token: 'UA-28909194-3' },
                 sharing: {
                   facebook: true,
                   twitter: true,
@@ -763,52 +763,52 @@
                   weibo: false,
                   instapaper: false,
                   vk: false,
-                  all: ["facebook", "google", "twitter", "weibo", "instapaper"],
+                  all: ['facebook', 'google', 'twitter', 'weibo', 'instapaper'],
                 },
                 redirect: {},
-                "theme-default": {
+                'theme-default': {
                   styles: {
-                    website: "style.css",
-                    pdf: "styles/pdf.css",
-                    epub: "styles/epub.css",
-                    mobi: "styles/mobi.css",
-                    ebook: "styles/ebook.css",
-                    print: "styles/print.css",
+                    website: 'style.css',
+                    pdf: 'styles/pdf.css',
+                    epub: 'styles/epub.css',
+                    mobi: 'styles/mobi.css',
+                    ebook: 'styles/ebook.css',
+                    print: 'styles/print.css',
                   },
                   showLevel: false,
                 },
-                anchorjs: { icon: "#", placement: "left", visible: "always" },
-                "search-plus": {},
+                anchorjs: { icon: '#', placement: 'left', visible: 'always' },
+                'search-plus': {},
               },
-              theme: "default",
-              author: "chartjs",
+              theme: 'default',
+              author: 'chartjs',
               pdf: {
                 pageNumbers: true,
                 fontSize: 12,
-                fontFamily: "Arial",
-                paperSize: "a4",
-                chapterMark: "pagebreak",
-                pageBreaksBefore: "/",
+                fontFamily: 'Arial',
+                paperSize: 'a4',
+                chapterMark: 'pagebreak',
+                pageBreaksBefore: '/',
                 margin: { right: 62, left: 62, top: 56, bottom: 56 },
               },
               structure: {
-                langs: "LANGS.md",
-                readme: "README.md",
-                glossary: "GLOSSARY.md",
-                summary: "SUMMARY.md",
+                langs: 'LANGS.md',
+                readme: 'README.md',
+                glossary: 'GLOSSARY.md',
+                summary: 'SUMMARY.md',
               },
               variables: {},
-              title: "Chart.js documentation",
-              gitbook: "3.2.2",
+              title: 'Chart.js documentation',
+              gitbook: '3.2.2',
             },
             file: {
-              path: "charts/area.md",
-              mtime: "2019-12-23T03:27:10.497Z",
-              type: "markdown",
+              path: 'charts/area.md',
+              mtime: '2019-12-23T03:27:10.497Z',
+              type: 'markdown',
             },
-            gitbook: { version: "3.2.2", time: "2019-12-23T03:29:40.428Z" },
-            basePath: "..",
-            book: { language: "" },
+            gitbook: { version: '3.2.2', time: '2019-12-23T03:29:40.428Z' },
+            basePath: '..',
+            book: { language: '' },
           });
         });
       </script>
