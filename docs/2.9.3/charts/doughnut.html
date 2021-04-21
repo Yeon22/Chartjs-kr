@@ -917,18 +917,12 @@
 
                                 <section class="normal markdown-section">
 
-                                    <h1 id="doughnut-and-pie">Doughnut and Pie</h1>
-                                    <p>Pie and doughnut charts are probably the most commonly used charts. They are
-                                        divided into segments, the arc of each segment shows the proportional value of
-                                        each piece of data.</p>
-                                    <p>They are excellent at showing the relational proportions between data.</p>
-                                    <p>Pie and doughnut charts are effectively the same class in Chart.js, but have one
-                                        different default value - their <code>cutoutPercentage</code>. This equates what
-                                        percentage of the inner should be cut out. This defaults to <code>0</code> for
-                                        pie charts, and <code>50</code> for doughnuts.</p>
-                                    <p>They are also registered under two aliases in the <code>Chart</code> core. Other
-                                        than their different default value, and different alias, they are exactly the
-                                        same.</p>
+                                    <h1 id="doughnut-and-pie">도넛 과 파이형</h1>
+                                    <p>파이와 도넛 차트는 차트에서 가장 흔하게 사용됩니다. 이 차트들은 세그먼트로 나뉘며, 각 세그먼트의 호는 각 데이터의 조각의 비례한 값을 보여줍니다.</p>
+                                    <p>데이터 사이에 관계 비율을 보여주는데 탁월합니다.</p>
+                                    <p>파이와 도넛 차트는 Chart.js에서 사실상 동일한 클래스이지만, 기본 값이 다르다는 한가지 차이가 있습니다 - 바로 <code>cutoutPercentage</code> 값이죠. 
+                                        이것은 내부의 몇 퍼센트를 잘라내여 하는지를 나타냅니다. 파이 차트에선 <code>0</code>이 기본 값이고, 도넛 차트에선 <code>50</code>이 기본 값입니다.</p>
+                                    <p>또한 <code>Chart</code> 코어에서 두 개의 별칭으로 등록됩니다. 기본 값이 다른 것과 별칭이 다른 것 외에는 파이와 도넛은 정확이 같습니다.</p>
                                     <p>
                                         <div class="chartjs-wrapper"><canvas id="chartjs-4" class="chartjs"
                                                 width="undefined" height="undefined"></canvas>
@@ -950,66 +944,66 @@
                                             </script>
                                         </div>
                                     </p>
-                                    <h2 id="example-usage">Example Usage</h2>
-                                    <pre><code class="lang-javascript"><span class="hljs-comment">// For a pie chart</span>
+                                    <h2 id="example-usage">사용 예시</h2>
+                                    <pre><code class="lang-javascript"><span class="hljs-comment">// 파이 차트</span>
 <span class="hljs-keyword">var</span> myPieChart = <span class="hljs-keyword">new</span> Chart(ctx, {
     type: <span class="hljs-string">&apos;pie&apos;</span>,
     data: data,
     options: options
 });
 </code></pre>
-                                    <pre><code class="lang-javascript"><span class="hljs-comment">// And for a doughnut chart</span>
+                                    <pre><code class="lang-javascript"><span class="hljs-comment">// 도넛 차트</span>
 <span class="hljs-keyword">var</span> myDoughnutChart = <span class="hljs-keyword">new</span> Chart(ctx, {
     type: <span class="hljs-string">&apos;doughnut&apos;</span>,
     data: data,
     options: options
 });
 </code></pre>
-                                    <h2 id="dataset-properties">Dataset Properties</h2>
-                                    <p>The doughnut/pie chart allows a number of properties to be specified for each
-                                        dataset. These are used to set display properties for a specific dataset. For
-                                        example, the colours of the dataset&apos;s arcs are generally set this way.</p>
+                                    <h2 id="dataset-properties">데이터집합 속성들</h2>
+                                    <p>도넛/파이 차트는 각 데이터집합을 특정하는 속성들을 허용합니다.
+                                        이것들은 특정한 데이터집합에 대한 속성을 보여주는데 사용됩니다. 예를 들어,
+                                        데이터집합 호의 색상은 일반적으로 다음과 같은 방법으로 설정됩니다.</p>
                                     <table>
                                         <thead>
                                             <tr>
-                                                <th>Name</th>
-                                                <th>Type</th>
+                                                <th>이름</th>
+                                                <th>유형</th>
                                                 <th style="text-align:center"><a
-                                                        href="../general/options.html#scriptable-options">Scriptable</a>
+                                                        href="../general/options.html#scriptable-options">스크립트 할 수 있는지 여부</a>
                                                 </th>
                                                 <th style="text-align:center"><a
-                                                        href="../general/options.html#indexable-options">Indexable</a>
+                                                        href="../general/options.html#indexable-options">인테스 할 수 있는지 여부</a>
                                                 </th>
-                                                <th>Default</th>
+                                                <th>기본 값</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
                                                 <td><a href="#styling"><code>backgroundColor</code></a></td>
                                                 <td><a href="../general/colors.html"><code>Color</code></a></td>
-                                                <td style="text-align:center">Yes</td>
-                                                <td style="text-align:center">Yes</td>
+                                                <td style="text-align:center">예</td>
+                                                <td style="text-align:center">예</td>
                                                 <td><code>&apos;rgba(0, 0, 0, 0.1)&apos;</code></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="#border-alignment"><code>borderAlign</code></a></td>
                                                 <td><code>string</code></td>
-                                                <td style="text-align:center">Yes</td>
-                                                <td style="text-align:center">Yes</td>
+                                                <td style="text-align:center">예</td>
+                                                <td style="text-align:center">예</td>
                                                 <td><code>&apos;center&apos;</code></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="#styling"><code>borderColor</code></a></td>
                                                 <td><a href="../general/colors.html"><code>Color</code></a></td>
-                                                <td style="text-align:center">Yes</td>
-                                                <td style="text-align:center">Yes</td>
+                                                <td style="text-align:center">예</td>
+                                                <td style="text-align:center">예</td>
                                                 <td><code>&apos;#fff&apos;</code></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="#styling"><code>borderWidth</code></a></td>
                                                 <td><code>number</code></td>
-                                                <td style="text-align:center">Yes</td>
-                                                <td style="text-align:center">Yes</td>
+                                                <td style="text-align:center">예</td>
+                                                <td style="text-align:center">예</td>
                                                 <td><code>2</code></td>
                                             </tr>
                                             <tr>
@@ -1022,22 +1016,22 @@
                                             <tr>
                                                 <td><a href="#interations"><code>hoverBackgroundColor</code></a></td>
                                                 <td><a href="../general/colors.html"><code>Color</code></a></td>
-                                                <td style="text-align:center">Yes</td>
-                                                <td style="text-align:center">Yes</td>
+                                                <td style="text-align:center">예</td>
+                                                <td style="text-align:center">예</td>
                                                 <td><code>undefined</code></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="#interactions"><code>hoverBorderColor</code></a></td>
                                                 <td><a href="../general/colors.html"><code>Color</code></a></td>
-                                                <td style="text-align:center">Yes</td>
-                                                <td style="text-align:center">Yes</td>
+                                                <td style="text-align:center">예</td>
+                                                <td style="text-align:center">예</td>
                                                 <td><code>undefined</code></td>
                                             </tr>
                                             <tr>
                                                 <td><a href="#interactions"><code>hoverBorderWidth</code></a></td>
                                                 <td><code>number</code></td>
-                                                <td style="text-align:center">Yes</td>
-                                                <td style="text-align:center">Yes</td>
+                                                <td style="text-align:center">예</td>
+                                                <td style="text-align:center">예</td>
                                                 <td><code>undefined</code></td>
                                             </tr>
                                             <tr>
@@ -1049,142 +1043,133 @@
                                             </tr>
                                         </tbody>
                                     </table>
-                                    <h3 id="styling">Styling</h3>
-                                    <p>The style of each arc can be controlled with the following properties:</p>
+                                    <h3 id="styling">스타일링</h3>
+                                    <p>각 호의 스타일은 다음의 속성들로 제어할 수 있습니다:</p>
                                     <table>
                                         <thead>
                                             <tr>
-                                                <th>Name</th>
-                                                <th>Description</th>
+                                                <th>이름</th>
+                                                <th>설명</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
                                                 <td><code>backgroundColor</code></td>
-                                                <td>arc background color.</td>
+                                                <td>호의 배경색.</td>
                                             </tr>
                                             <tr>
                                                 <td><code>borderColor</code></td>
-                                                <td>arc border color.</td>
+                                                <td>호의 테두리 색상.</td>
                                             </tr>
                                             <tr>
                                                 <td><code>borderWidth</code></td>
-                                                <td>arc border width (in pixels).</td>
+                                                <td>호의 테두리 넓이 (픽셀단위).</td>
                                             </tr>
                                             <tr>
                                                 <td><code>weight</code></td>
-                                                <td>The relative thickness of the dataset. Providing a value for weight
-                                                    will cause the pie or doughnut dataset to be drawn with a thickness
-                                                    relative to the sum of all the dataset weight values.</td>
+                                                <td>데이터집합의 상대적 두께입니다. 넓이에 대한 값을 제공하면 모든 데이터집합 넓이 값들의 합에 대한 상대적 두께가 파이 또는 도넛 차트에 그려지는 이유입니다.</td>
                                             </tr>
                                         </tbody>
                                     </table>
-                                    <p>All these values, if <code>undefined</code>, fallback to the associated <a
+                                    <p>이 모든 값들이 <code>undefined</code>이면, 관련 <a
                                             href="../configuration/elements.html#arc-configuration"><code>elements.arc.*</code></a>
-                                        options.</p>
-                                    <h3 id="border-alignment">Border Alignment</h3>
-                                    <p>The following values are supported for <code>borderAlign</code>.</p>
+                                        옵션으로 대체됩니다.</p>
+                                    <h3 id="border-alignment">테두리 정렬</h3>
+                                    <p>다음의 값들은 <code>borderAlign</code>을 지원합니다.</p>
                                     <ul>
                                         <li><code>&apos;center&apos;</code> (default)</li>
                                         <li><code>&apos;inner&apos;</code></li>
                                     </ul>
-                                    <p>When <code>&apos;center&apos;</code> is set, the borders of arcs next to each
-                                        other will overlap. When <code>&apos;inner&apos;</code> is set, it is guaranteed
-                                        that all borders will not overlap.</p>
-                                    <h3 id="interactions">Interactions</h3>
-                                    <p>The interaction with each arc can be controlled with the following properties:
+                                    <p><code>&apos;center&apos;</code>로 설정되면, 서로 옆에 있는 호의 테두리들이 겹쳐집니다.
+                                        <code>&apos;inner&apos;</code>로 설정되면, 모든 테두리들은 겹치지 않습니다.</p>
+                                    <h3 id="interactions">상호작용</h3>
+                                    <p>각 호에 대한 상호작용은 다음의 속성들로 제어할 수 있습니다:
                                     </p>
                                     <table>
                                         <thead>
                                             <tr>
-                                                <th>Name</th>
-                                                <th>Description</th>
+                                                <th>이름</th>
+                                                <th>설명</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
                                                 <td><code>hoverBackgroundColor</code></td>
-                                                <td>arc background color when hovered.</td>
+                                                <td>호버했을 때 호의 배경 색.</td>
                                             </tr>
                                             <tr>
                                                 <td><code>hoverBorderColor</code></td>
-                                                <td>arc border color when hovered.</td>
+                                                <td>호버했을 때 호의 테두리 색.</td>
                                             </tr>
                                             <tr>
                                                 <td><code>hoverBorderWidth</code></td>
-                                                <td>arc border width when hovered (in pixels).</td>
+                                                <td>호버했을 때 호의 테두리 두께 (픽셀단위).</td>
                                             </tr>
                                         </tbody>
                                     </table>
-                                    <p>All these values, if <code>undefined</code>, fallback to the associated <a
+                                    <p>이 모든 값들이 <code>undefined</code>이면, 관련 <a
                                             href="../configuration/elements.html#arc-configuration"><code>elements.arc.*</code></a>
-                                        options.</p>
-                                    <h2 id="config-options">Config Options</h2>
-                                    <p>These are the customisation options specific to Pie &amp; Doughnut charts. These
-                                        options are merged with the global chart configuration options, and form the
-                                        options of the chart.</p>
+                                        옵션으로 대체됩니다.</p>
+                                    <h2 id="config-options">설정 옵션</h2>
+                                    <p>파이 &amp; 도넛 차트에 관련된 사용자 지정 옵션입니다. 이 옵션들은 전역 차트 설정 옵션과 합쳐져 차트의 옵션을 형성합니다.</p>
                                     <table>
                                         <thead>
                                             <tr>
-                                                <th>Name</th>
-                                                <th>Type</th>
-                                                <th>Default</th>
-                                                <th>Description</th>
+                                                <th>이름</th>
+                                                <th>유형</th>
+                                                <th>기본 값</th>
+                                                <th>설명</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
                                                 <td><code>cutoutPercentage</code></td>
                                                 <td><code>number</code></td>
-                                                <td><code>50</code> - for doughnut, <code>0</code> - for pie</td>
-                                                <td>The percentage of the chart that is cut out of the middle.</td>
+                                                <td><code>50</code> - 도넛 차트, <code>0</code> - 파이 차트</td>
+                                                <td>차트의 중앙을 자르는 백분율.</td>
                                             </tr>
                                             <tr>
                                                 <td><code>rotation</code></td>
                                                 <td><code>number</code></td>
                                                 <td><code>-0.5 * Math.PI</code></td>
-                                                <td>Starting angle to draw arcs from.</td>
+                                                <td>호를 그릴 시작 각도.</td>
                                             </tr>
                                             <tr>
                                                 <td><code>circumference</code></td>
                                                 <td><code>number</code></td>
                                                 <td><code>2 * Math.PI</code></td>
-                                                <td>Sweep to allow arcs to cover.</td>
+                                                <td>호가 덮일 수 있도록 허용.</td>
                                             </tr>
                                             <tr>
                                                 <td><code>animation.animateRotate</code></td>
                                                 <td><code>boolean</code></td>
                                                 <td><code>true</code></td>
-                                                <td>If true, the chart will animate in with a rotation animation. This
-                                                    property is in the <code>options.animation</code> object.</td>
+                                                <td>true이면, 차트가 회전 애니메이션으로 애니메이션 합니다. 이 속성은 <code>options.animation</code> 객체 안에 존재합니다.</td>
                                             </tr>
                                             <tr>
                                                 <td><code>animation.animateScale</code></td>
                                                 <td><code>boolean</code></td>
                                                 <td><code>false</code></td>
-                                                <td>If true, will animate scaling the chart from the center outwards.
+                                                <td>true이면, 중앙에서 바깥쪽으로 차트 배율을 애니메이션 합니다.
                                                 </td>
                                             </tr>
                                         </tbody>
                                     </table>
-                                    <h2 id="default-options">Default Options</h2>
-                                    <p>We can also change these default values for each Doughnut type that is created,
-                                        this object is available at <code>Chart.defaults.doughnut</code>. Pie charts
-                                        also have a clone of these defaults available to change at
-                                        <code>Chart.defaults.pie</code>, with the only difference being
-                                        <code>cutoutPercentage</code> being set to 0.</p>
-                                    <h2 id="data-structure">Data Structure</h2>
-                                    <p>For a pie chart, datasets need to contain an array of data points. The data
-                                        points should be a number, Chart.js will total all of the numbers and calculate
-                                        the relative proportion of each.</p>
-                                    <p>You also need to specify an array of labels so that tooltips appear correctly.
+                                    <h2 id="default-options">기본 옵션</h2>
+                                    <p>또한 각 도넛 유형이 생성될 때 기본 값을 변경할 수 있습니다,
+                                        이 객체는 <code>Chart.defaults.doughnut</code>에서 사용가능합니다. 파이 차트에는 <code>Chart.defaults.pie</code>에서 변경할 수 있는 이러한
+                                        기본 값의 복제본이 있으며, 유일한 차이점은 <code>cutoutPercentage</code>가 0으로 설정되어 있다는 점입니다.</p>
+                                    <h2 id="data-structure">데이터 구조</h2>
+                                    <p>파이 차트에서, 데이터 지점들의 배열을 담은 데이터집합이 필요합니다. 데이터 지점들은 반드시 숫자여야 하며, Chart.js는
+                                        각 관련 비율의 모든 숫자들을 합하고 계산합니다.</p>
+                                    <p>또한 툴팁을 정확히 표현할 수 있는 라벨의 배열을 지정해줘야 합니다.
                                     </p>
                                     <pre><code class="lang-javascript">data = {
     datasets: [{
         data: [<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>]
     }],
 
-    <span class="hljs-comment">// These labels appear in the legend and in the tooltips when hovering different arcs</span>
+    <span class="hljs-comment">// 이 라벨들은 다른 호들을 호버했을 때 툴팁과 범례 안에서 표현됩니다</span>
     labels: [
         <span class="hljs-string">&apos;Red&apos;</span>,
         <span class="hljs-string">&apos;Yellow&apos;</span>,
