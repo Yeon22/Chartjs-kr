@@ -486,7 +486,7 @@
             <!-- Title -->
             <h1>
               <i class="fa fa-circle-o-notch fa-spin"></i>
-              <a href="..">Area</a>
+              <a href="..">영역형</a>
             </h1>
           </div>
 
@@ -495,34 +495,33 @@
               <div class="search-plus" id="book-search-results">
                 <div class="search-noresults">
                   <section class="normal markdown-section">
-                    <h1 id="area-charts">Area Charts</h1>
+                    <h1 id="area-charts">영역 차트</h1>
                     <p>
-                      Both <a href="line.html">line</a> and
-                      <a href="radar.html">radar</a> charts support a
-                      <code>fill</code> option on the dataset object which can
-                      be used to create area between two datasets or a dataset
-                      and a boundary, i.e. the scale <code>origin</code>,
-                      <code>start</code> or <code>end</code> (see
-                      <a href="#filling-modes">filling modes</a>).
+                      <a href="line.html">선형</a> 과
+                      <a href="radar.html">레이더형</a> 차트는 모두 두
+                      데이터집합 또는 데이터집합과 경계 사이의 영역을 만드는데
+                      사용할 수 있는 데이터집합 객체의 <code>fill</code> 옵션을
+                      지원합니다. 즉, 스케일 <code>origin</code>,
+                      <code>start</code> 또는 <code>end</code> (
+                      <a href="#filling-modes">채우기 모드 참조</a>).
                     </p>
                     <blockquote>
                       <p>
-                        <strong>Note:</strong> this feature is implemented by
-                        the
+                        <strong>참고:</strong> 이 기능은
                         <a
                           href="https://github.com/chartjs/Chart.js/blob/master/src/plugins/plugin.filler.js"
                           target="_blank"
-                          ><code>filler</code> plugin</a
-                        >.
+                          ><code>filler</code> 플러그인</a
+                        >에 의해 구현됩니다.
                       </p>
                     </blockquote>
-                    <h2 id="filling-modes">Filling modes</h2>
+                    <h2 id="filling-modes">채우기 모드</h2>
                     <table>
                       <thead>
                         <tr>
-                          <th style="text-align: left">Mode</th>
-                          <th style="text-align: left">Type</th>
-                          <th style="text-align: left">Values</th>
+                          <th style="text-align: left">모드</th>
+                          <th style="text-align: left">유형</th>
+                          <th style="text-align: left">값들</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -570,18 +569,19 @@
                     </table>
                     <blockquote>
                       <p>
-                        <sup>1</sup> dataset filling modes have been introduced
-                        in version 2.6.0<br />
-                        <sup>2</sup> prior version 2.6.0, boundary values was
+                        <sup>1</sup> 버전 2.6.0에서 데이터집합 채우기 모드가
+                        도입되었습니다<br />
+                        <sup>2</sup> 이전 버전 2.6.0, 경계 값은
                         <code>&apos;zero&apos;</code>,
                         <code>&apos;top&apos;</code>,
-                        <code>&apos;bottom&apos;</code> (deprecated)<br />
-                        <sup>3</sup> for backward compatibility,
-                        <code>fill: true</code> (default) is equivalent to
-                        <code>fill: &apos;origin&apos;</code><br />
+                        <code>&apos;bottom&apos;</code> 이었습니다 (더 이상
+                        사용되지 않습니다)<br />
+                        <sup>3</sup> 이전 버전과 호환성을 위해,
+                        <code>fill: true</code> (기본값)는
+                        <code>fill: &apos;origin&apos;</code>과 동일합니다.<br />
                       </p>
                     </blockquote>
-                    <p><strong>Example</strong></p>
+                    <p><strong>예제</strong></p>
                     <pre><code class="lang-javascript"><span class="hljs-keyword">new</span> Chart(ctx, {
     data: {
         datasets: [
@@ -594,14 +594,14 @@
     }
 });
 </code></pre>
-                    <h2 id="configuration">Configuration</h2>
+                    <h2 id="configuration">설정</h2>
                     <table>
                       <thead>
                         <tr>
-                          <th style="text-align: left">Option</th>
-                          <th style="text-align: left">Type</th>
-                          <th style="text-align: left">Default</th>
-                          <th style="text-align: left">Description</th>
+                          <th style="text-align: left">옵션</th>
+                          <th style="text-align: left">유형</th>
+                          <th style="text-align: left">기본 값</th>
+                          <th style="text-align: left">설명</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -616,20 +616,20 @@
                           </td>
                           <td style="text-align: left"><code>true</code></td>
                           <td style="text-align: left">
-                            Fill propagation when target is hidden.
+                            타겟이 숨겨질 때 전파를 채웁니다.
                           </td>
                         </tr>
                       </tbody>
                     </table>
-                    <h3 id="propagate">propagate</h3>
+                    <h3 id="propagate">전파</h3>
                     <p>
-                      <code>propagate</code> takes a <code>boolean</code> value
-                      (default: <code>true</code>).
+                      <code>propagate</code>는 <code>boolean</code> 값을
+                      가집니다 (기본 값: <code>true</code>).
                     </p>
                     <p>
-                      If <code>true</code>, the fill area will be recursively
-                      extended to the visible target defined by the
-                      <code>fill</code> value of hidden dataset targets:
+                      만약 <code>true</code>이면, 채우기 영역은 숨겨진
+                      데이터집합 대상의 <code>fill</code> 값에 의해 정의된
+                      보이는 대상으로 재귀적으로 확장됩니다:
                     </p>
                     <p><strong>Example</strong></p>
                     <pre><code class="lang-javascript"><span class="hljs-keyword">new</span> Chart(ctx, {
@@ -654,18 +654,19 @@
                     <p><code>propagate: true</code>:</p>
                     <ul>
                       <li>
-                        if dataset 2 is hidden, dataset 4 will fill to dataset 1
+                        데이터집합 2가 숨겨져 있으면, 데이터집합 4가 데이터집합
+                        1로 채워집니다
                       </li>
                       <li>
-                        if dataset 2 and 1 are hidden, dataset 4 will fill to
-                        <code>&apos;origin&apos;</code>
+                        데이터집합 2와 1이 숨겨져 있으면, 데이터집합 4가
+                        <code>&apos;origin&apos;</code>으로 채워집니다
                       </li>
                     </ul>
                     <p><code>propagate: false</code>:</p>
                     <ul>
                       <li>
-                        if dataset 2 and/or 4 are hidden, dataset 4 will not be
-                        filled
+                        데이터집합 2와/또는 4가 숨겨져 있으면, 데이터집합 4는
+                        채워지지 않습니다
                       </li>
                     </ul>
                   </section>

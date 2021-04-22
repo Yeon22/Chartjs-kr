@@ -900,7 +900,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Bubble</a>
+        <a href=".." >버블형</a>
     </h1>
 </div>
 
@@ -915,49 +915,51 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="bubble-chart">Bubble Chart</h1>
-<p>A bubble chart is used to display three dimensions of data at the same time. The location of the bubble is determined by the first two dimensions and the corresponding horizontal and vertical axes. The third dimension is represented by the size of the individual bubbles.</p>
-<p><div class="chartjs-wrapper"><canvas id="chartjs-6" class="chartjs" width="undefined" height="undefined"></canvas><script>new Chart(document.getElementById("chartjs-6"),{"type":"bubble","data":{"datasets":[{"label":"First Dataset","data":[{"x":20,"y":30,"r":15},{"x":40,"y":10,"r":10}],"backgroundColor":"rgb(255, 99, 132)"}]}});</script></div></p>
-<h2 id="example-usage">Example Usage</h2>
-<pre><code class="lang-javascript"><span class="hljs-comment">// For a bubble chart</span>
+                                <h1 id="bubble-chart">버블 차트</h1>
+<p>버블 차트는 3차원 데이터를 동시에 보여주기 위해 사용됩니다. 버블의 위치는 처음 두 차원과 해당 수평과 수직 축에 의해 결정됩니다.
+    3차원은 각 버블들의 크기로 표시됩니다.</p>
+<p><div class="chartjs-wrapper"><canvas id="chartjs-6" class="chartjs" width="undefined" height="undefined"></canvas><script>new Chart(document.getElementById("chartjs-6"),{"type":"bubble","data":{"datasets":[{"label":"첫번째 데이터집합","data":[{"x":20,"y":30,"r":15},{"x":40,"y":10,"r":10}],"backgroundColor":"rgb(255, 99, 132)"}]}});</script></div></p>
+<h2 id="example-usage">사용 예시</h2>
+<pre><code class="lang-javascript"><span class="hljs-comment">// 버블 차트</span>
 <span class="hljs-keyword">var</span> myBubbleChart = <span class="hljs-keyword">new</span> Chart(ctx, {
     type: <span class="hljs-string">&apos;bubble&apos;</span>,
     data: data,
     options: options
 });
 </code></pre>
-<h2 id="dataset-properties">Dataset Properties</h2>
-<p>The bubble chart allows a number of properties to be specified for each dataset. These are used to set display properties for a specific dataset. For example, the colour of the bubbles is generally set this way.</p>
+<h2 id="dataset-properties">데이터집합 속성들</h2>
+<p>버블 차트는 각 데이터집합에 대해 여러 속성을 지정할 수 있습니다.
+    이 속성들은 특정 데이터집합의 속성을 설정하는데 사용됩니다. 예를 들어, 버블의 색상은 일반적으로 이러한 방식으로 설정됩니다.</p>
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Type</th>
-<th style="text-align:center"><a href="../general/options.html#scriptable-options">Scriptable</a></th>
-<th style="text-align:center"><a href="../general/options.html#indexable-options">Indexable</a></th>
-<th>Default</th>
+<th>이름</th>
+<th>유형</th>
+<th style="text-align:center"><a href="../general/options.html#scriptable-options">스크립트 할 수 있는지 여부</a></th>
+<th style="text-align:center"><a href="../general/options.html#indexable-options">인덱스 할 수 있는지 여부</a></th>
+<th>기본 값</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><a href="#styling"><code>backgroundColor</code></a></td>
 <td><a href="../general/colors.html"><code>Color</code></a></td>
-<td style="text-align:center">Yes</td>
-<td style="text-align:center">Yes</td>
+<td style="text-align:center">예</td>
+<td style="text-align:center">예</td>
 <td><code>&apos;rgba(0, 0, 0, 0.1)&apos;</code></td>
 </tr>
 <tr>
 <td><a href="#styling"><code>borderColor</code></a></td>
 <td><a href="../general/colors.html"><code>Color</code></a></td>
-<td style="text-align:center">Yes</td>
-<td style="text-align:center">Yes</td>
+<td style="text-align:center">예</td>
+<td style="text-align:center">예</td>
 <td><code>&apos;rgba(0, 0, 0, 0.1)&apos;</code></td>
 </tr>
 <tr>
 <td><a href="#styling"><code>borderWidth</code></a></td>
 <td><code>number</code></td>
-<td style="text-align:center">Yes</td>
-<td style="text-align:center">Yes</td>
+<td style="text-align:center">예</td>
+<td style="text-align:center">예</td>
 <td><code>3</code></td>
 </tr>
 <tr>
@@ -970,36 +972,36 @@
 <tr>
 <td><a href="#interactions"><code>hoverBackgroundColor</code></a></td>
 <td><a href="../general/colors.html"><code>Color</code></a></td>
-<td style="text-align:center">Yes</td>
-<td style="text-align:center">Yes</td>
+<td style="text-align:center">예</td>
+<td style="text-align:center">예</td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
 <td><a href="#interactions"><code>hoverBorderColor</code></a></td>
 <td><a href="../general/colors.html"><code>Color</code></a></td>
-<td style="text-align:center">Yes</td>
-<td style="text-align:center">Yes</td>
+<td style="text-align:center">예</td>
+<td style="text-align:center">예</td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
 <td><a href="#interactions"><code>hoverBorderWidth</code></a></td>
 <td><code>number</code></td>
-<td style="text-align:center">Yes</td>
-<td style="text-align:center">Yes</td>
+<td style="text-align:center">예</td>
+<td style="text-align:center">예</td>
 <td><code>1</code></td>
 </tr>
 <tr>
 <td><a href="#interactions"><code>hoverRadius</code></a></td>
 <td><code>number</code></td>
-<td style="text-align:center">Yes</td>
-<td style="text-align:center">Yes</td>
+<td style="text-align:center">예</td>
+<td style="text-align:center">예</td>
 <td><code>4</code></td>
 </tr>
 <tr>
 <td><a href="#interactions"><code>hitRadius</code></a></td>
 <td><code>number</code></td>
-<td style="text-align:center">Yes</td>
-<td style="text-align:center">Yes</td>
+<td style="text-align:center">예</td>
+<td style="text-align:center">예</td>
 <td><code>1</code></td>
 </tr>
 <tr>
@@ -1019,131 +1021,132 @@
 <tr>
 <td><a href="#styling"><code>pointStyle</code></a></td>
 <td><code>string</code></td>
-<td style="text-align:center">Yes</td>
-<td style="text-align:center">Yes</td>
+<td style="text-align:center">예</td>
+<td style="text-align:center">예</td>
 <td><code>&apos;circle&apos;</code></td>
 </tr>
 <tr>
 <td><a href="#styling"><code>rotation</code></a></td>
 <td><code>number</code></td>
-<td style="text-align:center">Yes</td>
-<td style="text-align:center">Yes</td>
+<td style="text-align:center">예</td>
+<td style="text-align:center">예</td>
 <td><code>0</code></td>
 </tr>
 <tr>
 <td><a href="#styling"><code>radius</code></a></td>
 <td><code>number</code></td>
-<td style="text-align:center">Yes</td>
-<td style="text-align:center">Yes</td>
+<td style="text-align:center">예</td>
+<td style="text-align:center">예</td>
 <td><code>3</code></td>
 </tr>
 </tbody>
 </table>
-<h3 id="general">General</h3>
+<h3 id="general">일반적인 속성</h3>
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Description</th>
+<th>이름</th>
+<th>설명</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>label</code></td>
-<td>The label for the dataset which appears in the legend and tooltips.</td>
+<td>범례와 툴팁에 표시되는 데이터집합에 대한 라벨..</td>
 </tr>
 <tr>
 <td><code>order</code></td>
-<td>The drawing order of dataset.</td>
+<td>데이터 집합의 그려지는 순서.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="styling">Styling</h3>
-<p>The style of each bubble can be controlled with the following properties:</p>
+<h3 id="styling">스타일링</h3>
+<p>각 버블의 스타일은 다음의 속성들로 제어할 수 있습니다:</p>
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Description</th>
+<th>이름</th>
+<th>설명</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>backgroundColor</code></td>
-<td>bubble background color.</td>
+<td>버블의 배경색.</td>
 </tr>
 <tr>
 <td><code>borderColor</code></td>
-<td>bubble border color.</td>
+<td>버블의 테두리 색상.</td>
 </tr>
 <tr>
 <td><code>borderWidth</code></td>
-<td>bubble border width (in pixels).</td>
+<td>버블의 테두리 두께 (픽셀단위).</td>
 </tr>
 <tr>
 <td><code>pointStyle</code></td>
-<td>bubble <a href="../configuration/elements#point-styles">shape style</a>.</td>
+<td>버블의 <a href="../configuration/elements#point-styles">모양 스타일</a>.</td>
 </tr>
 <tr>
 <td><code>rotation</code></td>
-<td>bubble rotation (in degrees).</td>
+<td>버블의 회전정도 (도).</td>
 </tr>
 <tr>
 <td><code>radius</code></td>
-<td>bubble radius (in pixels).</td>
+<td>버블의 반지름 (픽셀단위).</td>
 </tr>
 </tbody>
 </table>
-<p>All these values, if <code>undefined</code>, fallback to the associated <a href="../configuration/elements.html#point-configuration"><code>elements.point.*</code></a> options.</p>
-<h3 id="interactions">Interactions</h3>
-<p>The interaction with each bubble can be controlled with the following properties:</p>
+<p>만약 이 모든 값들이 <code>undefined</code>이면, 관련 <a href="../configuration/elements.html#point-configuration"><code>elements.point.*</code></a> 옵션으로 대체됩니다.</p>
+<h3 id="interactions">상호작용</h3>
+<p>각 버블의 상호작용은 다음 속성들로 제어 할 수 있습니다:</p>
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Description</th>
+<th>이름</th>
+<th>설명</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>hoverBackgroundColor</code></td>
-<td>bubble background color when hovered.</td>
+<td>호버했을 때 버블의 배경색.</td>
 </tr>
 <tr>
 <td><code>hoverBorderColor</code></td>
-<td>bubble border color when hovered.</td>
+<td>호버했을 때 버블의 테두리 색상.</td>
 </tr>
 <tr>
 <td><code>hoverBorderWidth</code></td>
-<td>bubble border width when hovered (in pixels).</td>
+<td>호버했을 때 버블의 테두리 두께 (픽셀단위).</td>
 </tr>
 <tr>
 <td><code>hoverRadius</code></td>
-<td>bubble <strong>additional</strong> radius when hovered (in pixels).</td>
+<td>호버했을 때 버블의 <strong>추가</strong> 반지름 (픽셀단위).</td>
 </tr>
 <tr>
 <td><code>hitRadius</code></td>
-<td>bubble <strong>additional</strong> radius for hit detection (in pixels).</td>
+<td>클릭 감지에 대한 버블의 <strong>추가</strong> 반지름 (픽셀단위).</td>
 </tr>
 </tbody>
 </table>
-<p>All these values, if <code>undefined</code>, fallback to the associated <a href="../configuration/elements.html#point-configuration"><code>elements.point.*</code></a> options.</p>
-<h2 id="default-options">Default Options</h2>
-<p>We can also change the default values for the Bubble chart type. Doing so will give all bubble charts created after this point the new defaults. The default configuration for the bubble chart can be accessed at <code>Chart.defaults.bubble</code>.</p>
-<h2 id="data-structure">Data Structure</h2>
-<p>Bubble chart datasets need to contain a <code>data</code> array of points, each points represented by an object containing the following properties:</p>
+<p>만약 이 모든 값들이 <code>undefined</code>이면, 관련 <a href="../configuration/elements.html#point-configuration"><code>elements.point.*</code></a> 옵션으로 대체됩니다.</p>
+<h2 id="default-options">기본 옵션</h2>
+<p>버블 차트 유형의 기본 값을 변경할 수도 있습니다. 이렇게하면 이 시점 이후에 생성된 모든 버블 차트들에 새로운 기본 값이 적용됩니다.
+    버블 차트의 기본 구성은 <code>Chart.defaults.bubble</code>에서 접근할 수 있습니다.</p>
+<h2 id="data-structure">데이터 구조</h2>
+<p>버블 차트 데이터집합에는 다음 속성을 포함하는 객체로 표현되는 각 포인트의 데이터 <code>data</code> 배열이 포함되어야 합니다:</p>
 <pre><code class="lang-javascript">{
-    <span class="hljs-comment">// X Value</span>
+    <span class="hljs-comment">// X 값</span>
     x: number,
 
-    <span class="hljs-comment">// Y Value</span>
+    <span class="hljs-comment">// Y 값</span>
     y: number,
 
-    <span class="hljs-comment">// Bubble radius in pixels (not scaled).</span>
+    <span class="hljs-comment">// 픽셀 단위의 버블 반경 (크기 조정 안됨).</span>
     r: number
 }
 </code></pre>
-<p><strong>Important:</strong> the radius property, <code>r</code> is <strong>not</strong> scaled by the chart, it is the raw radius in pixels of the bubble that is drawn on the canvas.</p>
+<p><strong>중요:</strong> 반지름 속성 <code>r</code> 은 차트에 의해 크기가 <strong>조정되지 않으며</strong>, 캔버스에 그려지는 버블의 픽셀 단위의 원시 반지름입니다.</p>
 
                                 
                                 </section>

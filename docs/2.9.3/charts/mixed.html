@@ -902,7 +902,7 @@
                     <!-- Title -->
                     <h1>
                         <i class="fa fa-circle-o-notch fa-spin"></i>
-                        <a href="..">Mixed</a>
+                        <a href="..">혼합형</a>
                     </h1>
                 </div>
 
@@ -917,30 +917,28 @@
 
                                 <section class="normal markdown-section">
 
-                                    <h1 id="mixed-chart-types">Mixed Chart Types</h1>
-                                    <p>With Chart.js, it is possible to create mixed charts that are a combination of
-                                        two or more different chart types. A common example is a bar chart that also
-                                        includes a line dataset.</p>
-                                    <p>Creating a mixed chart starts with the initialization of a basic chart.</p>
+                                    <h1 id="mixed-chart-types">혼합 차트 유형</h1>
+                                    <p>Chart.js를 사용하면, 둘 이상의 다른 차트 유형이 조합된 혼합 차트를 만들 수 있습니다.
+                                        흔한 예시로 막대 차트에 선형 데이터집합을 포함할 수 있습니다.</p>
+                                    <p>혼합 차트 만들기는 기본 차트의 초기화로 시작됩니다.</p>
                                     <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> myChart = <span class="hljs-keyword">new</span> Chart(ctx, {
     type: <span class="hljs-string">&apos;bar&apos;</span>,
     data: data,
     options: options
 });
 </code></pre>
-                                    <p>At this point we have a standard bar chart. Now we need to convert one of the
-                                        datasets to a line dataset.</p>
+                                    <p>이 지점에서 표준 막대 차트를 가집니다. 이제 데이터집합 중 하나를 선형 데이터집합으로 변환해야 합니다.</p>
                                     <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> mixedChart = <span class="hljs-keyword">new</span> Chart(ctx, {
     type: <span class="hljs-string">&apos;bar&apos;</span>,
     data: {
         datasets: [{
-            label: <span class="hljs-string">&apos;Bar Dataset&apos;</span>,
+            label: <span class="hljs-string">&apos;막대형 데이터집합&apos;</span>,
             data: [<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>, <span class="hljs-number">40</span>]
         }, {
-            label: <span class="hljs-string">&apos;Line Dataset&apos;</span>,
+            label: <span class="hljs-string">&apos;선형 데이터집합&apos;</span>,
             data: [<span class="hljs-number">50</span>, <span class="hljs-number">50</span>, <span class="hljs-number">50</span>, <span class="hljs-number">50</span>],
 
-            <span class="hljs-comment">// Changes this dataset to become a line</span>
+            <span class="hljs-comment">// 이 데이터집합이 선형으로 변경됩니다</span>
             type: <span class="hljs-string">&apos;line&apos;</span>
         }],
         labels: [<span class="hljs-string">&apos;January&apos;</span>, <span class="hljs-string">&apos;February&apos;</span>, <span class="hljs-string">&apos;March&apos;</span>, <span class="hljs-string">&apos;April&apos;</span>]
@@ -948,11 +946,10 @@
     options: options
 });
 </code></pre>
-                                    <p>At this point we have a chart rendering how we&apos;d like. It&apos;s important
-                                        to note that the default options for a line chart are not merged in this case.
-                                        Only the options for the default type are merged in. In this case, that means
-                                        that the default options for a bar chart are merged because that is the type
-                                        specified by the <code>type</code> field.</p>
+                                    <p>이 시점에서 우리가 원하는 방식으로 그려지는 차트를 가집니다.
+                                        이 경우 선형 차트의 기본 옵션이 합쳐지지 않는다는 점에 유의해야 합니다.
+                                        기본 유형에 대한 옵션만 합쳐집니다.
+                                        이 경우, 막대형 차트의 기본 옵션이 <code>type</code> 필드에 지정된 유형이기 때문에 합쳐진 것입니다.</p>
                                     <p>
                                         <div class="chartjs-wrapper"><canvas id="chartjs-7" class="chartjs"
                                                 width="undefined" height="undefined"></canvas>
@@ -987,23 +984,22 @@
                                             </script>
                                         </div>
                                     </p>
-                                    <h2 id="drawing-order">Drawing order</h2>
-                                    <p> By default, datasets are drawn so that first one is top-most. This can be
-                                        altered by specifying <code>order</code> option to datasets. <code>order</code>
-                                        defaults to <code>0</code>.</p>
+                                    <h2 id="drawing-order">그려지는 순서</h2>
+                                    <p> 기본적으로, 데이터집합은 첫번째 항목이 맨 위에 있도록 그려집니다.
+                                        이는 데이터집합 옵션의 <code>order</code> 옵션을 지정하면 변경할 수 있습니다. <code>order</code>의 기본 값은 <code>0</code>입니다.</p>
                                     <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> mixedChart = <span class="hljs-keyword">new</span> Chart(ctx, {
     type: <span class="hljs-string">&apos;bar&apos;</span>,
     data: {
         datasets: [{
-            label: <span class="hljs-string">&apos;Bar Dataset&apos;</span>,
+            label: <span class="hljs-string">&apos;막대형 데이터집합&apos;</span>,
             data: [<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>, <span class="hljs-number">40</span>],
-            <span class="hljs-comment">// this dataset is drawn below</span>
+            <span class="hljs-comment">// 이 데이터집합은 아래에 그려집니다</span>
             order: <span class="hljs-number">1</span>
         }, {
-            label: <span class="hljs-string">&apos;Line Dataset&apos;</span>,
+            label: <span class="hljs-string">&apos;선형 데이터집합&apos;</span>,
             data: [<span class="hljs-number">10</span>, <span class="hljs-number">10</span>, <span class="hljs-number">10</span>, <span class="hljs-number">10</span>],
             type: <span class="hljs-string">&apos;line&apos;</span>,
-            <span class="hljs-comment">// this dataset is drawn on top</span>
+            <span class="hljs-comment">// 이 데이터집합은 위에 그려집니다</span>
             order: <span class="hljs-number">2</span>
         }],
         labels: [<span class="hljs-string">&apos;January&apos;</span>, <span class="hljs-string">&apos;February&apos;</span>, <span class="hljs-string">&apos;March&apos;</span>, <span class="hljs-string">&apos;April&apos;</span>]
