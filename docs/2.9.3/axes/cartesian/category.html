@@ -518,7 +518,7 @@
             <!-- Title -->
             <h1>
               <i class="fa fa-circle-o-notch fa-spin"></i>
-              <a href="../..">Category</a>
+              <a href="../..">범주</a>
             </h1>
           </div>
 
@@ -527,33 +527,28 @@
               <div class="search-plus" id="book-search-results">
                 <div class="search-noresults">
                   <section class="normal markdown-section">
-                    <h1 id="category-cartesian-axis">
-                      Category Cartesian Axis
-                    </h1>
+                    <h1 id="category-cartesian-axis">범주 직교 축</h1>
                     <p>
-                      If global configuration is used, labels are drawn from one
-                      of the label arrays included in the chart data. If only
-                      <code>data.labels</code> is defined, this will be used. If
-                      <code>data.xLabels</code> is defined and the axis is
-                      horizontal, this will be used. Similarly, if
-                      <code>data.yLabels</code> is defined and the axis is
-                      vertical, this property will be used. Using both
-                      <code>xLabels</code> and <code>yLabels</code> together can
-                      create a chart that uses strings for both the X and Y
-                      axes.
+                      만약 전역 설정을 사용한다면, 라벨은 차트 데이터에 포함된
+                      라벨 배열 중 하나로 그려집니다. 만약
+                      <code>data.labels</code> 만 정의되어 있다면, 이것이
+                      사용됩니다. 만약 <code>data.xLabels</code> 정의되어 있고
+                      가로축이라면 이것이 사용됩니다. 비슷하게
+                      <code>data.yLabels</code> 정의되어 있고 세로축이라면 이
+                      속성이 사용됩니다. <code>xLabels</code> 와
+                      <code>yLabels</code> 두개를 함께 사용하면 X 와 Y 모두에
+                      문자열을 사용한 차트를 생성할 수 있습니다.
                     </p>
                     <p>
-                      Specifying any of the settings above defines the x axis as
-                      <code>type: &apos;category&apos;</code> if not defined
-                      otherwise. For more fine-grained control of category
-                      labels it is also possible to add <code>labels</code> as
-                      part of the category axis definition. Doing so does not
-                      apply the global defaults.
+                      위의 설정 중 하나를 지정하면 x 축이 유형으로 정의되며 달리
+                      정의되지 않은 경우
+                      <code>type: &apos;category&apos;</code> 로 정의됩니다.
+                      범주 라벨 보다 더 세밀하게 제어하기 위해 범주 축 정의의
+                      일부로 <code>labels</code> 을 추가할 수도 있습니다. 이렇게
+                      하면 전역 기본 값이 적용되지 않습니다.
                     </p>
-                    <h2 id="category-axis-definition">
-                      Category Axis Definition
-                    </h2>
-                    <p>Globally:</p>
+                    <h2 id="category-axis-definition">범주 축 정의</h2>
+                    <p>전역으로:</p>
                     <pre><code class="lang-javascript"><span class="hljs-keyword">let</span> chart = <span class="hljs-keyword">new</span> Chart(ctx, {
     type: ...
     data: {
@@ -562,7 +557,7 @@
     }
 });
 </code></pre>
-                    <p>As part of axis definition:</p>
+                    <p>축 정의의 일부로:</p>
                     <pre><code class="lang-javascript"><span class="hljs-keyword">let</span> chart = <span class="hljs-keyword">new</span> Chart(ctx, {
     type: ...
     data: ...
@@ -576,24 +571,21 @@
     }
 });
 </code></pre>
-                    <h2 id="tick-configuration-options">
-                      Tick Configuration Options
-                    </h2>
+                    <h2 id="tick-configuration-options">눈금 설정 옵션</h2>
                     <p>
-                      The category scale provides the following options for
-                      configuring tick marks. They are nested in the
-                      <code>ticks</code> sub object. These options extend the
-                      <a href="./#tick-configuration"
-                        >common tick configuration</a
-                      >.
+                      범주 스케일은 눈금 마크를 설정하기 위해 다음의 옵션들을
+                      제공합니다. 내부적으로
+                      <code>ticks</code> 서브 객체 안에 있습니다. 이 옵션은
+                      <a href="./#tick-configuration">공통 눈금 설정</a>을
+                      확장합니다.
                     </p>
                     <table>
                       <thead>
                         <tr>
-                          <th>Name</th>
-                          <th>Type</th>
-                          <th>Default</th>
-                          <th>Description</th>
+                          <th>이름</th>
+                          <th>유형</th>
+                          <th>기본 값</th>
+                          <th>설명</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -601,15 +593,15 @@
                           <td><code>labels</code></td>
                           <td><code>string[]</code></td>
                           <td>-</td>
-                          <td>An array of labels to display.</td>
+                          <td>표시할 라벨 배열.</td>
                         </tr>
                         <tr>
                           <td><code>min</code></td>
                           <td><code>string</code></td>
                           <td></td>
                           <td>
-                            The minimum item to display.
-                            <a href="#min-max-configuration">more...</a>
+                            표시할 최소 항목.
+                            <a href="#min-max-configuration">더보기...</a>
                           </td>
                         </tr>
                         <tr>
@@ -617,19 +609,18 @@
                           <td><code>string</code></td>
                           <td></td>
                           <td>
-                            The maximum item to display.
-                            <a href="#min-max-configuration">more...</a>
+                            표시할 최대 항목.
+                            <a href="#min-max-configuration">더보기...</a>
                           </td>
                         </tr>
                       </tbody>
                     </table>
-                    <h2 id="min-max-configuration">Min Max Configuration</h2>
+                    <h2 id="min-max-configuration">최소 최대 설정</h2>
                     <p>
-                      For both the <code>min</code> and
-                      <code>max</code> properties, the value must be in the
-                      <code>labels</code> array. In the example below, the x
-                      axis would only display &quot;March&quot; through
-                      &quot;June&quot;.
+                      <code>min</code> 과 <code>max</code> 속성의 경우 값은
+                      <code>labels</code> 배열에 있어야만 합니다. 아래 예시에서,
+                      x 축은 &quot;3월&quot; 부터 &quot;6월&quot;까지만
+                      표시됩니다.
                     </p>
                     <pre><code class="lang-javascript"><span class="hljs-keyword">let</span> chart = <span class="hljs-keyword">new</span> Chart(ctx, {
     type: <span class="hljs-string">&apos;line&apos;</span>,

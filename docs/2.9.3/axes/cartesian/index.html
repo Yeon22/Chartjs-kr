@@ -518,7 +518,7 @@
             <!-- Title -->
             <h1>
               <i class="fa fa-circle-o-notch fa-spin"></i>
-              <a href="../..">Cartesian</a>
+              <a href="../..">직교</a>
             </h1>
           </div>
 
@@ -527,41 +527,38 @@
               <div class="search-plus" id="book-search-results">
                 <div class="search-noresults">
                   <section class="normal markdown-section">
-                    <h1 id="cartesian-axes">Cartesian Axes</h1>
+                    <h1 id="cartesian-axes">직교 축</h1>
                     <p>
-                      Axes that follow a cartesian grid are known as
-                      &apos;Cartesian Axes&apos;. Cartesian axes are used for
-                      line, bar, and bubble charts. Four cartesian axes are
-                      included in Chart.js by default.
+                      데카르트 그리드를 따르는 축을 &apos;Cartesian
+                      Axes&apos;라고 합니다. 직교 축은 선, 막대와 버블 차트에서
+                      사용됩니다. 기본적으로 4개의 직교축이 Chart.js에에
+                      포함되어 있습니다.
                     </p>
                     <ul>
                       <li>
-                        <a href="linear.html#linear-cartesian-axis">linear</a>
+                        <a href="linear.html#linear-cartesian-axis">선형</a>
                       </li>
                       <li>
                         <a href="logarithmic.html#logarithmic-cartesian-axis"
-                          >logarithmic</a
+                          >대수</a
                         >
                       </li>
                       <li>
-                        <a href="category.html#category-cartesian-axis"
-                          >category</a
-                        >
+                        <a href="category.html#category-cartesian-axis">범주</a>
                       </li>
-                      <li><a href="time.html#time-cartesian-axis">time</a></li>
+                      <li><a href="time.html#time-cartesian-axis">시간</a></li>
                     </ul>
-                    <h2 id="common-configuration">Common Configuration</h2>
+                    <h2 id="common-configuration">공통 설정</h2>
                     <p>
-                      All of the included cartesian axes support a number of
-                      common options.
+                      포함된 모든 직교 축은 여러가지 공통 옵션을 지원합니다.
                     </p>
                     <table>
                       <thead>
                         <tr>
-                          <th>Name</th>
-                          <th>Type</th>
-                          <th>Default</th>
-                          <th>Description</th>
+                          <th>이름</th>
+                          <th>유형</th>
+                          <th>기본 값</th>
+                          <th>설명</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -570,9 +567,9 @@
                           <td><code>string</code></td>
                           <td></td>
                           <td>
-                            Type of scale being employed. Custom scales can be
-                            created and registered with a string key. This
-                            allows changing the type of an axis for a chart.
+                            사용되는 스케일의 유형. 사용자 지정 스케일은 문자열
+                            키로 생성되거나 등록할 수 있습니다. 이것은 차트 축의
+                            유형을 변경합니다.
                           </td>
                         </tr>
                         <tr>
@@ -580,8 +577,8 @@
                           <td><code>string</code></td>
                           <td></td>
                           <td>
-                            Position of the axis in the chart. Possible values
-                            are: <code>&apos;top&apos;</code>,
+                            차트에서 축의 위치를 지정합니다. 가능한 값들은
+                            이렇습니다: <code>&apos;top&apos;</code>,
                             <code>&apos;left&apos;</code>,
                             <code>&apos;bottom&apos;</code>,
                             <code>&apos;right&apos;</code>
@@ -592,10 +589,9 @@
                           <td><code>boolean</code></td>
                           <td><code>false</code></td>
                           <td>
-                            If true, extra space is added to the both edges and
-                            the axis is scaled to fit into the chart area. This
-                            is set to <code>true</code> for a bar chart by
-                            default.
+                            true이면, 양쪽 가장자리에 추가 공간이 추가되고 축이
+                            차트 영역에 맞게 조정됩니다. 기본적으로 막대
+                            차트에는 <code>true</code>로 설정됩니다.
                           </td>
                         </tr>
                         <tr>
@@ -603,8 +599,8 @@
                           <td><code>string</code></td>
                           <td></td>
                           <td>
-                            The ID is used to link datasets and scale axes
-                            together. <a href="#axis-id">more...</a>
+                            ID는 데이터집합과 스케일 축을 함께 연결하는데
+                            사용됩니다. <a href="#axis-id">더보기...</a>
                           </td>
                         </tr>
                         <tr>
@@ -612,9 +608,9 @@
                           <td><code>object</code></td>
                           <td></td>
                           <td>
-                            Grid line configuration.
+                            그리드 선 설정.
                             <a href="../styling.html#grid-line-configuration"
-                              >more...</a
+                              >더보기...</a
                             >
                           </td>
                         </tr>
@@ -623,10 +619,10 @@
                           <td><code>object</code></td>
                           <td></td>
                           <td>
-                            Scale title configuration.
+                            스케일 타이틀 설정.
                             <a
                               href="../labelling.html#scale-title-configuration"
-                              >more...</a
+                              >더보기...</a
                             >
                           </td>
                         </tr>
@@ -635,24 +631,24 @@
                           <td><code>object</code></td>
                           <td></td>
                           <td>
-                            Tick configuration.
-                            <a href="#tick-configuration">more...</a>
+                            틱 설정.
+                            <a href="#tick-configuration">더보기...</a>
                           </td>
                         </tr>
                       </tbody>
                     </table>
-                    <h3 id="tick-configuration">Tick Configuration</h3>
+                    <h3 id="tick-configuration">틱 설정</h3>
                     <p>
-                      The following options are common to all cartesian axes but
-                      do not apply to other axes.
+                      다음의 옵션들은 모든 직교 축에 공통이지만 다른 축에는
+                      적용되지 않습니다.
                     </p>
                     <table>
                       <thead>
                         <tr>
-                          <th>Name</th>
-                          <th>Type</th>
-                          <th>Default</th>
-                          <th>Description</th>
+                          <th>이름</th>
+                          <th>유형</th>
+                          <th>기본 값</th>
+                          <th>설명</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -661,8 +657,8 @@
                           <td><code>number</code></td>
                           <td></td>
                           <td>
-                            User defined minimum value for the scale, overrides
-                            minimum value from data.
+                            스케일에 대한 사용자 정의 최소 값은 데이터의 최소
+                            값을 재정의합니다.
                           </td>
                         </tr>
                         <tr>
@@ -670,8 +666,8 @@
                           <td><code>number</code></td>
                           <td></td>
                           <td>
-                            User defined maximum value for the scale, overrides
-                            maximum value from data.
+                            스케일에 대한 사용자 정의 최대 값은 데이터의 최대
+                            값을 재정의합니다.
                           </td>
                         </tr>
                         <tr>
@@ -679,10 +675,9 @@
                           <td><code>number</code></td>
                           <td><code>ticks.length</code></td>
                           <td>
-                            The number of ticks to examine when deciding how
-                            many labels will fit. Setting a smaller value will
-                            be faster, but may be less accurate when there is
-                            large variability in label length.
+                            맞는 라벨 수를 경정할 때 검사할 틱(눈금) 수. 더 작은
+                            값을 설정하면 빠르지만 라벨 길이에 큰 변동이 있는
+                            경우 정확도가 떨어질 수 있습니다.
                           </td>
                         </tr>
                         <tr>
@@ -690,12 +685,11 @@
                           <td><code>boolean</code></td>
                           <td><code>true</code></td>
                           <td>
-                            If true, automatically calculates how many labels
-                            can be shown and hides labels accordingly. Labels
-                            will be rotated up to
-                            <code>maxRotation</code> before skipping any. Turn
-                            <code>autoSkip</code> off to show all labels no
-                            matter what.
+                            true이면, 표시할 수 있는 라벨 수를 자동으로 계산하고
+                            그에 따라 라벨을 숨깁니다. 라벨은 건너뛰기 전에
+                            <code>maxRotation</code>까지 회전합니다.
+                            <code>autoSkip</code>을 끄면 어떤 경우에도 모든
+                            라벨이 표시됩니다.
                           </td>
                         </tr>
                         <tr>
@@ -703,8 +697,8 @@
                           <td><code>number</code></td>
                           <td><code>0</code></td>
                           <td>
-                            Padding between the ticks on the horizontal axis
-                            when <code>autoSkip</code> is enabled.
+                            <code>autoSkip</code>이 활성화 되었을 때 수평 축의
+                            눈금 사이의 패딩.
                           </td>
                         </tr>
                         <tr>
@@ -712,12 +706,11 @@
                           <td><code>number</code></td>
                           <td><code>0</code></td>
                           <td>
-                            Distance in pixels to offset the label from the
-                            centre point of the tick (in the x direction for the
-                            x axis, and the y direction for the y axis).
+                            눈금의 중심점에서 라벨을 픽셀단위로 오프셋할 거리 (x
+                            축의 경우 x 방향, y 축의 경우 y 방향).
                             <em
-                              >Note: this can cause labels at the edges to be
-                              cropped by the edge of the canvas</em
+                              >주의: 이로 인해 가장자리 라벨이 캔버스 가장자리에
+                              의해 잘릴 수 있습니다</em
                             >
                           </td>
                         </tr>
@@ -726,10 +719,9 @@
                           <td><code>number</code></td>
                           <td><code>50</code></td>
                           <td>
-                            Maximum rotation for tick labels when rotating to
-                            condense labels. Note: Rotation doesn&apos;t occur
-                            until necessary.
-                            <em>Note: Only applicable to horizontal scales.</em>
+                            라벨을 압축하기 위해 회전할 때 눈금 라벨의 최저
+                            회전. 주의: 필요할 때까지 회전이 발생하지 않습니다.
+                            <em>주의: 수평 스케일에서만 적용됩니다.</em>
                           </td>
                         </tr>
                         <tr>
@@ -737,8 +729,8 @@
                           <td><code>number</code></td>
                           <td><code>0</code></td>
                           <td>
-                            Minimum rotation for tick labels.
-                            <em>Note: Only applicable to horizontal scales.</em>
+                            눈금 라벨의 최소 회전.
+                            <em>주의: 수평 스케일에서만 적용됩니다.</em>
                           </td>
                         </tr>
                         <tr>
@@ -746,9 +738,9 @@
                           <td><code>boolean</code></td>
                           <td><code>false</code></td>
                           <td>
-                            Flips tick labels around axis, displaying the labels
-                            inside the chart instead of outside.
-                            <em>Note: Only applicable to vertical scales.</em>
+                            축을 중심으로 눈금 라벨을 뒤집어 차트 외부가 아닌
+                            내부에 레이블을 표시합니다.
+                            <em>주의: 수직 스케일에서만 적용됩니다.</em>
                           </td>
                         </tr>
                         <tr>
@@ -756,30 +748,29 @@
                           <td><code>number</code></td>
                           <td><code>0</code></td>
                           <td>
-                            Padding between the tick label and the axis. When
-                            set on a vertical axis, this applies in the
-                            horizontal (X) direction. When set on a horizontal
-                            axis, this applies in the vertical (Y) direction.
+                            눈금 라벨과 축 사이의 패딩. 세로 축에 설정하면 가로
+                            (X) 방향으로 적용됩니다. 가로 축에 설정하면 세로 (Y)
+                            방향으로 적용됩니다.
                           </td>
                         </tr>
                       </tbody>
                     </table>
-                    <h3 id="axis-id">Axis ID</h3>
+                    <h3 id="axis-id">축 ID</h3>
                     <p>
-                      The properties <code>dataset.xAxisID</code> or
-                      <code>dataset.yAxisID</code> have to match the scale
-                      properties <code>scales.xAxes.id</code> or
-                      <code>scales.yAxes.id</code>. This is especially needed if
-                      multi-axes charts are used.
+                      <code>dataset.xAxisID</code> 또는
+                      <code>dataset.yAxisID</code> 속성은
+                      <code>scales.xAxes.id</code> 또는
+                      <code>scales.yAxes.id</code> 속성과 일치해야 합니다. 특히
+                      여러 축의 차트를 사용할 때 필요합니다.
                     </p>
                     <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> myChart = <span class="hljs-keyword">new</span> Chart(ctx, {
     type: <span class="hljs-string">&apos;line&apos;</span>,
     data: {
         datasets: [{
-            <span class="hljs-comment">// This dataset appears on the first axis</span>
+            <span class="hljs-comment">// 이 데이터집합은 첫번째 축에 나타납니다</span>
             yAxisID: <span class="hljs-string">&apos;first-y-axis&apos;</span>
         }, {
-            <span class="hljs-comment">// This dataset appears on the second axis</span>
+            <span class="hljs-comment">// 이 데이터집합은 두번째 축에 나타납니다</span>
             yAxisID: <span class="hljs-string">&apos;second-y-axis&apos;</span>
         }]
     },
@@ -796,20 +787,19 @@
     }
 });
 </code></pre>
-                    <h2 id="creating-multiple-axes">Creating Multiple Axes</h2>
+                    <h2 id="creating-multiple-axes">여러 축 만들기</h2>
                     <p>
-                      With cartesian axes, it is possible to create multiple X
-                      and Y axes. To do so, you can add multiple configuration
-                      objects to the <code>xAxes</code> and
-                      <code>yAxes</code> properties. When adding new axes, it is
-                      important to ensure that you specify the type of the new
-                      axes as default types are <strong>not</strong> used in
-                      this case.
+                      직교축에서는 여러 X 와 Y 축을 만드는 것이 가능합니다.
+                      그렇게 하기 위해 여러 <code>xAxes</code> 와
+                      <code>yAxes</code> 속성 설정 객체를 추가할 수 있습니다.
+                      새로운 축이 추가될 때 기본 유형이 사용되지
+                      <strong>않으므로</strong> 새 축의 유형을 지정하는 것이
+                      중요합니다.
                     </p>
                     <p>
-                      In the example below, we are creating two Y axes. We then
-                      use the <code>yAxisID</code> property to map the datasets
-                      to their correct axes.
+                      아래의 예제에서 2개의 Y 축을 생성합니다. 그리고
+                      <code>yAxisID</code> 속성을 사용하여 데이터집합을 올바른
+                      축에 매핑합니다.
                     </p>
                     <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> myChart = <span class="hljs-keyword">new</span> Chart(ctx, {
     type: <span class="hljs-string">&apos;line&apos;</span>,
@@ -818,13 +808,13 @@
             data: [<span class="hljs-number">20</span>, <span class="hljs-number">50</span>, <span class="hljs-number">100</span>, <span class="hljs-number">75</span>, <span class="hljs-number">25</span>, <span class="hljs-number">0</span>],
             label: <span class="hljs-string">&apos;Left dataset&apos;</span>,
 
-            <span class="hljs-comment">// This binds the dataset to the left y axis</span>
+            <span class="hljs-comment">// 이렇게 하면 데이터집합이 왼쪽 y 축에 바인딩됩니다</span>
             yAxisID: <span class="hljs-string">&apos;left-y-axis&apos;</span>
         }, {
             data: [<span class="hljs-number">0.1</span>, <span class="hljs-number">0.5</span>, <span class="hljs-number">1.0</span>, <span class="hljs-number">2.0</span>, <span class="hljs-number">1.5</span>, <span class="hljs-number">0</span>],
             label: <span class="hljs-string">&apos;Right dataset&apos;</span>,
 
-            <span class="hljs-comment">// This binds the dataset to the right y axis</span>
+            <span class="hljs-comment">// 이렇게 하면 데이터집합이 오른쪽 y 축에 바인딩됩니다</span>
             yAxisID: <span class="hljs-string">&apos;right-y-axis&apos;</span>
         }],
         labels: [<span class="hljs-string">&apos;Jan&apos;</span>, <span class="hljs-string">&apos;Feb&apos;</span>, <span class="hljs-string">&apos;Mar&apos;</span>, <span class="hljs-string">&apos;Apr&apos;</span>, <span class="hljs-string">&apos;May&apos;</span>, <span class="hljs-string">&apos;Jun&apos;</span>]

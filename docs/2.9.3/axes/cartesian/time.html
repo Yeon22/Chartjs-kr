@@ -517,7 +517,7 @@
             <!-- Title -->
             <h1>
               <i class="fa fa-circle-o-notch fa-spin"></i>
-              <a href="../..">Time</a>
+              <a href="../..">시간</a>
             </h1>
           </div>
 
@@ -526,34 +526,32 @@
               <div class="search-plus" id="book-search-results">
                 <div class="search-noresults">
                   <section class="normal markdown-section">
-                    <h1 id="time-cartesian-axis">Time Cartesian Axis</h1>
+                    <h1 id="time-cartesian-axis">시간 직교 축</h1>
                     <p>
-                      The time scale is used to display times and dates. When
-                      building its ticks, it will automatically calculate the
-                      most comfortable unit base on the size of the scale.
+                      시간 스케일은 시간과 날짜를 표시하는데 사용됩니다. 눈금을
+                      만들 대, 스케일의 크기에 따라 가장 편안한 단위를 기반으로
+                      자동으로 계산합니다.
                     </p>
-                    <h2 id="date-adapters">Date Adapters</h2>
+                    <h2 id="date-adapters">날짜 어댑터</h2>
                     <p>
-                      The time scale requires both a date library and
-                      corresponding adapter to be present. By default, Chart.js
-                      includes an adapter for Moment.js. You may wish to
+                      시간 스케일은 날짜 라이브러리와 해당 어댑터가 모두 있어야
+                      합니다. 기본적으로, Chart.js는 Moment.js 어댑터를
+                      포함합니다.
                       <a href="../../getting-started/integration.html"
-                        >exclude moment</a
-                      >
-                      and choose from
+                        >moment 제외</a
+                      >하고 대신
                       <a
                         href="https://github.com/chartjs/awesome#adapters"
                         target="_blank"
-                        >other available adapters</a
-                      >
-                      instead.
+                        >사용가능한 다른 어댑터</a
+                      >에서 선택할 수 있습니다.
                     </p>
-                    <h2 id="data-sets">Data Sets</h2>
-                    <h3 id="input-data">Input Data</h3>
+                    <h2 id="data-sets">날짜 설정</h2>
+                    <h3 id="input-data">데이터 입력</h3>
                     <p>
-                      The x-axis data points may additionally be specified via
-                      the <code>t</code> or <code>x</code> attribute when using
-                      the time scale.
+                      x 축 데이터 포인트는 시간 스케일을 사용할 때
+                      <code>t</code> 또는 <code>x</code> 속성을 통해 추가로
+                      지정할 수 있습니다.
                     </p>
                     <pre><code class="lang-javascript">data: [{
     x: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
@@ -563,32 +561,29 @@
     y: <span class="hljs-number">10</span>
 }]
 </code></pre>
-                    <h3 id="date-formats">Date Formats</h3>
+                    <h3 id="date-formats">날짜 형식</h3>
                     <p>
-                      When providing data for the time scale, Chart.js supports
-                      all of the formats that Moment.js accepts. See
+                      시간 스케일에 날짜를 제공할 때, Chart.js는 Moment.js가
+                      받아들이는 모든 유형을 지원합니다. 자세한 사항은
                       <a
                         href="https://momentjs.com/docs/#/parsing/"
                         target="_blank"
-                        >Moment.js docs</a
-                      >
-                      for details.
+                        >Moment.js 문서</a
+                      >를 참고하세요.
                     </p>
-                    <h2 id="configuration-options">Configuration Options</h2>
+                    <h2 id="configuration-options">설정 옵션</h2>
                     <p>
-                      The following options are provided by the time scale. You
-                      may also set options provided by the
-                      <a href="./#tick-configuration"
-                        >common tick configuration</a
-                      >.
+                      다음의 옵션은 시간 스케일에 의해 제공됩니다.
+                      <a href="./#tick-configuration">공통 눈금 설정</a>에서
+                      제공하는 옵션으로도 설정할 수 있습니다.
                     </p>
                     <table>
                       <thead>
                         <tr>
-                          <th>Name</th>
-                          <th>Type</th>
-                          <th>Default</th>
-                          <th>Description</th>
+                          <th>이름</th>
+                          <th>유형</th>
+                          <th>기본 값</th>
+                          <th>설명</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -597,8 +592,8 @@
                           <td><code>object</code></td>
                           <td><code>{}</code></td>
                           <td>
-                            Options for adapter for external date library if
-                            that adapter needs or supports options
+                            어댑터가 필요하거나 옵션을 지원하는 경우 외부 날짜
+                            라이브러리에 대한 어댑터 옵션
                           </td>
                         </tr>
                         <tr>
@@ -606,8 +601,8 @@
                           <td><code>string</code></td>
                           <td><code>&apos;linear&apos;</code></td>
                           <td>
-                            How data is plotted.
-                            <a href="#scale-distribution">more...</a>
+                            데이터를 그리는 방법.
+                            <a href="#scale-distribution">더보기...</a>
                           </td>
                         </tr>
                         <tr>
@@ -615,8 +610,8 @@
                           <td><code>string</code></td>
                           <td><code>&apos;data&apos;</code></td>
                           <td>
-                            Determines the scale bounds.
-                            <a href="#scale-bounds">more...</a>
+                            스케일 경계를 결정.
+                            <a href="#scale-bounds">더보기...</a>
                           </td>
                         </tr>
                         <tr>
@@ -624,8 +619,8 @@
                           <td><code>string</code></td>
                           <td><code>&apos;auto&apos;</code></td>
                           <td>
-                            How ticks are generated.
-                            <a href="#ticks-source">more...</a>
+                            눈금을 생성하는 방법.
+                            <a href="#ticks-source">더보기...</a>
                           </td>
                         </tr>
                         <tr>
@@ -633,8 +628,8 @@
                           <td><code>object</code></td>
                           <td></td>
                           <td>
-                            Sets how different time units are displayed.
-                            <a href="#display-formats">more...</a>
+                            다른 시간 단위가 표시되는 방식을 설정.
+                            <a href="#display-formats">더보기...</a>
                           </td>
                         </tr>
                         <tr>
@@ -642,9 +637,9 @@
                           <td><code>boolean</code></td>
                           <td><code>false</code></td>
                           <td>
-                            If true and the unit is set to &apos;week&apos;,
-                            then the first day of the week will be Monday.
-                            Otherwise, it will be Sunday.
+                            만약 true이고 단위가 &apos;week&apos;로 설정된 경우,
+                            주의 첫번째 요일은 월요일이 됩니다. 그렇지 않으면
+                            일요일이 됩니다.
                           </td>
                         </tr>
                         <tr>
@@ -652,8 +647,8 @@
                           <td><code>string|function</code></td>
                           <td></td>
                           <td>
-                            Custom parser for dates.
-                            <a href="#parser">more...</a>
+                            날짜를 위한 사용자 정의 파서.
+                            <a href="#parser">더보기...</a>
                           </td>
                         </tr>
                         <tr>
@@ -661,54 +656,48 @@
                           <td><code>string</code></td>
                           <td><code>false</code></td>
                           <td>
-                            If defined, dates will be rounded to the start of
-                            this unit. See
-                            <a href="#time-units">Time Units</a> below for the
-                            allowed units.
+                            만약 정의된다면 날짜는 이 단위의 시작부터
+                            반올림됩니다. 허용되는 단위는 아래의
+                            <a href="#time-units">시간 단위</a>를 참조하세요.
                           </td>
                         </tr>
                         <tr>
                           <td><code>time.tooltipFormat</code></td>
                           <td><code>string</code></td>
                           <td></td>
-                          <td>
-                            The Moment.js format string to use for the tooltip.
-                          </td>
+                          <td>툴팁에 사용될 Moment.js 유형 문자열.</td>
                         </tr>
                         <tr>
                           <td><code>time.unit</code></td>
                           <td><code>string</code></td>
                           <td><code>false</code></td>
                           <td>
-                            If defined, will force the unit to be a certain
-                            type. See
-                            <a href="#time-units">Time Units</a> section below
-                            for details.
+                            만약 정의된다면 단위가 특정 유형이 되도록 합니다.
+                            자세한 내용은 아래의
+                            <a href="#time-units">시간 단위</a> 부분을
+                            참조하세요.
                           </td>
                         </tr>
                         <tr>
                           <td><code>time.stepSize</code></td>
                           <td><code>number</code></td>
                           <td><code>1</code></td>
-                          <td>The number of units between grid lines.</td>
+                          <td>그리드 선 사이 단위의 숫자.</td>
                         </tr>
                         <tr>
                           <td><code>time.minUnit</code></td>
                           <td><code>string</code></td>
                           <td><code>&apos;millisecond&apos;</code></td>
-                          <td>
-                            The minimum display format to be used for a time
-                            unit.
-                          </td>
+                          <td>시간 단위에 사용할 최소 표시 형식.</td>
                         </tr>
                       </tbody>
                     </table>
-                    <h3 id="time-units">Time Units</h3>
+                    <h3 id="time-units">시간 단위</h3>
                     <p>
-                      The following time measurements are supported. The names
-                      can be passed as strings to the
-                      <code>time.unit</code> config option to force a certain
-                      unit.
+                      다음의 시간 측정이 지원됩니다. 이름은 특정 단위를 강제하기
+                      위해
+                      <code>time.unit</code> 설정 옵션에 문자열로 전달될 수
+                      있습니다.
                     </p>
                     <ul>
                       <li><code>&apos;millisecond&apos;</code></li>
@@ -722,9 +711,8 @@
                       <li><code>&apos;year&apos;</code></li>
                     </ul>
                     <p>
-                      For example, to create a chart with a time scale that
-                      always displayed units per month, the following config
-                      could be used.
+                      예를 들어, 항상 월 단위를 표시하는 시간 스케일이 있는
+                      차트를 생성하려면 다음 설정을 사용할 수 있습니다.
                     </p>
                     <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> chart = <span class="hljs-keyword">new</span> Chart(ctx, {
     type: <span class="hljs-string">&apos;line&apos;</span>,
@@ -741,24 +729,23 @@
     }
 });
 </code></pre>
-                    <h3 id="display-formats">Display Formats</h3>
+                    <h3 id="display-formats">표시 형식</h3>
                     <p>
-                      The following display formats are used to configure how
-                      different time units are formed into strings for the axis
-                      tick marks. See
+                      다음의 표시 형식은 서로 다른 시간 단위가 축 눈금 마크에
+                      대한 문자열로 형성되는 방식을 설정하는데 사용됩니다 허용된
+                      문자열 형식을 알고싶다면
                       <a
                         href="https://momentjs.com/docs/#/displaying/format/"
                         target="_blank"
                         >Moment.js</a
-                      >
-                      for the allowable format strings.
+                      >를 참고하세요.
                     </p>
                     <table>
                       <thead>
                         <tr>
-                          <th>Name</th>
-                          <th>Default</th>
-                          <th>Example</th>
+                          <th>이름</th>
+                          <th>기본 값</th>
+                          <th>예제</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -810,9 +797,9 @@
                       </tbody>
                     </table>
                     <p>
-                      For example, to set the display format for the
-                      <code>quarter</code> unit to show the month and year, the
-                      following config would be passed to the chart constructor.
+                      예를 들어, 월과 연도를 보여주기 위해
+                      <code>quarter</code> 단위의 표시 형식을 설정하려먼, 다음과
+                      같은 설정이 차트 생성자에 전달되어야 합니다.
                     </p>
                     <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> chart = <span class="hljs-keyword">new</span> Chart(ctx, {
     type: <span class="hljs-string">&apos;line&apos;</span>,
@@ -831,19 +818,19 @@
     }
 });
 </code></pre>
-                    <h3 id="scale-distribution">Scale Distribution</h3>
+                    <h3 id="scale-distribution">스케일 분포</h3>
                     <p>
-                      The <code>distribution</code> property controls the data
-                      distribution along the scale:
+                      <code>distribution</code> 속성은 스케일을 따라 데이터
+                      분포를 제어합니다:
                     </p>
                     <ul>
                       <li>
-                        <code>&apos;linear&apos;</code>: data are spread
-                        according to their time (distances can vary)
+                        <code>&apos;linear&apos;</code>: 시간에 따라 데이터가
+                        펼쳐집니다 (거리는 다를 수 있습니다)
                       </li>
                       <li>
-                        <code>&apos;series&apos;</code>: data are spread at the
-                        same distance from each other
+                        <code>&apos;series&apos;</code>: 데이터가 서로 같은
+                        거리에 분산됩니다
                       </li>
                     </ul>
                     <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> chart = <span class="hljs-keyword">new</span> Chart(ctx, {
@@ -859,54 +846,48 @@
     }
 });
 </code></pre>
-                    <h3 id="scale-bounds">Scale Bounds</h3>
+                    <h3 id="scale-bounds">스케일 경계</h3>
                     <p>
-                      The <code>bounds</code> property controls the scale
-                      boundary strategy (bypassed by <code>min</code>/<code
-                        >max</code
-                      >
-                      time options).
+                      <code>bounds</code> 속성은 스케일 경계 전략을 제어합니다
+                      (<code>min</code>/<code>max</code> 시간 옵션 무시).
                     </p>
                     <ul>
                       <li>
-                        <code>&apos;data&apos;</code>: makes sure data are fully
-                        visible, labels outside are removed
+                        <code>&apos;data&apos;</code>: 데이터가 완전히
+                        표시되는지 확인하고 외부 라벨은 제거합니다
                       </li>
                       <li>
-                        <code>&apos;ticks&apos;</code>: makes sure ticks are
-                        fully visible, data outside are truncated
+                        <code>&apos;ticks&apos;</code>: 눈금이 완전히 표시되는지
+                        확인하고 외부 데이터가 잘리도록 합니다
                       </li>
                     </ul>
-                    <h3 id="ticks-source">Ticks Source</h3>
+                    <h3 id="ticks-source">눈금 자원</h3>
                     <p>
-                      The <code>ticks.source</code> property controls the ticks
-                      generation.
+                      <code>ticks.source</code> 속성은 눈금의 생성을 제어합니다.
                     </p>
                     <ul>
                       <li>
-                        <code>&apos;auto&apos;</code>: generates
-                        &quot;optimal&quot; ticks based on scale size and time
-                        options
+                        <code>&apos;auto&apos;</code>: 스케일 크기와 시간 옵션을
+                        기반으로 &quot;최적&quot;의 눈금을 생성합니다
                       </li>
                       <li>
-                        <code>&apos;data&apos;</code>: generates ticks from data
-                        (including labels from data
-                        <code>{t|x|y}</code> objects)
+                        <code>&apos;data&apos;</code>: 데이터로부터 눈금을
+                        생성합니다 ( 데이터 <code>{t|x|y}</code> 객체의 레이블
+                        포함)
                       </li>
                       <li>
-                        <code>&apos;labels&apos;</code>: generates ticks from
-                        user given <code>labels</code> ONLY
+                        <code>&apos;labels&apos;</code>: 사용자가 준
+                        <code>labels</code>에먼 눈금을 생성합니다
                       </li>
                     </ul>
-                    <h3 id="parser">Parser</h3>
+                    <h3 id="parser">파서</h3>
                     <p>
-                      If this property is defined as a string, it is interpreted
-                      as a custom format to be used by Moment.js to parse the
-                      date.
+                      만약 이 속성이 문자열로 정의된다면, Moment.js에서 날짜를
+                      구문 분석하는데 사용할 사용자 지정 형식으로 해석됩니다.
                     </p>
                     <p>
-                      If this is a function, it must return a Moment.js object
-                      given the appropriate data value.
+                      만약 함수인 경우 적절한 데이터 값이 주어진 Moment.js
+                      객체를 반환해야 합니다.
                     </p>
                   </section>
                 </div>
