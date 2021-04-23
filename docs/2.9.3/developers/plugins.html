@@ -499,7 +499,7 @@
             <!-- Title -->
             <h1>
               <i class="fa fa-circle-o-notch fa-spin"></i>
-              <a href="..">Plugins</a>
+              <a href="..">플러그인</a>
             </h1>
           </div>
 
@@ -508,27 +508,26 @@
               <div class="search-plus" id="book-search-results">
                 <div class="search-noresults">
                   <section class="normal markdown-section">
-                    <h1 id="plugins">Plugins</h1>
+                    <h1 id="plugins">플러그인</h1>
                     <p>
-                      Plugins are the most efficient way to customize or change
-                      the default behavior of a chart. They have been introduced
-                      at
+                      플러그인은 차트의 기본 동작을 변경하거나 사용자지정하는
+                      가장 효과적인 방법입니다.
                       <a
                         href="https://github.com/chartjs/Chart.js/releases/tag/2.1.0"
                         target="_blank"
                         >version 2.1.0</a
                       >
-                      (global plugins only) and extended at
+                      (전역 플러그인만)에서 이미 소개되었고
                       <a
                         href="https://github.com/chartjs/Chart.js/releases/tag/v2.5.0"
                         target="_blank"
                         >version 2.5.0</a
                       >
-                      (per chart plugins and options).
+                      (차트마다 플러그인과 옵션)에서 확장되었습니다.
                     </p>
-                    <h2 id="using-plugins">Using plugins</h2>
-                    <p>Plugins can be shared between chart instances:</p>
-                    <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> plugin = { <span class="hljs-comment">/* plugin implementation */</span> };
+                    <h2 id="using-plugins">플러그인 사용하기</h2>
+                    <p>플러그인은 차트 인스턴스 사이에서 공유될 수 있습니다:</p>
+                    <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> plugin = { <span class="hljs-comment">/* 플러그인 구현 */</span> };
 
 <span class="hljs-comment">// chart1 and chart2 use &quot;plugin&quot;</span>
 <span class="hljs-keyword">var</span> chart1 = <span class="hljs-keyword">new</span> Chart(ctx, {
@@ -543,9 +542,8 @@
 <span class="hljs-keyword">var</span> chart3 = <span class="hljs-keyword">new</span> Chart(ctx, {});
 </code></pre>
                     <p>
-                      Plugins can also be defined directly in the chart
-                      <code>plugins</code> config (a.k.a.
-                      <em>inline plugins</em>):
+                      플러그인은 차트 내에 <code>plugins</code> 설정 (a.k.a.
+                      <em>inline plugins</em>)으로 직접 정의될 수 있습니다:
                     </p>
                     <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> chart = <span class="hljs-keyword">new</span> Chart(ctx, {
     plugins: [{
@@ -556,86 +554,83 @@
 });
 </code></pre>
                     <p>
-                      However, this approach is not ideal when the customization
-                      needs to apply to many charts.
+                      그러나 많은 차트들에 사용자 지정을 적용할 때는 이상적인
+                      방법은 아닙니다.
                     </p>
-                    <h2 id="global-plugins">Global plugins</h2>
+                    <h2 id="global-plugins">전역 플러그인</h2>
                     <p>
-                      Plugins can be registered globally to be applied on all
-                      charts (a.k.a. <em>global plugins</em>):
+                      플러그인은 모든 차트 (a.k.a. <em>global plugins</em>)에
+                      적용하기 위해 전역으로 등록될 수 있습니다:
                     </p>
                     <pre><code class="lang-javascript">Chart.plugins.register({
-    <span class="hljs-comment">// plugin implementation</span>
+    <span class="hljs-comment">// 플러그인 구현</span>
 });
 </code></pre>
                     <blockquote>
                       <p>
-                        Note: <em>inline</em> plugins can&apos;t be registered
-                        globally.
+                        주의: <em>inline</em> 플러그인은 전역으로 등록될 수
+                        없습니다.
                       </p>
                     </blockquote>
-                    <h2 id="configuration">Configuration</h2>
-                    <h3 id="plugin-id">Plugin ID</h3>
+                    <h2 id="configuration">설정</h2>
+                    <h3 id="plugin-id">플러그인 ID</h3>
                     <p>
-                      Plugins must define a unique id in order to be
-                      configurable.
+                      플러그인은 설정 가능하기 위해 반드시 유일한 id가
+                      정의되어야 합니다.
                     </p>
                     <p>
-                      This id should follow the
+                      이 id는 반드시
                       <a
                         href="https://docs.npmjs.com/files/package.json#name"
                         target="_blank"
                         >npm package name convention</a
-                      >:
+                      >을 따라야 합니다:
                     </p>
                     <ul>
-                      <li>can&apos;t start with a dot or an underscore</li>
-                      <li>can&apos;t contain any non-URL-safe characters</li>
-                      <li>can&apos;t contain uppercase letters</li>
-                      <li>
-                        should be something short, but also reasonably
-                        descriptive
-                      </li>
+                      <li>점 또는 언더바로 시작할 수 없습니다</li>
+                      <li>어떤 non-URL-safe 문자도 포함될 수 없습니다</li>
+                      <li>대문자는 포함될 수 없습니다</li>
+                      <li>짧지만 합리적으로 설명해야 합니다</li>
                     </ul>
                     <p>
-                      If a plugin is intended to be released publicly, you may
-                      want to check the
+                      플러그인이 공개적으로 출시될 예정인 경우
                       <a
                         href="https://www.npmjs.com/search?q=chartjs-plugin-"
                         target="_blank"
                         >registry</a
-                      >
-                      to see if there&apos;s something by that name already.
-                      Note that in this case, the package name should be
-                      prefixed by <code>chartjs-plugin-</code> to appear in
-                      Chart.js plugin registry.
+                      >를 확인하여 해당 이름이 이미 있는지 확인할 수 있습니다.
+                      이 경우에 주의할 점은 패키지 이름은 반드시 접두사
+                      <code>chartjs-plugin-</code>을 두어 Chart.js 플러그인
+                      레지스트리입을 표현해야 합니다.
                     </p>
-                    <h3 id="plugin-options">Plugin options</h3>
+                    <h3 id="plugin-options">플러그인 옵션</h3>
                     <p>
-                      Plugin options are located under the
-                      <code>options.plugins</code> config and are scoped by the
-                      plugin ID: <code>options.plugins.{plugin-id}</code>.
+                      플러그인 옵션은
+                      <code>options.plugins</code> 설정 아래에 위치하고 플러그인
+                      ID: <code>options.plugins.{plugin-id}</code>로 범위가
+                      지정됩니다.
                     </p>
                     <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> chart = <span class="hljs-keyword">new</span> Chart(ctx, {
     options: {
-        foo: { ... },           <span class="hljs-comment">// chart &apos;foo&apos; option</span>
+        foo: { ... },           <span class="hljs-comment">// 차트 &apos;foo&apos; 옵션</span>
         plugins: {
             p1: {
-                foo: { ... },   <span class="hljs-comment">// p1 plugin &apos;foo&apos; option</span>
+                foo: { ... },   <span class="hljs-comment">// p1 플러그인 &apos;foo&apos; 옵션</span>
                 bar: { ... }
             },
             p2: {
-                foo: { ... },   <span class="hljs-comment">// p2 plugin &apos;foo&apos; option</span>
+                foo: { ... },   <span class="hljs-comment">// p2 플러그인 &apos;foo&apos; 옵션</span>
                 bla: { ... }
             }
         }
     }
 });
 </code></pre>
-                    <h4 id="disable-plugins">Disable plugins</h4>
+                    <h4 id="disable-plugins">플러그인 비활성화</h4>
                     <p>
-                      To disable a global plugin for a specific chart instance,
-                      the plugin options must be set to <code>false</code>:
+                      특정 차트 인스턴스에서 전역 플러그인을 비활성화 하려면
+                      플러그인 옵션이 반드시 <code>false</code>로 설정되어야만
+                      합니다:
                     </p>
                     <pre><code class="lang-javascript">Chart.plugins.register({
     id: <span class="hljs-string">&apos;p1&apos;</span>,
@@ -645,41 +640,55 @@
 <span class="hljs-keyword">var</span> chart = <span class="hljs-keyword">new</span> Chart(ctx, {
     options: {
         plugins: {
-            p1: <span class="hljs-literal">false</span>   <span class="hljs-comment">// disable plugin &apos;p1&apos; for this instance</span>
+            p1: <span class="hljs-literal">false</span>   <span class="hljs-comment">// 이 인스턴스에서 &apos;p1&apos; 플러그인을 비활성화합니다</span>
         }
     }
 });
 </code></pre>
-                    <h2 id="plugin-core-api">Plugin Core API</h2>
-                    <p>Available hooks (as of version 2.7):</p>
+                    <h2 id="plugin-core-api">플러그인 코어 API</h2>
+                    <p>이용가능한 hooks (버전 2.7 기준):</p>
                     <ul>
                       <li><code>beforeInit</code></li>
                       <li><code>afterInit</code></li>
-                      <li><code>beforeUpdate</code> <em>(cancellable)</em></li>
+                      <li>
+                        <code>beforeUpdate</code> <em>(취소 할 수 있음)</em>
+                      </li>
                       <li><code>afterUpdate</code></li>
-                      <li><code>beforeLayout</code> <em>(cancellable)</em></li>
+                      <li>
+                        <code>beforeLayout</code> <em>(취소 할 수 있음)</em>
+                      </li>
                       <li><code>afterLayout</code></li>
                       <li>
-                        <code>beforeDatasetsUpdate</code> <em>(cancellable)</em>
+                        <code>beforeDatasetsUpdate</code>
+                        <em>(취소 할 수 있음)</em>
                       </li>
                       <li><code>afterDatasetsUpdate</code></li>
                       <li>
-                        <code>beforeDatasetUpdate</code> <em>(cancellable)</em>
+                        <code>beforeDatasetUpdate</code>
+                        <em>(취소 할 수 있음)</em>
                       </li>
                       <li><code>afterDatasetUpdate</code></li>
-                      <li><code>beforeRender</code> <em>(cancellable)</em></li>
+                      <li>
+                        <code>beforeRender</code> <em>(취소 할 수 있음)</em>
+                      </li>
                       <li><code>afterRender</code></li>
-                      <li><code>beforeDraw</code> <em>(cancellable)</em></li>
+                      <li>
+                        <code>beforeDraw</code> <em>(취소 할 수 있음)</em>
+                      </li>
                       <li><code>afterDraw</code></li>
                       <li>
-                        <code>beforeDatasetsDraw</code> <em>(cancellable)</em>
+                        <code>beforeDatasetsDraw</code>
+                        <em>(취소 할 수 있음)</em>
                       </li>
                       <li><code>afterDatasetsDraw</code></li>
                       <li>
-                        <code>beforeDatasetDraw</code> <em>(cancellable)</em>
+                        <code>beforeDatasetDraw</code>
+                        <em>(취소 할 수 있음)</em>
                       </li>
                       <li><code>afterDatasetDraw</code></li>
-                      <li><code>beforeEvent</code> <em>(cancellable)</em></li>
+                      <li>
+                        <code>beforeEvent</code> <em>(취소 할 수 있음)</em>
+                      </li>
                       <li><code>afterEvent</code></li>
                       <li><code>resize</code></li>
                       <li><code>destroy</code></li>
@@ -727,59 +736,59 @@
         gitbook.push(function () {
           gitbook.page.hasChanged({
             page: {
-              title: "Plugins",
-              level: "1.8.3",
+              title: 'Plugins',
+              level: '1.8.3',
               depth: 2,
               next: {
-                title: "New Charts",
-                level: "1.8.4",
+                title: 'New Charts',
+                level: '1.8.4',
                 depth: 2,
-                path: "developers/charts.md",
-                ref: "developers/charts.md",
+                path: 'developers/charts.md',
+                ref: 'developers/charts.md',
                 articles: [],
               },
               previous: {
-                title: "Updating Charts",
-                level: "1.8.2",
+                title: 'Updating Charts',
+                level: '1.8.2',
                 depth: 2,
-                path: "developers/updates.md",
-                ref: "developers/updates.md",
+                path: 'developers/updates.md',
+                ref: 'developers/updates.md',
                 articles: [],
               },
-              dir: "ltr",
+              dir: 'ltr',
             },
             config: {
               plugins: [
-                "-lunr",
-                "-search",
-                "search-plus",
-                "anchorjs",
-                "chartjs",
-                "ga",
-                "redirect",
+                '-lunr',
+                '-search',
+                'search-plus',
+                'anchorjs',
+                'chartjs',
+                'ga',
+                'redirect',
               ],
-              root: "./docs",
+              root: './docs',
               styles: {
-                website: "style.css",
-                pdf: "styles/pdf.css",
-                epub: "styles/epub.css",
-                mobi: "styles/mobi.css",
-                ebook: "styles/ebook.css",
-                print: "styles/print.css",
+                website: 'style.css',
+                pdf: 'styles/pdf.css',
+                epub: 'styles/epub.css',
+                mobi: 'styles/mobi.css',
+                ebook: 'styles/ebook.css',
+                print: 'styles/print.css',
               },
               pluginsConfig: {
                 chartjs: {
                   defaults: null,
                 },
                 fontsettings: {
-                  theme: "white",
-                  family: "sans",
+                  theme: 'white',
+                  family: 'sans',
                   size: 2,
                 },
                 highlight: {},
                 ga: {
-                  configuration: "auto",
-                  token: "UA-28909194-3",
+                  configuration: 'auto',
+                  token: 'UA-28909194-3',
                 },
                 sharing: {
                   facebook: true,
@@ -788,36 +797,36 @@
                   weibo: false,
                   instapaper: false,
                   vk: false,
-                  all: ["facebook", "google", "twitter", "weibo", "instapaper"],
+                  all: ['facebook', 'google', 'twitter', 'weibo', 'instapaper'],
                 },
                 redirect: {},
-                "theme-default": {
+                'theme-default': {
                   styles: {
-                    website: "style.css",
-                    pdf: "styles/pdf.css",
-                    epub: "styles/epub.css",
-                    mobi: "styles/mobi.css",
-                    ebook: "styles/ebook.css",
-                    print: "styles/print.css",
+                    website: 'style.css',
+                    pdf: 'styles/pdf.css',
+                    epub: 'styles/epub.css',
+                    mobi: 'styles/mobi.css',
+                    ebook: 'styles/ebook.css',
+                    print: 'styles/print.css',
                   },
                   showLevel: false,
                 },
                 anchorjs: {
-                  icon: "#",
-                  placement: "left",
-                  visible: "always",
+                  icon: '#',
+                  placement: 'left',
+                  visible: 'always',
                 },
-                "search-plus": {},
+                'search-plus': {},
               },
-              theme: "default",
-              author: "chartjs",
+              theme: 'default',
+              author: 'chartjs',
               pdf: {
                 pageNumbers: true,
                 fontSize: 12,
-                fontFamily: "Arial",
-                paperSize: "a4",
-                chapterMark: "pagebreak",
-                pageBreaksBefore: "/",
+                fontFamily: 'Arial',
+                paperSize: 'a4',
+                chapterMark: 'pagebreak',
+                pageBreaksBefore: '/',
                 margin: {
                   right: 62,
                   left: 62,
@@ -826,27 +835,27 @@
                 },
               },
               structure: {
-                langs: "LANGS.md",
-                readme: "README.md",
-                glossary: "GLOSSARY.md",
-                summary: "SUMMARY.md",
+                langs: 'LANGS.md',
+                readme: 'README.md',
+                glossary: 'GLOSSARY.md',
+                summary: 'SUMMARY.md',
               },
               variables: {},
-              title: "Chart.js documentation",
-              gitbook: "3.2.2",
+              title: 'Chart.js documentation',
+              gitbook: '3.2.2',
             },
             file: {
-              path: "developers/plugins.md",
-              mtime: "2019-12-23T03:27:10.497Z",
-              type: "markdown",
+              path: 'developers/plugins.md',
+              mtime: '2019-12-23T03:27:10.497Z',
+              type: 'markdown',
             },
             gitbook: {
-              version: "3.2.2",
-              time: "2019-12-23T03:29:40.428Z",
+              version: '3.2.2',
+              time: '2019-12-23T03:29:40.428Z',
             },
-            basePath: "..",
+            basePath: '..',
             book: {
-              language: "",
+              language: '',
             },
           });
         });

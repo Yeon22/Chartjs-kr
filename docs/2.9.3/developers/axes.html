@@ -499,7 +499,7 @@
             <!-- Title -->
             <h1>
               <i class="fa fa-circle-o-notch fa-spin"></i>
-              <a href="..">New Axes</a>
+              <a href="..">새로운 축</a>
             </h1>
           </div>
 
@@ -508,31 +508,30 @@
               <div class="search-plus" id="book-search-results">
                 <div class="search-noresults">
                   <section class="normal markdown-section">
-                    <h1 id="new-axes">New Axes</h1>
+                    <h1 id="new-axes">새로운 축</h1>
                     <p>
-                      Axes in Chart.js can be individually extended. Axes should
-                      always derive from <code>Chart.Scale</code> but this is
-                      not a mandatory requirement.
+                      Chart.js에서 축은 개별적으로 확장할 수 있습니다. 축은 항상
+                      <code>Chart.Scale</code>로 부터 파생되야 하지만 필수
+                      사항은 아닙니다.
                     </p>
                     <pre><code class="lang-javascript"><span class="hljs-keyword">let</span> MyScale = Chart.Scale.extend({
     <span class="hljs-comment">/* extensions ... */</span>
 });
 
-<span class="hljs-comment">// MyScale is now derived from Chart.Scale</span>
+<span class="hljs-comment">// MyScale은 Chart.Scale로 부터 파생됩니다</span>
 </code></pre>
                     <p>
-                      Once you have created your scale class, you need to
-                      register it with the global chart object so that it can be
-                      used. A default config for the scale may be provided when
-                      registering the constructor. The first parameter to the
-                      register function is a string key that is used later to
-                      identify which scale type to use for a chart.
+                      스케일 클래스를 만든 후에는 사용할 수 있도록 전역 차트
+                      객체와 함께 등록할 필요가 있습니다. 스케일에 대한 기본
+                      설정은 생성자가 등록될 때 제공될 수 있습니다. 등록 함수에
+                      대한 첫번째 매개변수는 차트에 사용하기 위한 스케일 유형을
+                      식별하기 위해 나중에 사용된 문자열 키입니다.
                     </p>
                     <pre><code class="lang-javascript">Chart.scaleService.registerScaleType(<span class="hljs-string">&apos;myScale&apos;</span>, MyScale, defaultConfigObject);
 </code></pre>
                     <p>
-                      To use the new scale, simply pass in the string key to the
-                      config when creating a chart.
+                      새로운 스케일을 사용하기 위해 차트가 생성될 때 설정에
+                      문자열 키를 넘김으로 간단히 할 수 있습니다.
                     </p>
                     <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> lineChart = <span class="hljs-keyword">new</span> Chart(ctx, {
     data: data,
@@ -540,26 +539,26 @@
     options: {
         scales: {
             yAxes: [{
-                type: <span class="hljs-string">&apos;myScale&apos;</span> <span class="hljs-comment">// this is the same key that was passed to the registerScaleType function</span>
+                type: <span class="hljs-string">&apos;myScale&apos;</span> <span class="hljs-comment">// registerScaleType 함수에 넘겨진 같은 키입니다</span>
             }]
         }
     }
 });
 </code></pre>
-                    <h2 id="scale-properties">Scale Properties</h2>
+                    <h2 id="scale-properties">스케일 속성</h2>
                     <p>
-                      Scale instances are given the following properties during
-                      the fitting process.
+                      스케일 인스턴스는 조정 프로세스 동안 다음의 속성들이
+                      주어집니다.
                     </p>
                     <pre><code class="lang-javascript">{
-    left: number, <span class="hljs-comment">// left edge of the scale bounding box</span>
-    right: number, <span class="hljs-comment">// right edge of the bounding box</span>
+    left: number, <span class="hljs-comment">// 스케일 바운딩 상자의 왼쪽 가장자리</span>
+    right: number, <span class="hljs-comment">// 바운딩 상자의 오른쪽 가장자리</span>
     top: number,
     bottom: number,
-    width: number, <span class="hljs-comment">// the same as right - left</span>
-    height: number, <span class="hljs-comment">// the same as bottom - top</span>
+    width: number, <span class="hljs-comment">// 오른쪽 - 왼쪽과 동일</span>
+    height: number, <span class="hljs-comment">// 아래 - 위와 동일</span>
 
-    <span class="hljs-comment">// Margin on each side. Like css, this is outside the bounding box.</span>
+    <span class="hljs-comment">// 양쪽 여백. css와 같이 바운딩 상자 바깥족.</span>
     margins: {
         left: number,
         right: number,
@@ -567,84 +566,84 @@
         bottom: number
     },
 
-    <span class="hljs-comment">// Amount of padding on the inside of the bounding box (like CSS)</span>
+    <span class="hljs-comment">// 바운딩 상자 내부의 여백 양 (CSS와 같이)</span>
     paddingLeft: number,
     paddingRight: number,
     paddingTop: number,
     paddingBottom: number
 }
 </code></pre>
-                    <h2 id="scale-interface">Scale Interface</h2>
+                    <h2 id="scale-interface">스케일 인터페이스</h2>
                     <p>
-                      To work with Chart.js, custom scale types must implement
-                      the following interface.
+                      Chart.js로 작업하려면 사용자 지정 스케일 유형은 다음의
+                      인터페이스로 구현되어야만 합니다.
                     </p>
                     <pre><code class="lang-javascript">{
-    <span class="hljs-comment">// Determines the data limits. Should set this.min and this.max to be the data max/min</span>
+    <span class="hljs-comment">// 데이터 제한을 결정합니다. 데이터 max/min이 되는 this.min 과 this.max가 설정되어야만 합니다 </span>
     determineDataLimits: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{},
 
-    <span class="hljs-comment">// Generate tick marks. this.chart is the chart instance. The data object can be accessed as this.chart.data</span>
-    <span class="hljs-comment">// buildTicks() should create a ticks array on the axis instance, if you intend to use any of the implementations from the base class</span>
+    <span class="hljs-comment">// 눈금 마크를 생성합니다. this.chart는 차트 인스턴스입니다. 데이터 객체는 this.chart.data로 접근할 수 있습니다</span>
+    <span class="hljs-comment">// 기본 클래스 구현을 사용하려는 경우 buildTicks()은 축 인스턴스의 눈금 배열로 생성되어야만 합니다</span>
     buildTicks: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{},
 
-    <span class="hljs-comment">// Get the value to show for the data at the given index of the the given dataset, ie this.chart.data.datasets[datasetIndex].data[index]</span>
+    <span class="hljs-comment">// 주어진 데이터집합의 주어진 인덱스에서 데이터에 대해 표시할 값을 가져오니다. ie this.chart.data.datasets[datasetIndex].data[index]</span>
     getLabelForIndex: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">index, datasetIndex</span>) </span>{},
 
-    <span class="hljs-comment">// Get the pixel (x coordinate for horizontal axis, y coordinate for vertical axis) for a given value</span>
-    <span class="hljs-comment">// @param index: index into the ticks array</span>
+    <span class="hljs-comment">// 주어진 값에 대한 픽셀(가로 축에 대한 x 좌표, 세로 축에 대한 y 좌표)을 가져옵니다</span>
+    <span class="hljs-comment">// @param index: 눈금 배열 안에 인덱스</span>
     getPixelForTick: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">index</span>) </span>{},
 
-    <span class="hljs-comment">// Get the pixel (x coordinate for horizontal axis, y coordinate for vertical axis) for a given value</span>
-    <span class="hljs-comment">// @param value : the value to get the pixel for</span>
-    <span class="hljs-comment">// @param index : index into the data array of the value</span>
-    <span class="hljs-comment">// @param datasetIndex : index of the dataset the value comes from</span>
+    <span class="hljs-comment">// 주어진 값의 픽셀(가로 축에 대한 x 좌표, 세로 축에 대한 y 좌표)을 가져옵니다</span>
+    <span class="hljs-comment">// @param value : 픽셀을 가져올 값</span>
+    <span class="hljs-comment">// @param index : 값의 데이터 배열 안에 인덱스</span>
+    <span class="hljs-comment">// @param datasetIndex : 값을 가져온 데이터집합의 인덱스</span>
     getPixelForValue: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">value, index, datasetIndex</span>) </span>{},
 
-    <span class="hljs-comment">// Get the value for a given pixel (x coordinate for horizontal axis, y coordinate for vertical axis)</span>
-    <span class="hljs-comment">// @param pixel : pixel value</span>
+    <span class="hljs-comment">// 주어진 픽셀(가로 축에 대한 x 좌표, 세로 축에 대한 y 좌표)에 대한 값을 가져옵니다</span>
+    <span class="hljs-comment">// @param pixel : 픽셀 값</span>
     getValueForPixel: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">pixel</span>) </span>{}
 }
 </code></pre>
                     <p>
-                      Optionally, the following methods may also be overwritten,
-                      but an implementation is already provided by the
-                      <code>Chart.Scale</code> base class.
+                      선택적으로 다음의 메소드는 재정의 될 수 있지만 구현은 이미
+                      <code>Chart.Scale</code> 기본 클래스에서 제공되어
+                      있습니다.
                     </p>
                     <pre><code class="lang-javascript">{
-    <span class="hljs-comment">// Transform the ticks array of the scale instance into strings. The default implementation simply calls this.options.ticks.callback(numericalTick, index, ticks);</span>
+    <span class="hljs-comment">// 스케일 인스턴스의 눈금 배열을 문자열로 변환합니다. 기본 구현은 간단히 this.options.ticks.callback(numericalTick, index, ticks); 호출합니다</span>
     convertTicksToLabels: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{},
 
-    <span class="hljs-comment">// Determine how much the labels will rotate by. The default implementation will only rotate labels if the scale is horizontal.</span>
+    <span class="hljs-comment">// 라벨을 얼마만큼 회전해야할지 결정합니다. 스케일이 수평일 경우 기본 구현은 라벨 회전만 합니다.</span>
     calculateTickRotation: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{},
 
-    <span class="hljs-comment">// Fits the scale into the canvas.</span>
-    <span class="hljs-comment">// this.maxWidth and this.maxHeight will tell you the maximum dimensions the scale instance can be. Scales should endeavour to be as efficient as possible with canvas space.</span>
-    <span class="hljs-comment">// this.margins is the amount of space you have on either side of your scale that you may expand in to. This is used already for calculating the best label rotation</span>
-    <span class="hljs-comment">// You must set this.minSize to be the size of your scale. It must be an object containing 2 properties: width and height.</span>
-    <span class="hljs-comment">// You must set this.width to be the width and this.height to be the height of the scale</span>
+    <span class="hljs-comment">// 캔버스 내의 첫번째 스케일.</span>
+    <span class="hljs-comment">// this.maxWidth 와 this.maxHeight는 스케일 인스턴스가 할 수 있는 최대 차원을 말해줍니다. 스케일은 캔버스 공간에서 가능한한 효율적이되도록 노력해야합니다.</span>
+    <span class="hljs-comment">// this.margins는 확장한 스케일의 한쪽이 가지고 있는 공간의 양입니다. 최적의 라벨 회전 계산에 이미 사용되고 있습니다</span>
+    <span class="hljs-comment">// 스케일의 크기를 위해 this.minSize를 반드시 설정해줘야 합니다. 2 속성을 포함한 객채여야 합니다: width 와 height.</span>
+    <span class="hljs-comment">// 스케일의 넓이를 위해 this.width를 설정해줘야 하고 높이를 위해 this.height를 설정해줘야 합니다</span>
     fit: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{},
 
-    <span class="hljs-comment">// Draws the scale onto the canvas. this.(left|right|top|bottom) will have been populated to tell you the area on the canvas to draw in</span>
-    <span class="hljs-comment">// @param chartArea : an object containing four properties: left, right, top, bottom. This is the rectangle that lines, bars, etc will be drawn in. It may be used, for example, to draw grid lines.</span>
+    <span class="hljs-comment">// 캔버스에 스케일을 그립니다. this.(left|right|top|bottom)는 캔버스에서 그릴 영역을 알려줍니다</span>
+    <span class="hljs-comment">// @param chartArea : 4개의 속성을 가진 객체입니다: left, right, top, bottom. 이것은 선, 막대 등의 그려질 직사각형입니다. 예를들어 그리드 선을 그리는데 사용할 수 있습니다.</span>
     draw: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">chartArea</span>) </span>{}
 }
 </code></pre>
                     <p>
-                      The Core.Scale base class also has some utility functions
-                      that you may find useful.
+                      Core.Scale 기본 클래스는 또한 유용할 수 있는 몇가지
+                      유틸리티 함수도 있습니다.
                     </p>
                     <pre><code class="lang-javascript">{
-    <span class="hljs-comment">// Returns true if the scale instance is horizontal</span>
+    <span class="hljs-comment">// 스케일 인스턴스가 수평일 때 true를 반환합니다</span>
     isHorizontal: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{},
 
-    <span class="hljs-comment">// Get the correct value from the value from this.chart.data.datasets[x].data[]</span>
-    <span class="hljs-comment">// If dataValue is an object, returns .x or .y depending on the return of isHorizontal()</span>
-    <span class="hljs-comment">// If the value is undefined, returns NaN</span>
-    <span class="hljs-comment">// Otherwise returns the value.</span>
-    <span class="hljs-comment">// Note that in all cases, the returned value is not guaranteed to be a number</span>
+    <span class="hljs-comment">// this.chart.data.datasets[x].data[]의 값으로 부터 정확한 값을 가져옵니다</span>
+    <span class="hljs-comment">// dataValue가 객체이면 isHorizontal()이 어떤 값을 반환하냐에 따라 .x 또는 .y 를 반환합니다</span>
+    <span class="hljs-comment">// 만약 값이 undefined이면 NaN을 반환합니다</span>
+    <span class="hljs-comment">// 그렇지 않으면 값을 반환합니다.</span>
+    <span class="hljs-comment">// 모든 경우에서 반환되는 값은 숫자를 보장하지 않느다는 점을 주의해야 합니다</span>
     getRightValue: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">dataValue</span>) </span>{},
 
-    <span class="hljs-comment">// Returns the scale tick objects ({label, major})</span>
+    <span class="hljs-comment">// 스케일 눈금 객체를 반환합니다 ({label, major})</span>
     getTicks: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{}
 }
 </code></pre>
@@ -691,59 +690,59 @@
         gitbook.push(function () {
           gitbook.page.hasChanged({
             page: {
-              title: "New Axes",
-              level: "1.8.5",
+              title: 'New Axes',
+              level: '1.8.5',
               depth: 2,
               next: {
-                title: "Contributing",
-                level: "1.8.6",
+                title: 'Contributing',
+                level: '1.8.6',
                 depth: 2,
-                path: "developers/contributing.md",
-                ref: "developers/contributing.md",
+                path: 'developers/contributing.md',
+                ref: 'developers/contributing.md',
                 articles: [],
               },
               previous: {
-                title: "New Charts",
-                level: "1.8.4",
+                title: 'New Charts',
+                level: '1.8.4',
                 depth: 2,
-                path: "developers/charts.md",
-                ref: "developers/charts.md",
+                path: 'developers/charts.md',
+                ref: 'developers/charts.md',
                 articles: [],
               },
-              dir: "ltr",
+              dir: 'ltr',
             },
             config: {
               plugins: [
-                "-lunr",
-                "-search",
-                "search-plus",
-                "anchorjs",
-                "chartjs",
-                "ga",
-                "redirect",
+                '-lunr',
+                '-search',
+                'search-plus',
+                'anchorjs',
+                'chartjs',
+                'ga',
+                'redirect',
               ],
-              root: "./docs",
+              root: './docs',
               styles: {
-                website: "style.css",
-                pdf: "styles/pdf.css",
-                epub: "styles/epub.css",
-                mobi: "styles/mobi.css",
-                ebook: "styles/ebook.css",
-                print: "styles/print.css",
+                website: 'style.css',
+                pdf: 'styles/pdf.css',
+                epub: 'styles/epub.css',
+                mobi: 'styles/mobi.css',
+                ebook: 'styles/ebook.css',
+                print: 'styles/print.css',
               },
               pluginsConfig: {
                 chartjs: {
                   defaults: null,
                 },
                 fontsettings: {
-                  theme: "white",
-                  family: "sans",
+                  theme: 'white',
+                  family: 'sans',
                   size: 2,
                 },
                 highlight: {},
                 ga: {
-                  configuration: "auto",
-                  token: "UA-28909194-3",
+                  configuration: 'auto',
+                  token: 'UA-28909194-3',
                 },
                 sharing: {
                   facebook: true,
@@ -752,36 +751,36 @@
                   weibo: false,
                   instapaper: false,
                   vk: false,
-                  all: ["facebook", "google", "twitter", "weibo", "instapaper"],
+                  all: ['facebook', 'google', 'twitter', 'weibo', 'instapaper'],
                 },
                 redirect: {},
-                "theme-default": {
+                'theme-default': {
                   styles: {
-                    website: "style.css",
-                    pdf: "styles/pdf.css",
-                    epub: "styles/epub.css",
-                    mobi: "styles/mobi.css",
-                    ebook: "styles/ebook.css",
-                    print: "styles/print.css",
+                    website: 'style.css',
+                    pdf: 'styles/pdf.css',
+                    epub: 'styles/epub.css',
+                    mobi: 'styles/mobi.css',
+                    ebook: 'styles/ebook.css',
+                    print: 'styles/print.css',
                   },
                   showLevel: false,
                 },
                 anchorjs: {
-                  icon: "#",
-                  placement: "left",
-                  visible: "always",
+                  icon: '#',
+                  placement: 'left',
+                  visible: 'always',
                 },
-                "search-plus": {},
+                'search-plus': {},
               },
-              theme: "default",
-              author: "chartjs",
+              theme: 'default',
+              author: 'chartjs',
               pdf: {
                 pageNumbers: true,
                 fontSize: 12,
-                fontFamily: "Arial",
-                paperSize: "a4",
-                chapterMark: "pagebreak",
-                pageBreaksBefore: "/",
+                fontFamily: 'Arial',
+                paperSize: 'a4',
+                chapterMark: 'pagebreak',
+                pageBreaksBefore: '/',
                 margin: {
                   right: 62,
                   left: 62,
@@ -790,27 +789,27 @@
                 },
               },
               structure: {
-                langs: "LANGS.md",
-                readme: "README.md",
-                glossary: "GLOSSARY.md",
-                summary: "SUMMARY.md",
+                langs: 'LANGS.md',
+                readme: 'README.md',
+                glossary: 'GLOSSARY.md',
+                summary: 'SUMMARY.md',
               },
               variables: {},
-              title: "Chart.js documentation",
-              gitbook: "3.2.2",
+              title: 'Chart.js documentation',
+              gitbook: '3.2.2',
             },
             file: {
-              path: "developers/axes.md",
-              mtime: "2019-12-23T03:27:10.497Z",
-              type: "markdown",
+              path: 'developers/axes.md',
+              mtime: '2019-12-23T03:27:10.497Z',
+              type: 'markdown',
             },
             gitbook: {
-              version: "3.2.2",
-              time: "2019-12-23T03:29:40.428Z",
+              version: '3.2.2',
+              time: '2019-12-23T03:29:40.428Z',
             },
-            basePath: "..",
+            basePath: '..',
             book: {
-              language: "",
+              language: '',
             },
           });
         });

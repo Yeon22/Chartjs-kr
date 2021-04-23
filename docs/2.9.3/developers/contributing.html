@@ -495,7 +495,7 @@
             <!-- Title -->
             <h1>
               <i class="fa fa-circle-o-notch fa-spin"></i>
-              <a href="..">Contributing</a>
+              <a href="..">기여하기</a>
             </h1>
           </div>
 
@@ -504,282 +504,275 @@
               <div class="search-plus" id="book-search-results">
                 <div class="search-noresults">
                   <section class="normal markdown-section">
-                    <h1 id="contributing">Contributing</h1>
+                    <h1 id="contributing">기여하기</h1>
                     <p>
-                      New contributions to the library are welcome, but we ask
-                      that you please follow these guidelines:
+                      라이브러리에 대한 새로운 기여를 환영하지만 다음의
+                      가이드라인을 따라주시기 바랍니다:
                     </p>
                     <ul>
                       <li>
-                        Before opening a PR for major additions or changes,
-                        please discuss the expected API and/or implementation by
-                        <a
-                          href="https://github.com/chartjs/Chart.js/issues"
-                          target="_blank"
-                          >filing an issue</a
-                        >
-                        or asking about it in the
+                        메이저 추가 또는 변경에 대한 PR을 열기 전에
                         <a
                           href="https://chartjs-slack.herokuapp.com/"
                           target="_blank"
-                          >Chart.js Slack</a
+                          >Chart.js 슬랙</a
                         >
-                        #dev channel. This will save you development time by
-                        getting feedback upfront and make review faster by
-                        giving the maintainers more context and details.
+                        #dev 채널에서
+                        <a
+                          href="https://github.com/chartjs/Chart.js/issues"
+                          target="_blank"
+                          >문제 제출</a
+                        >을 하거나 이에 대해 질문하여 예상 API 와/또는 구현에
+                        대해 논의 하십시오. 이렇게 하면 피드백을 미리 받아 개발
+                        시간을 절약하고 관리자에게 더 많은 컨텍스트와 세부
+                        정보를 제공하여 더 빠르게 검토할 수 있습니다.
                       </li>
                       <li>
-                        Consider whether your changes are useful for all users,
-                        or if creating a Chart.js
-                        <a href="plugins.html">plugin</a> would be more
-                        appropriate.
+                        변경 사항이 모든 사용자에게 유용한 변화인지 아니면
+                        Chart.js
+                        <a href="plugins.html">플러그인</a>을 만드는 것이 더
+                        적절한지 고려하십시오.
                       </li>
                       <li>
-                        Check that your code will pass tests and
-                        <code>eslint</code> code standards.
-                        <code>gulp test</code> will run both the linter and
-                        tests for you.
+                        테스트를 통과하고 <code>eslint</code> 코드 표준을
+                        통과하는지 당신의 코드를 확인하세요.
+                        <code>gulp test</code>는 린터와 테스트 모두에 동작할
+                        것입니다.
                       </li>
                       <li>
-                        Add unit tests and document new functionality (in the
-                        <code>test/</code> and <code>docs/</code> directories
-                        respectively).
+                        유닛 테스트와 문서에 새로운 기능을 추가하세요 (각각
+                        <code>test/</code> 와 <code>docs/</code> 폴더 안에
+                        있습니다).
                       </li>
                       <li>
-                        Avoid breaking changes unless there is an upcoming major
-                        release, which are infrequent. We encourage people to
-                        write plugins for most new advanced features, and care a
-                        lot about backwards compatibility.
+                        드물게 예정된 주요 릴리즈가 없는한 변경 사항을 중단하지
+                        마세요. 우리는 새로운 고급 기능에 대한 플러그인을
+                        작성하고 이전 버전과의 호환성에 많은 관심을 갖도록
+                        권장합니다.
                       </li>
                       <li>
-                        We strongly prefer new methods to be added as private
-                        whenever possible. A method can be made private either
-                        by making a top-level <code>function</code> outside of a
-                        class or by prefixing it with <code>_</code> and adding
-                        <code>@private</code> JSDoc if inside a class. Public
-                        APIs take considerable time to review and become locked
-                        once implemented as we have limited ability to change
-                        them without breaking backwards compatibility. Private
-                        APIs allow the flexibility to address unforeseen cases.
+                        가능할 때마다 비공개로 추가되는 새로운 메소드를 강하게
+                        선호합니다. 메소드는 클래스 외부에 최상위
+                        <code>function</code>을 만들거나 <code>_</code> 접두사를
+                        붙이고 클래스 내부에서 <code>@private</code> JSDoc을
+                        추가하여 비공개로 만들 수 있습니다. 공용 API는 이전
+                        버전과의 호환성을 깨지않고 변경할 수 있는 기능이
+                        제한되어 있으므로 구현된 후에는 검토하고 잠기는데 상당한
+                        시간이 걸립니다. 비공개 API를 사용하면 예상치 못한
+                        사례를 유연하게 해결할 수 있습니다.
                       </li>
                     </ul>
-                    <h2 id="joining-the-project">Joining the project</h2>
+                    <h2 id="joining-the-project">프로젝트 참여</h2>
                     <p>
-                      Active committers and contributors are invited to
-                      introduce yourself and request commit access to this
-                      project. We have a very active Slack community that you
-                      can join
+                      적극적인 커미터와 기여자들은 자신을 소개하고 프로젝트에
+                      대한 커밋 엑세스 권한을 요청하도록 초대됩니다.
                       <a
                         href="https://chartjs-slack.herokuapp.com/"
                         target="_blank"
-                        >here</a
-                      >. If you think you can help, we&apos;d love to have you!
+                        >여기</a
+                      >
+                      당신이 참여할 수 있는 매우 활동적인 슬랙 커뮤니티를 가지고
+                      있습니다. 만약 당신이 도울 수 있다고 생각된다면 우리는
+                      당신을 원합니다!
                     </p>
-                    <h2 id="building-and-testing">Building and Testing</h2>
+                    <h2 id="building-and-testing">빌딩과 테스팅</h2>
                     <p>
-                      Chart.js uses
-                      <a href="https://gulpjs.com/" target="_blank">gulp</a> to
-                      build the library into a single JavaScript file.
+                      Chart.js는 라이브러리를 단일 자바스크립트 파일로
+                      빌드하는데
+                      <a href="https://gulpjs.com/" target="_blank">gulp</a>를
+                      사용합니다.
                     </p>
                     <p>
-                      Firstly, we need to ensure development dependencies are
-                      installed. With node and npm installed, after cloning the
-                      Chart.js repo to a local directory, and navigating to that
-                      directory in the command line, we can run the following:
+                      첫번째로 개발 종속성들이 설치되었는지 확인할 필요가
+                      있습니다. 커맨드 창으로 node와 npm으로 로컬 디렉토리에
+                      Chart.js 레포지토리를 복제한 후 설치하고 그 디렉토리로
+                      이동하여 다음과 같이 실행할 수 있습니다:
                     </p>
                     <pre><code class="lang-bash">&gt; npm install
 &gt; npm install -g gulp-cli
 </code></pre>
                     <p>
-                      This will install the local development dependencies for
-                      Chart.js, along with a CLI for the JavaScript task runner
-                      <a href="https://gulpjs.com/" target="_blank">gulp</a>.
+                      자바스크립트 태스크 러너인
+                      <a href="https://gulpjs.com/" target="_blank">gulp</a>를
+                      위한 CLI와 함께 Chart.js를 위한 로컬 개발 종속성들을
+                      설치합니다.
                     </p>
-                    <p>
-                      The following commands are now available from the
-                      repository root:
-                    </p>
-                    <pre><code class="lang-bash">&gt; gulp build                // build dist files <span class="hljs-keyword">in</span> ./dist
-&gt; gulp build --watch        // build and watch <span class="hljs-keyword">for</span> changes
-&gt; gulp unittest             // run tests from ./<span class="hljs-built_in">test</span>/specs
-&gt; gulp unittest --watch     // run tests and watch <span class="hljs-keyword">for</span> <span class="hljs-built_in">source</span> changes
-&gt; gulp unittest --coverage  // run tests and generate coverage reports <span class="hljs-keyword">in</span> ./coverage
-&gt; gulp lint                 // perform code linting (ESLint)
-&gt; gulp <span class="hljs-built_in">test</span>                 // perform code linting and run unit tests
-&gt; gulp docs                 // build the documentation <span class="hljs-keyword">in</span> ./dist/docs
-&gt; gulp docs --watch         // starts the gitbook live reloaded server
+                    <p>다음의 명령어들은 루트 레포지토리에서 사용가능합니다:</p>
+                    <pre><code class="lang-bash">&gt; gulp build                // ./dist <span class="hljs-keyword">안에</span> dist 파일들을 빌드  
+&gt; gulp build --watch        // 변경<span class="hljs-keyword">에 대한</span> 빌드를 감시
+&gt; gulp unittest             // ./<span class="hljs-built_in">test</span>/specs 으로 부터 테스트를 실행합니다
+&gt; gulp unittest --watch     // <span class="hljs-built_in">source</span> 변경을<span class="hljs-keyword">위한</span> 테스트 실행 및 감시
+&gt; gulp unittest --coverage  // ./coverage <span class="hljs-keyword">안에</span> 범위 문서를 생성하고 테스트를 실행
+&gt; gulp lint                 // 코드 린팅 수행 (ESLint)
+&gt; gulp <span class="hljs-built_in">test</span>                 // 코드 린팅과 유닛 테스트 수행
+&gt; gulp docs                 // <span class="hljs-keyword">in</span> ./dist/docs <span class="hljs-keyword">안에</span> 문서를 빌드
+&gt; gulp docs --watch         // gitbook 라이브 reloaded 서버 시작
 </code></pre>
                     <p>
-                      More information can be found in
+                      더 많은 정보는
                       <a
                         href="https://github.com/chartjs/Chart.js/blob/master/gulpfile.js"
                         target="_blank"
                         >gulpfile.js</a
-                      >.
+                      >에서 찾을 수 있습니다.
                     </p>
-                    <h3 id="image-based-tests">Image-Based Tests</h3>
+                    <h3 id="image-based-tests">이미지 기본 테스트</h3>
                     <p>
-                      Some display-related functionality is difficult to test
-                      via typical Jasmine units. For this reason, we introduced
-                      image-based tests (<a
+                      일부 디스플레이 관련 기능은 일반적인 자스민 장치를 통해
+                      테스트하기가 어렵습니다. 이러한 이유로 우리는 예상
+                      이미지와 일치하는 픽셀 단위로 그려지는 이미지 기반
+                      테스트(<a
                         href="https://github.com/chartjs/Chart.js/pull/3988"
                         target="_blank"
                         >#3988</a
                       >
-                      and
+                      과
                       <a
                         href="https://github.com/chartjs/Chart.js/pull/5777"
                         target="_blank"
                         >#5777</a
-                      >) to assert that a chart is drawn pixel-for-pixel
-                      matching an expected image.
+                      >)를 도입하였습니다.
                     </p>
                     <p>
-                      Generated charts in image-based tests should be
-                      <strong>as minimal as possible</strong> and focus only on
-                      the tested feature to prevent failure if another feature
-                      breaks (e.g. disable the title and legend when testing
-                      scales).
+                      이미지 기반 테스트에서 생성된 차트는 Generated charts in
+                      image-based tests should be
+                      <strong>가능한한 최소화</strong>해야 하며 다른 기능이
+                      중단된 경우 실패를 방지하기 위해 테스트된 기능에만
+                      집중해야 합니다 (예: 스케일 테스팅시 제목과 범례 비활성화
+                      ).
                     </p>
                     <p>
-                      You can create a new image-based test by following the
-                      steps below:
+                      다음 아래에 있는 단계를 통해 새로운 이미지 기반 테스트를
+                      만들 수 있습니다:
                     </p>
                     <ul>
                       <li>
-                        Create a JS file (<a
+                        차트 설정과 생성 옵션이 정의된 JS 파일 (<a
                           href="https://github.com/chartjs/Chart.js/blob/f7b671006a86201808402c3b6fe2054fe834fd4a/test/fixtures/controller.bubble/radius-scriptable.js"
                           target="_blank"
-                          >example</a
-                        >) or JSON file (<a
+                          >예제</a
+                        >) 또는 JSON 파일 (<a
                           href="https://github.com/chartjs/Chart.js/blob/4b421a50bfa17f73ac7aa8db7d077e674dbc148d/test/fixtures/plugin.filler/fill-line-dataset.json"
                           target="_blank"
-                          >example</a
-                        >) that defines chart config and generation options.
+                          >예제</a
+                        >) 생성.
                       </li>
                       <li>
-                        Add this file in
+                        이 파일들은
                         <code
                           >test/fixtures/{spec.name}/{feature-name}.json</code
-                        >.
+                        >안에 추가됩니다.
                       </li>
                       <li>
-                        Add a
+                        아직 존재하지 않는 경우,
+                        <code>test/specs/{spec.name}.tests.js</code> 시작 부분에
                         <a
                           href="https://github.com/chartjs/Chart.js/blob/4b421a50bfa17f73ac7aa8db7d077e674dbc148d/test/specs/plugin.filler.tests.js#L10"
                           target="_blank"
-                          >describe line</a
-                        >
-                        to the beginning of
-                        <code>test/specs/{spec.name}.tests.js</code> if it
-                        doesn&apos;t exist yet.
+                          >설명 선</a
+                        >을 추가합니다.
                       </li>
                       <li>
-                        Run
                         <code
                           >gulp unittest --watch
                           --inputs=test/specs/{spec.name}.tests.js</code
-                        >.
+                        >
+                        실행.
                       </li>
                       <li>
-                        Click the <em>&quot;Debug&quot;</em> button (top/right):
-                        a test should fail with the associated canvas visible.
+                        <em>&quot;Debug&quot;</em> 버튼 클릭 (top/right): 연결된
+                        캔버스가 표시되고 테스트가 실패해야 합니다.
                       </li>
                       <li>
-                        Right click on the chart and
-                        <em>&quot;Save image as...&quot;</em>
+                        차트를 마우스 오른쪽 버튼으로 클릭하고
+                        <em>&quot;다른 이름으로 이미지 저장...&quot;</em>
                         <code
                           >test/fixtures/{spec.name}/{feature-name}.png</code
                         >
-                        making sure not to activate the tooltip or any hover
-                        functionality
+                        툴팁이나 호버 기능이 활성화되지 않도록 합니다
                       </li>
                       <li>
-                        Refresh the browser page (<code>CTRL+R</code>): test
-                        should now pass
+                        브라우제 페이지를 새로고침 (<code>CTRL+R</code>): 이제
+                        테스트를 통과해야 합니다
                       </li>
                       <li>
-                        Verify test relevancy by changing the feature values
-                        <em>slightly</em> in the JSON file.
+                        <em>slightly</em> in the JSON 파일에서 기능 값을
+                        <em>약간</em> 변경하여 테스트 관련성을 확인합니다.
                       </li>
                     </ul>
                     <p>
-                      Tests should pass in both browsers. In general, we&apos;ve
-                      hidden all text in image tests since it&apos;s quite
-                      difficult to get them passing between different browsers.
-                      As a result, it is recommended to hide all scales in
-                      image-based tests. It is also recommended to disable
-                      animations. If tests still do not pass, adjust
+                      테스트는 두 브라우저에서 모두 통과해야 합니다. 일반적으로,
+                      이미지 테스트에서 모든 텍스트는 다른 브라우저간에 전달하기
+                      매우 어렵기 때문에 숨겼습니다. 결과적으로 이미지 기반
+                      테스트에서 모든 스케일은 숨기는 것을 권장합니다. 또한
+                      애니메이션 비활성화도 권장합니다. 만약 테스트가 여전히
+                      통과되지 않느다면,
+                      <strong>가능한한 적게</strong> 유지되도록 JSON 파일의
+                      시작에
                       <a
                         href="https://github.com/chartjs/Chart.js/blob/1ca0ffb5d5b6c2072176fd36fa85a58c483aa434/test/jasmine.matchers.js"
                         target="_blank"
-                        ><code>tolerance</code> and/or <code>threshold</code></a
-                      >
-                      at the beginning of the JSON file keeping them
-                      <strong>as low as possible</strong>.
+                        ><code>tolerance</code> 와/또는
+                        <code>threshold</code></a
+                      >를 적용하세요.
                     </p>
                     <p>
-                      When a test fails, the expected and actual images are
-                      shown. If you&apos;d like to see the images even when the
-                      tests pass, set <code>&quot;debug&quot;: true</code> in
-                      the JSON file.
+                      테스트가 실패했을시 예상 이미지와 실제 이미지가
+                      보여집니다. 테스트를 통과했는데도 이미지를 보고 싶다면
+                      JSON 파일에서 <code>&quot;debug&quot;: true</code> 로
+                      설정하세요.
                     </p>
-                    <h2 id="bugs-and-issues">Bugs and Issues</h2>
+                    <h2 id="bugs-and-issues">버그와 이슈</h2>
                     <p>
-                      Please report these on the GitHub page - at
+                      GitHub 페이지 -
                       <a
                         href="https://github.com/chartjs/Chart.js"
                         target="_blank"
                         >github.com/chartjs/Chart.js</a
-                      >. Please do not use issues for support requests. For help
-                      using Chart.js, please take a look at the
+                      >에 알려주세요. 지원 요청에 이슈를 사용하지 말아주세요.
+                      Chart.js 사용에 도움이 필요하면 Stack Overflow에서
                       <a
                         href="https://stackoverflow.com/questions/tagged/chartjs"
                         target="_blank"
                         ><code>chartjs</code></a
                       >
-                      tag on Stack Overflow.
+                      태그를 찾아보세요.
                     </p>
                     <p>
-                      Well structured, detailed bug reports are hugely valuable
-                      for the project.
+                      잘 구조화되고 자세한 버그 보고서는 프로젝트에 매우 가치
+                      있습니다.
                     </p>
-                    <p>Guidelines for reporting bugs:</p>
+                    <p>버그 보고서에 대한 가이드라인:</p>
                     <ul>
+                      <li>이슈 검색을 확인하여 이미 보고되었는지 확인하세요</li>
+                      <li>간단한 테스트 케이스로 문제를 분리하세요</li>
                       <li>
-                        Check the issue search to see if it has already been
-                        reported
-                      </li>
-                      <li>Isolate the problem to a simple test case</li>
-                      <li>
-                        Please include a demonstration of the bug on a website
-                        such as
                         <a href="https://jsbin.com/" target="_blank">JS Bin</a>,
                         <a href="https://jsfiddle.net/" target="_blank"
                           >JS Fiddle</a
-                        >, or
+                        >
+                        또는
                         <a href="https://codepen.io/pen/" target="_blank"
                           >Codepen</a
-                        >. (<a
+                        >과 같은 웹사이트에 버그의 실행화면을 포함해주세요. (<a
                           href="https://codepen.io/pen?template=JXVYzq"
                           target="_blank"
                           >Template</a
-                        >). If filing a bug against <code>master</code>, you may
-                        reference the latest code via
+                        >). <code>master</code>에 대한 버그를 제출할 경우,
                         <a
                           href="https://www.chartjs.org/dist/master/Chart.min.js"
                           target="_blank"
                           >https://www.chartjs.org/dist/master/Chart.min.js</a
-                        >
-                        (changing the filename to point at the file you need as
-                        appropriate). Do not rely on these files for production
-                        purposes as they may be removed at any time.
+                        >를 통해 최신 코드를 참조할 수 있습니다 (적절한 파일을
+                        가리키도록 파일 이름 변경). 이러한 파일들을 언제든지
+                        삭제될 수 있으므로 프로덕션 목적을 위해 이 파일들을
+                        신뢰하지 마세요.
                       </li>
                     </ul>
                     <p>
-                      Please provide any additional details associated with the
-                      bug, if it&apos;s browser or screen density specific, or
-                      only happens with a certain configuration or data.
+                      브라우저 또는 화면에 따라 다르거나 특정 설정이나 데이터에
+                      대해서만 발생한다면 버그와 관련된 모든 자세한 추가사항을
+                      제공해주세요.
                     </p>
                   </section>
                 </div>
@@ -824,84 +817,84 @@
         gitbook.push(function () {
           gitbook.page.hasChanged({
             page: {
-              title: "Contributing",
-              level: "1.8.6",
+              title: 'Contributing',
+              level: '1.8.6',
               depth: 2,
               next: {
-                title: "Additional Notes",
-                level: "1.9",
+                title: 'Additional Notes',
+                level: '1.9',
                 depth: 1,
-                path: "notes/README.md",
-                ref: "notes/README.md",
+                path: 'notes/README.md',
+                ref: 'notes/README.md',
                 articles: [
                   {
-                    title: "Comparison Table",
-                    level: "1.9.1",
+                    title: 'Comparison Table',
+                    level: '1.9.1',
                     depth: 2,
-                    path: "notes/comparison.md",
-                    ref: "notes/comparison.md",
+                    path: 'notes/comparison.md',
+                    ref: 'notes/comparison.md',
                     articles: [],
                   },
                   {
-                    title: "Popular Extensions",
-                    level: "1.9.2",
+                    title: 'Popular Extensions',
+                    level: '1.9.2',
                     depth: 2,
-                    path: "notes/extensions.md",
-                    ref: "notes/extensions.md",
+                    path: 'notes/extensions.md',
+                    ref: 'notes/extensions.md',
                     articles: [],
                   },
                   {
-                    title: "License",
-                    level: "1.9.3",
+                    title: 'License',
+                    level: '1.9.3',
                     depth: 2,
-                    path: "notes/license.md",
-                    ref: "notes/license.md",
+                    path: 'notes/license.md',
+                    ref: 'notes/license.md',
                     articles: [],
                   },
                 ],
               },
               previous: {
-                title: "New Axes",
-                level: "1.8.5",
+                title: 'New Axes',
+                level: '1.8.5',
                 depth: 2,
-                path: "developers/axes.md",
-                ref: "developers/axes.md",
+                path: 'developers/axes.md',
+                ref: 'developers/axes.md',
                 articles: [],
               },
-              dir: "ltr",
+              dir: 'ltr',
             },
             config: {
               plugins: [
-                "-lunr",
-                "-search",
-                "search-plus",
-                "anchorjs",
-                "chartjs",
-                "ga",
-                "redirect",
+                '-lunr',
+                '-search',
+                'search-plus',
+                'anchorjs',
+                'chartjs',
+                'ga',
+                'redirect',
               ],
-              root: "./docs",
+              root: './docs',
               styles: {
-                website: "style.css",
-                pdf: "styles/pdf.css",
-                epub: "styles/epub.css",
-                mobi: "styles/mobi.css",
-                ebook: "styles/ebook.css",
-                print: "styles/print.css",
+                website: 'style.css',
+                pdf: 'styles/pdf.css',
+                epub: 'styles/epub.css',
+                mobi: 'styles/mobi.css',
+                ebook: 'styles/ebook.css',
+                print: 'styles/print.css',
               },
               pluginsConfig: {
                 chartjs: {
                   defaults: null,
                 },
                 fontsettings: {
-                  theme: "white",
-                  family: "sans",
+                  theme: 'white',
+                  family: 'sans',
                   size: 2,
                 },
                 highlight: {},
                 ga: {
-                  configuration: "auto",
-                  token: "UA-28909194-3",
+                  configuration: 'auto',
+                  token: 'UA-28909194-3',
                 },
                 sharing: {
                   facebook: true,
@@ -910,36 +903,36 @@
                   weibo: false,
                   instapaper: false,
                   vk: false,
-                  all: ["facebook", "google", "twitter", "weibo", "instapaper"],
+                  all: ['facebook', 'google', 'twitter', 'weibo', 'instapaper'],
                 },
                 redirect: {},
-                "theme-default": {
+                'theme-default': {
                   styles: {
-                    website: "style.css",
-                    pdf: "styles/pdf.css",
-                    epub: "styles/epub.css",
-                    mobi: "styles/mobi.css",
-                    ebook: "styles/ebook.css",
-                    print: "styles/print.css",
+                    website: 'style.css',
+                    pdf: 'styles/pdf.css',
+                    epub: 'styles/epub.css',
+                    mobi: 'styles/mobi.css',
+                    ebook: 'styles/ebook.css',
+                    print: 'styles/print.css',
                   },
                   showLevel: false,
                 },
                 anchorjs: {
-                  icon: "#",
-                  placement: "left",
-                  visible: "always",
+                  icon: '#',
+                  placement: 'left',
+                  visible: 'always',
                 },
-                "search-plus": {},
+                'search-plus': {},
               },
-              theme: "default",
-              author: "chartjs",
+              theme: 'default',
+              author: 'chartjs',
               pdf: {
                 pageNumbers: true,
                 fontSize: 12,
-                fontFamily: "Arial",
-                paperSize: "a4",
-                chapterMark: "pagebreak",
-                pageBreaksBefore: "/",
+                fontFamily: 'Arial',
+                paperSize: 'a4',
+                chapterMark: 'pagebreak',
+                pageBreaksBefore: '/',
                 margin: {
                   right: 62,
                   left: 62,
@@ -948,27 +941,27 @@
                 },
               },
               structure: {
-                langs: "LANGS.md",
-                readme: "README.md",
-                glossary: "GLOSSARY.md",
-                summary: "SUMMARY.md",
+                langs: 'LANGS.md',
+                readme: 'README.md',
+                glossary: 'GLOSSARY.md',
+                summary: 'SUMMARY.md',
               },
               variables: {},
-              title: "Chart.js documentation",
-              gitbook: "3.2.2",
+              title: 'Chart.js documentation',
+              gitbook: '3.2.2',
             },
             file: {
-              path: "developers/contributing.md",
-              mtime: "2019-12-23T03:27:10.497Z",
-              type: "markdown",
+              path: 'developers/contributing.md',
+              mtime: '2019-12-23T03:27:10.497Z',
+              type: 'markdown',
             },
             gitbook: {
-              version: "3.2.2",
-              time: "2019-12-23T03:29:40.428Z",
+              version: '3.2.2',
+              time: '2019-12-23T03:29:40.428Z',
             },
-            basePath: "..",
+            basePath: '..',
             book: {
-              language: "",
+              language: '',
             },
           });
         });

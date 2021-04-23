@@ -519,93 +519,93 @@
 </code></pre>
                     <h2 id="destroy">.destroy()</h2>
                     <p>
-                      Use this to destroy any chart instances that are created.
-                      This will clean up any references stored to the chart
-                      object within Chart.js, along with any associated event
-                      listeners attached by Chart.js. This must be called before
-                      the canvas is reused for a new chart.
+                      생성된 모든 차트의 인스턴스를 삭제사려면 이것을 사용하면
+                      됩니다. 이렇게 하면 Chart.js에 의해 연결된 모든 관련
+                      이벤트 리스너와 함께 Chart.js 내의 차트 객체에 저장된 모든
+                      참조가 정리됩니다. 이것은 반드시 새로운 차트를 재사용하는
+                      캔버스 전에 호출되야 합니다.
                     </p>
-                    <pre><code class="lang-javascript"><span class="hljs-comment">// Destroys a specific chart instance</span>
+                    <pre><code class="lang-javascript"><span class="hljs-comment">// 특정 차트 인스턴스 삭제</span>
 myLineChart.destroy();
 </code></pre>
                     <h2 id="updateconfig">.update(config)</h2>
                     <p>
-                      Triggers an update of the chart. This can be safely called
-                      after updating the data object. This will update all
-                      scales, legends, and then re-render the chart.
+                      차트의 업데이트를 트리거합니다. 데이터 객체 업데이트 후
+                      안전하게 호출할 수 있습니다. 모든 스케일, 범례 그리고 새로
+                      그려지는 차트를 업데이트 합니다.
                     </p>
-                    <pre><code class="lang-javascript"><span class="hljs-comment">// duration is the time for the animation of the redraw in milliseconds</span>
-<span class="hljs-comment">// lazy is a boolean. if true, the animation can be interrupted by other animations</span>
-myLineChart.data.datasets[<span class="hljs-number">0</span>].data[<span class="hljs-number">2</span>] = <span class="hljs-number">50</span>; <span class="hljs-comment">// Would update the first dataset&apos;s value of &apos;March&apos; to be 50</span>
-myLineChart.update(); <span class="hljs-comment">// Calling update now animates the position of March from 90 to 50.</span>
+                    <pre><code class="lang-javascript"><span class="hljs-comment">// duration은 밀리초로 다시 그려지는 애니메이션에 대한 시간입니다</span>
+<span class="hljs-comment">// lazy는 boolean입니다. true이면, 애니메이션은 다른 애니메이션에 의해 중단될 수 있습니다</span>
+myLineChart.data.datasets[<span class="hljs-number">0</span>].data[<span class="hljs-number">2</span>] = <span class="hljs-number">50</span>; <span class="hljs-comment">// 첫번째 데이터집합의 &apos;March&apos; 값을 50으로 업데이트 합니다</span>
+myLineChart.update(); <span class="hljs-comment">// 업데이트를 호출하면 March의 위치를 90에서 50으로 애니메이션됩니다.</span>
 </code></pre>
                     <blockquote>
                       <p>
-                        <strong>Note:</strong> replacing the data reference
-                        (e.g.
-                        <code>myLineChart.data = {datasets: [...]}</code> only
-                        works starting <strong>version 2.6</strong>. Prior that,
-                        replacing the entire data object could be achieved with
-                        the following workaround:
+                        <strong>주의:</strong> 데이터 참조 교체 (e.g.
+                        <code>myLineChart.data = {datasets: [...]}</code>는
+                        <strong>version 2.6</strong> 부터 동작합니다. 이전
+                        버전에서는 전체 데이터 객체 교체는 다음과 같은 방법으로
+                        할 수 있습니다:
                         <code>myLineChart.config.data = {datasets: [...]}</code
                         >.
                       </p>
                     </blockquote>
                     <p>
-                      A <code>config</code> object can be provided with
-                      additional configuration for the update process. This is
-                      useful when <code>update</code> is manually called inside
-                      an event handler and some different animation is desired.
+                      <code>config</code> 객체는 업데이트 프로세스에 추가적인
+                      설정을 제공할 수 있습니다. 수동으로 이벤트 핸들러 안에서
+                      <code>update</code>를 호출할 때와 다른 애니메이션이 필요할
+                      때 유용합니다.
                     </p>
-                    <p>The following properties are supported:</p>
+                    <p>다음의 속성들이 지원됩니다:</p>
                     <ul>
                       <li>
-                        <strong>duration</strong> (number): Time for the
-                        animation of the redraw in milliseconds
+                        <strong>duration</strong> (number): 밀리 초로 새로
+                        그려지는 애니메이션에 대한 시간
                       </li>
                       <li>
-                        <strong>lazy</strong> (boolean): If true, the animation
-                        can be interrupted by other animations
+                        <strong>lazy</strong> (boolean): true이면, 애니메이션은
+                        다른 애니메이션에 의해 중단될 수 있습니다
                       </li>
                       <li>
-                        <strong>easing</strong> (string): The animation easing
-                        function. See
+                        <strong>easing</strong> (string): easing 함수
+                        애니메이션. 가능한 값은
                         <a href="../configuration/animations.html"
-                          >Animation Easing</a
+                          >애니메이션 Easing</a
                         >
-                        for possible values.
+                        참조.
                       </li>
                     </ul>
-                    <p>Example:</p>
+                    <p>예시:</p>
                     <pre><code class="lang-javascript">myChart.update({
     duration: <span class="hljs-number">800</span>,
     easing: <span class="hljs-string">&apos;easeOutBounce&apos;</span>
 });
 </code></pre>
                     <p>
-                      See <a href="updates.html">Updating Charts</a> for more
-                      details.
+                      자세한 사항은
+                      <a href="updates.html">차트 업데이트</a> 참조.
                     </p>
                     <h2 id="reset">.reset()</h2>
                     <p>
-                      Reset the chart to it&apos;s state before the initial
-                      animation. A new animation can then be triggered using
-                      <code>update</code>.
+                      애니메이션 초기화 전에 차트의 상태를 리셋합니다. 이렇게
+                      하면 새로운 애니메이션은
+                      <code>update</code>를 사용하여 트리거될 수 있습니다.
                     </p>
                     <pre><code class="lang-javascript">myLineChart.reset();
 </code></pre>
                     <h2 id="renderconfig">.render(config)</h2>
                     <p>
-                      Triggers a redraw of all chart elements. Note, this does
-                      not update elements for new data. Use
-                      <code>.update()</code> in that case.
+                      모든 차트 요소들을 새로 그리도록 트리거합니다. 주의,
+                      새로운 데이터에 대한 요소 업데이트는 하지 않습니다. 이
+                      경우
+                      <code>.update()</code>를 사용하세요.
                     </p>
                     <p>
-                      See <code>.update(config)</code> for more details on the
-                      config object.
+                      설정 객체에 대한 더 자세한 사항은
+                      <code>.update(config)</code> 참조.
                     </p>
-                    <pre><code class="lang-javascript"><span class="hljs-comment">// duration is the time for the animation of the redraw in milliseconds</span>
-<span class="hljs-comment">// lazy is a boolean. if true, the animation can be interrupted by other animations</span>
+                    <pre><code class="lang-javascript"><span class="hljs-comment">// duration은 밀리초로 새로 그려지는 애니메이션에 대한 시간입니다</span>
+<span class="hljs-comment">// lazy는 boolean입니다. true이면, 애니메이션은 다른 애니메이션에 의해 중단될 수 있습니다</span>
 myLineChart.render({
     duration: <span class="hljs-number">800</span>,
     lazy: <span class="hljs-literal">false</span>,
@@ -614,68 +614,64 @@ myLineChart.render({
 </code></pre>
                     <h2 id="stop">.stop()</h2>
                     <p>
-                      Use this to stop any current animation loop. This will
-                      pause the chart during any current animation frame. Call
-                      <code>.render()</code> to re-animate.
+                      모든 현재 애니메이션 반복을 중단할 때 사용합니다. 현재
+                      애니메이션 프레임 동안 차트가 일시 중지됩니다. 다시
+                      애니메이션하려면
+                      <code>.render()</code> 호출하세요.
                     </p>
-                    <pre><code class="lang-javascript"><span class="hljs-comment">// Stops the charts animation loop at its current frame</span>
+                    <pre><code class="lang-javascript"><span class="hljs-comment">// 현재 프레임에서 차트 애니메이션 반복을 중단합니다</span>
 myLineChart.stop();
-<span class="hljs-comment">// =&gt; returns &apos;this&apos; for chainability</span>
+<span class="hljs-comment">// =&gt; 채인 가능성을 위해 &apos;this&apos;를 반환합니다</span>
 </code></pre>
                     <h2 id="resize">.resize()</h2>
                     <p>
-                      Use this to manually resize the canvas element. This is
-                      run each time the canvas container is resized, but you can
-                      call this method manually if you change the size of the
-                      canvas nodes container element.
+                      캔버스 요소를 수동으로 크기 조정할 때 사용합니다. 캔버스
+                      컨테이너 크기가 조정될 때마다 동작하지만 캔버스 노드
+                      컨테이너 요소의 크기를 변경하면 이 메소드를 수동으로 호출
+                      할 수 있습니다.
                     </p>
-                    <pre><code class="lang-javascript"><span class="hljs-comment">// Resizes &amp; redraws to fill its container element</span>
+                    <pre><code class="lang-javascript"><span class="hljs-comment">// 컨테이너 요소를 채우기 위해 크기 조정 &amp; 다시 그리기</span>
 myLineChart.resize();
-<span class="hljs-comment">// =&gt; returns &apos;this&apos; for chainability</span>
+<span class="hljs-comment">// =&gt; 체인 가능성을 위해 &apos;this&apos;를 반환합니다</span>
 </code></pre>
                     <h2 id="clear">.clear()</h2>
                     <p>
-                      Will clear the chart canvas. Used extensively internally
-                      between animation frames, but you might find it useful.
+                      차트 캔버스를 완전히 지웁니다. 애니메이션 프레임 사이에서
+                      내부적으로 광범위하게 사용되지만 유용할 수 있습니다.
                     </p>
-                    <pre><code class="lang-javascript"><span class="hljs-comment">// Will clear the canvas that myLineChart is drawn on</span>
+                    <pre><code class="lang-javascript"><span class="hljs-comment">// myLineChart가 그려진 캔버스를 지웁니다</span>
 myLineChart.clear();
-<span class="hljs-comment">// =&gt; returns &apos;this&apos; for chainability</span>
+<span class="hljs-comment">// =&gt; 체인 가능성을 위해 &apos;this&apos;를 반환합니다</span>
 </code></pre>
                     <h2 id="tobase64image">.toBase64Image()</h2>
-                    <p>
-                      This returns a base 64 encoded string of the chart in
-                      it&apos;s current state.
-                    </p>
+                    <p>현재 상태 차트의 base 64 encoded 문자열을 반환합니다.</p>
                     <pre><code class="lang-javascript">myLineChart.toBase64Image();
-<span class="hljs-comment">// =&gt; returns png data url of the image on the canvas</span>
+<span class="hljs-comment">// =&gt; 캔버스 이미지의 png 데이터 url을 반환합니다</span>
 </code></pre>
                     <h2 id="generatelegend">.generateLegend()</h2>
                     <p>
-                      Returns an HTML string of a legend for that chart. The
-                      legend is generated from the
-                      <code>legendCallback</code> in the options.
+                      차트에 대한 범례의 HTML 문자열을 반환합니다. 옵션 안에
+                      <code>legendCallback</code>으로 부터 범례는 생성됩니다.
                     </p>
                     <pre><code class="lang-javascript">myLineChart.generateLegend();
-<span class="hljs-comment">// =&gt; returns HTML string of a legend for this chart</span>
+<span class="hljs-comment">// =&gt; 이 차트에 대한 범례의 HTML 문자열을 반환합니다</span>
 </code></pre>
                     <h2 id="getelementatevente">.getElementAtEvent(e)</h2>
                     <p>
-                      Calling <code>getElementAtEvent(event)</code> on your
-                      Chart instance passing an argument of an event, or jQuery
-                      event, will return the single element at the event
-                      position. If there are multiple items within range, only
-                      the first is returned. The value returned from this method
-                      is an array with a single parameter. An array is used to
-                      keep a consistent API between the
-                      <code>get*AtEvent</code> methods.
+                      이벤트 또는 jQuery 이벤트의 인자로 전달하는 차트
+                      인스턴스서 <code>getElementAtEvent(event)</code>를
+                      호출하면 이벤트 위치의 단일 요소가 반환됩니다. 만약 범위
+                      안에 여러 항목들이 있다면 첫번째만 반환됩니다. 이
+                      메소드로부터 반환된 값은 단일 매개변수가 있는 배열입니다.
+                      배열은 <code>get*AtEvent</code> 메소드간에 일괸된 API를
+                      유지하는데 사용됩니다.
                     </p>
                     <pre><code class="lang-javascript">myLineChart.getElementAtEvent(e);
-<span class="hljs-comment">// =&gt; returns the first element at the event point.</span>
+<span class="hljs-comment">// =&gt; 이벤트 포인트에서 첫번째 요소를 반환합니다.</span>
 </code></pre>
                     <p>
-                      To get an item that was clicked on,
-                      <code>getElementAtEvent</code> can be used.
+                      클릭된 아이템을 갖기 위해,
+                      <code>getElementAtEvent</code> 를 사용할 수 있습니다.
                     </p>
                     <pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">clickHandler</span>(<span class="hljs-params">evt</span>) </span>{
     <span class="hljs-keyword">var</span> firstPoint = myChart.getElementAtEvent(evt)[<span class="hljs-number">0</span>];
@@ -688,53 +684,51 @@ myLineChart.clear();
 </code></pre>
                     <h2 id="getelementsatevente">.getElementsAtEvent(e)</h2>
                     <p>
-                      Looks for the element under the event point, then returns
-                      all elements at the same data index. This is used
-                      internally for &apos;label&apos; mode highlighting.
+                      이벤트 포인트 아래에서 요소를 찾은 다음 동일한 데이터
+                      인덱스에 있는 모든 요소들을 반환합니다. &apos;label&apos;
+                      모드 하이라이팅을 위해 내부적으로 사용됩니다.
                     </p>
                     <p>
-                      Calling <code>getElementsAtEvent(event)</code> on your
-                      Chart instance passing an argument of an event, or jQuery
-                      event, will return the point elements that are at that the
-                      same position of that event.
+                      이벤트 또는 jQuery 이벤트의 인수로 전달하는 차트
+                      인스턴스에서 <code>getElementsAtEvent(event)</code>를
+                      호출하면 해당 이벤트의 동일한 위치에 있는 포인트 요소가
+                      반환됩니다.
                     </p>
                     <pre><code class="lang-javascript">canvas.onclick = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">evt</span>) </span>{
     <span class="hljs-keyword">var</span> activePoints = myLineChart.getElementsAtEvent(evt);
-    <span class="hljs-comment">// =&gt; activePoints is an array of points on the canvas that are at the same position as the click event.</span>
+    <span class="hljs-comment">// =&gt; activePoints는 캔버스에서 클릭 이벤트로서 같은 위치에 있는 포인트의 배열입니다.</span>
 };
 </code></pre>
                     <p>
-                      This functionality may be useful for implementing DOM
-                      based tooltips, or triggering custom behaviour in your
-                      application.
+                      이 기능은 애플리케이션에서 DOM 기반의 툴팁이나 사용자 지정
+                      동작을 트리거할 때 유용할 수 있습니다.
                     </p>
                     <h2 id="getdatasetatevente">.getDatasetAtEvent(e)</h2>
                     <p>
-                      Looks for the element under the event point, then returns
-                      all elements from that dataset. This is used internally
-                      for &apos;dataset&apos; mode highlighting.
+                      이벤트 포인트 아래에 요소를 찾은 다음 그 데이터집합으로
+                      부터 모든 요소들을 반환합니다. &apos;dataset&apos; 모드
+                      하이라이팅을 위해 내부적으로 사용됩니다.
                     </p>
                     <pre><code class="lang-javascript">myLineChart.getDatasetAtEvent(e);
-<span class="hljs-comment">// =&gt; returns an array of elements</span>
+<span class="hljs-comment">// =&gt; 요소들의 배열을 반환합니다</span>
 </code></pre>
                     <h2 id="getdatasetmetaindex">.getDatasetMeta(index)</h2>
                     <p>
-                      Looks for the dataset that matches the current index and
-                      returns that metadata. This returned data has all of the
-                      metadata that is used to construct the chart.
+                      현재 인덱스와 매치되는 데이터집합을 찾고 해당 메타데이터를
+                      반환합니다. 차트의 생성자로 사용된 모든 메타데이터를 가진
+                      데이터를 반환합니다.
                     </p>
                     <p>
-                      The <code>data</code> property of the metadata will
-                      contain information about each point, rectangle, etc.
-                      depending on the chart type.
+                      메타데이터의 <code>data</code> 속성은 각 포인트, 사각형
+                      등의 정보를 포함합니다. 차트 유형에 따라서요.
                     </p>
                     <p>
-                      Extensive examples of usage are available in the
                       <a
                         href="https://github.com/chartjs/Chart.js/tree/master/test"
                         target="_blank"
-                        >Chart.js tests</a
-                      >.
+                        >Chart.js 테스트</a
+                      >에서 허용하는 광범위한 사용예제 방식을 참조할 수
+                      있습니다.
                     </p>
                     <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> meta = myChart.getDatasetMeta(<span class="hljs-number">0</span>);
 <span class="hljs-keyword">var</span> x = meta.data[<span class="hljs-number">0</span>]._model.x;
@@ -782,100 +776,100 @@ myLineChart.clear();
         gitbook.push(function () {
           gitbook.page.hasChanged({
             page: {
-              title: "Chart.js API",
-              level: "1.8.1",
+              title: 'Chart.js API',
+              level: '1.8.1',
               depth: 2,
               next: {
-                title: "Updating Charts",
-                level: "1.8.2",
+                title: 'Updating Charts',
+                level: '1.8.2',
                 depth: 2,
-                path: "developers/updates.md",
-                ref: "developers/updates.md",
+                path: 'developers/updates.md',
+                ref: 'developers/updates.md',
                 articles: [],
               },
               previous: {
-                title: "Developers",
-                level: "1.8",
+                title: 'Developers',
+                level: '1.8',
                 depth: 1,
-                path: "developers/README.md",
-                ref: "developers/README.md",
+                path: 'developers/README.md',
+                ref: 'developers/README.md',
                 articles: [
                   {
-                    title: "Chart.js API",
-                    level: "1.8.1",
+                    title: 'Chart.js API',
+                    level: '1.8.1',
                     depth: 2,
-                    path: "developers/api.md",
-                    ref: "developers/api.md",
+                    path: 'developers/api.md',
+                    ref: 'developers/api.md',
                     articles: [],
                   },
                   {
-                    title: "Updating Charts",
-                    level: "1.8.2",
+                    title: 'Updating Charts',
+                    level: '1.8.2',
                     depth: 2,
-                    path: "developers/updates.md",
-                    ref: "developers/updates.md",
+                    path: 'developers/updates.md',
+                    ref: 'developers/updates.md',
                     articles: [],
                   },
                   {
-                    title: "Plugins",
-                    level: "1.8.3",
+                    title: 'Plugins',
+                    level: '1.8.3',
                     depth: 2,
-                    path: "developers/plugins.md",
-                    ref: "developers/plugins.md",
+                    path: 'developers/plugins.md',
+                    ref: 'developers/plugins.md',
                     articles: [],
                   },
                   {
-                    title: "New Charts",
-                    level: "1.8.4",
+                    title: 'New Charts',
+                    level: '1.8.4',
                     depth: 2,
-                    path: "developers/charts.md",
-                    ref: "developers/charts.md",
+                    path: 'developers/charts.md',
+                    ref: 'developers/charts.md',
                     articles: [],
                   },
                   {
-                    title: "New Axes",
-                    level: "1.8.5",
+                    title: 'New Axes',
+                    level: '1.8.5',
                     depth: 2,
-                    path: "developers/axes.md",
-                    ref: "developers/axes.md",
+                    path: 'developers/axes.md',
+                    ref: 'developers/axes.md',
                     articles: [],
                   },
                   {
-                    title: "Contributing",
-                    level: "1.8.6",
+                    title: 'Contributing',
+                    level: '1.8.6',
                     depth: 2,
-                    path: "developers/contributing.md",
-                    ref: "developers/contributing.md",
+                    path: 'developers/contributing.md',
+                    ref: 'developers/contributing.md',
                     articles: [],
                   },
                 ],
               },
-              dir: "ltr",
+              dir: 'ltr',
             },
             config: {
               plugins: [
-                "-lunr",
-                "-search",
-                "search-plus",
-                "anchorjs",
-                "chartjs",
-                "ga",
-                "redirect",
+                '-lunr',
+                '-search',
+                'search-plus',
+                'anchorjs',
+                'chartjs',
+                'ga',
+                'redirect',
               ],
-              root: "./docs",
+              root: './docs',
               styles: {
-                website: "style.css",
-                pdf: "styles/pdf.css",
-                epub: "styles/epub.css",
-                mobi: "styles/mobi.css",
-                ebook: "styles/ebook.css",
-                print: "styles/print.css",
+                website: 'style.css',
+                pdf: 'styles/pdf.css',
+                epub: 'styles/epub.css',
+                mobi: 'styles/mobi.css',
+                ebook: 'styles/ebook.css',
+                print: 'styles/print.css',
               },
               pluginsConfig: {
                 chartjs: { defaults: null },
-                fontsettings: { theme: "white", family: "sans", size: 2 },
+                fontsettings: { theme: 'white', family: 'sans', size: 2 },
                 highlight: {},
-                ga: { configuration: "auto", token: "UA-28909194-3" },
+                ga: { configuration: 'auto', token: 'UA-28909194-3' },
                 sharing: {
                   facebook: true,
                   twitter: true,
@@ -883,52 +877,52 @@ myLineChart.clear();
                   weibo: false,
                   instapaper: false,
                   vk: false,
-                  all: ["facebook", "google", "twitter", "weibo", "instapaper"],
+                  all: ['facebook', 'google', 'twitter', 'weibo', 'instapaper'],
                 },
                 redirect: {},
-                "theme-default": {
+                'theme-default': {
                   styles: {
-                    website: "style.css",
-                    pdf: "styles/pdf.css",
-                    epub: "styles/epub.css",
-                    mobi: "styles/mobi.css",
-                    ebook: "styles/ebook.css",
-                    print: "styles/print.css",
+                    website: 'style.css',
+                    pdf: 'styles/pdf.css',
+                    epub: 'styles/epub.css',
+                    mobi: 'styles/mobi.css',
+                    ebook: 'styles/ebook.css',
+                    print: 'styles/print.css',
                   },
                   showLevel: false,
                 },
-                anchorjs: { icon: "#", placement: "left", visible: "always" },
-                "search-plus": {},
+                anchorjs: { icon: '#', placement: 'left', visible: 'always' },
+                'search-plus': {},
               },
-              theme: "default",
-              author: "chartjs",
+              theme: 'default',
+              author: 'chartjs',
               pdf: {
                 pageNumbers: true,
                 fontSize: 12,
-                fontFamily: "Arial",
-                paperSize: "a4",
-                chapterMark: "pagebreak",
-                pageBreaksBefore: "/",
+                fontFamily: 'Arial',
+                paperSize: 'a4',
+                chapterMark: 'pagebreak',
+                pageBreaksBefore: '/',
                 margin: { right: 62, left: 62, top: 56, bottom: 56 },
               },
               structure: {
-                langs: "LANGS.md",
-                readme: "README.md",
-                glossary: "GLOSSARY.md",
-                summary: "SUMMARY.md",
+                langs: 'LANGS.md',
+                readme: 'README.md',
+                glossary: 'GLOSSARY.md',
+                summary: 'SUMMARY.md',
               },
               variables: {},
-              title: "Chart.js documentation",
-              gitbook: "3.2.2",
+              title: 'Chart.js documentation',
+              gitbook: '3.2.2',
             },
             file: {
-              path: "developers/api.md",
-              mtime: "2019-12-23T03:27:10.497Z",
-              type: "markdown",
+              path: 'developers/api.md',
+              mtime: '2019-12-23T03:27:10.497Z',
+              type: 'markdown',
             },
-            gitbook: { version: "3.2.2", time: "2019-12-23T03:29:40.428Z" },
-            basePath: "..",
-            book: { language: "" },
+            gitbook: { version: '3.2.2', time: '2019-12-23T03:29:40.428Z' },
+            basePath: '..',
+            book: { language: '' },
           });
         });
       </script>

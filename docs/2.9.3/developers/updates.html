@@ -499,7 +499,7 @@
             <!-- Title -->
             <h1>
               <i class="fa fa-circle-o-notch fa-spin"></i>
-              <a href="..">Updating Charts</a>
+              <a href="..">차트 업데이트</a>
             </h1>
           </div>
 
@@ -508,20 +508,17 @@
               <div class="search-plus" id="book-search-results">
                 <div class="search-noresults">
                   <section class="normal markdown-section">
-                    <h1 id="updating-charts">Updating Charts</h1>
+                    <h1 id="updating-charts">차트 업데이트</h1>
                     <p>
-                      It&apos;s pretty common to want to update charts after
-                      they&apos;ve been created. When the chart data or options
-                      are changed, Chart.js will animate to the new data values
-                      and options.
+                      차트를 만든 후 업데이트하는 것은 매우 흔한 경우입니다.
+                      차트 데이터 또는 옵션을 변경할 때 Chart.js는 새로운 데이터
+                      값과 옵션을 애니메이션합니다.
                     </p>
-                    <h2 id="adding-or-removing-data">
-                      Adding or Removing Data
-                    </h2>
+                    <h2 id="adding-or-removing-data">데이터 추가 또는 삭제</h2>
                     <p>
-                      Adding and removing data is supported by changing the data
-                      array. To add data, just add data into the data array as
-                      seen in this example.
+                      데이터 추가와 삭제는 데이터 배열을 변경하는 것으로
+                      지원됩니다. 데이터를 추가하려면 이 예제와 같이
+                      데이터배열에 데이터를 추가해주면 됩니다.
                     </p>
                     <pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">addData</span>(<span class="hljs-params">chart, label, data</span>) </span>{
     chart.data.labels.push(label);
@@ -539,21 +536,19 @@
     chart.update();
 }
 </code></pre>
-                    <h2 id="updating-options">Updating Options</h2>
+                    <h2 id="updating-options">업데이트 옵션</h2>
                     <p>
-                      To update the options, mutating the options property in
-                      place or passing in a new options object are supported.
+                      옵션을 업데이트하려면 옵션 속성을 변경하거나 새 옵션
+                      객체를 전달하는 것으로 지원됩니다.
                     </p>
                     <ul>
                       <li>
-                        If the options are mutated in place, other option
-                        properties would be preserved, including those
-                        calculated by Chart.js.
+                        만약 옵션이 그 자리에서 변경되었다면 Chart.js에 의해
+                        계산되어 포함된 다른 옵션 속성은 보전됩니다.
                       </li>
                       <li>
-                        If created as a new object, it would be like creating a
-                        new chart with the options - old options would be
-                        discarded.
+                        만약 새로운 객체를 생성한다면 옵션과 함께 새로운 차트를
+                        만드는 것과 같습니다 - 이전 옵션은 폐기됩니다.
                       </li>
                     </ul>
                     <pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">updateConfigByMutating</span>(<span class="hljs-params">chart</span>) </span>{
@@ -581,16 +576,14 @@
 }
 </code></pre>
                     <p>
-                      Scales can be updated separately without changing other
-                      options. To update the scales, pass in an object
-                      containing all the customization including those unchanged
-                      ones.
+                      스케일은 다른 옵션의 변화 없이 분리되어 업데이트될 수
+                      있습니다. 스케일을 업데이트하려면 변경되지 않은 사용자
+                      정의를 포함하여 모든 객체를 전달해야 합니다.
                     </p>
                     <p>
-                      Variables referencing any one from
-                      <code>chart.scales</code> would be lost after updating
-                      scales with a new <code>id</code> or the changed
-                      <code>type</code>.
+                      새 <code>id</code> 또는 변경된 <code>tyep</code>으로
+                      스케일을 업데이트 한 후 <code>chart.scales</code>에서
+                      하나를 참조하는 변수가 손실됩니다.
                     </p>
                     <pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">updateScales</span>(<span class="hljs-params">chart</span>) </span>{
     <span class="hljs-keyword">var</span> xScale = chart.scales[<span class="hljs-string">&apos;x-axis-0&apos;</span>];
@@ -606,14 +599,14 @@
         }]
     };
     chart.update();
-    <span class="hljs-comment">// need to update the reference</span>
+    <span class="hljs-comment">// 참조를 업데이트해야합니다</span>
     xScale = chart.scales[<span class="hljs-string">&apos;newId&apos;</span>];
     yScale = chart.scales[<span class="hljs-string">&apos;y-axis-0&apos;</span>];
 }
 </code></pre>
                     <p>
-                      You can also update a specific scale either by specifying
-                      its index or id.
+                      인데스 또는 아이디를 지정하여 특정 스케일을 업데이트할
+                      수도 있습니다.
                     </p>
                     <pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">updateScale</span>(<span class="hljs-params">chart</span>) </span>{
     chart.options.scales.yAxes[<span class="hljs-number">0</span>] = {
@@ -623,18 +616,18 @@
 }
 </code></pre>
                     <p>
-                      Code sample for updating options can be found in
+                      업데이트 옵션에 대한 코드 샘플은
                       <a href="../../samples/scales/toggle-scale-type.html"
                         >toggle-scale-type.html</a
-                      >.
+                      >에서 찾을 수 있습니다.
                     </p>
-                    <h2 id="preventing-animations">Preventing Animations</h2>
+                    <h2 id="preventing-animations">애니메이션 방지</h2>
                     <p>
-                      Sometimes when a chart updates, you may not want an
-                      animation. To achieve this you can call
-                      <code>update</code> with a duration of <code>0</code>.
-                      This will render the chart synchronously and without an
-                      animation.
+                      간혹 차트가 업데이트될 때 애니메이션을 원하지 않을 수
+                      있습니다. 이것을 이루기 위해
+                      <code>0</code>의 duration을 가진 <code>update</code>를
+                      호출할 수 있습니다. 애니메이션 없이 차트를 동기적으로
+                      그립니다.
                     </p>
                   </section>
                 </div>
@@ -679,59 +672,59 @@
         gitbook.push(function () {
           gitbook.page.hasChanged({
             page: {
-              title: "Updating Charts",
-              level: "1.8.2",
+              title: 'Updating Charts',
+              level: '1.8.2',
               depth: 2,
               next: {
-                title: "Plugins",
-                level: "1.8.3",
+                title: 'Plugins',
+                level: '1.8.3',
                 depth: 2,
-                path: "developers/plugins.md",
-                ref: "developers/plugins.md",
+                path: 'developers/plugins.md',
+                ref: 'developers/plugins.md',
                 articles: [],
               },
               previous: {
-                title: "Chart.js API",
-                level: "1.8.1",
+                title: 'Chart.js API',
+                level: '1.8.1',
                 depth: 2,
-                path: "developers/api.md",
-                ref: "developers/api.md",
+                path: 'developers/api.md',
+                ref: 'developers/api.md',
                 articles: [],
               },
-              dir: "ltr",
+              dir: 'ltr',
             },
             config: {
               plugins: [
-                "-lunr",
-                "-search",
-                "search-plus",
-                "anchorjs",
-                "chartjs",
-                "ga",
-                "redirect",
+                '-lunr',
+                '-search',
+                'search-plus',
+                'anchorjs',
+                'chartjs',
+                'ga',
+                'redirect',
               ],
-              root: "./docs",
+              root: './docs',
               styles: {
-                website: "style.css",
-                pdf: "styles/pdf.css",
-                epub: "styles/epub.css",
-                mobi: "styles/mobi.css",
-                ebook: "styles/ebook.css",
-                print: "styles/print.css",
+                website: 'style.css',
+                pdf: 'styles/pdf.css',
+                epub: 'styles/epub.css',
+                mobi: 'styles/mobi.css',
+                ebook: 'styles/ebook.css',
+                print: 'styles/print.css',
               },
               pluginsConfig: {
                 chartjs: {
                   defaults: null,
                 },
                 fontsettings: {
-                  theme: "white",
-                  family: "sans",
+                  theme: 'white',
+                  family: 'sans',
                   size: 2,
                 },
                 highlight: {},
                 ga: {
-                  configuration: "auto",
-                  token: "UA-28909194-3",
+                  configuration: 'auto',
+                  token: 'UA-28909194-3',
                 },
                 sharing: {
                   facebook: true,
@@ -740,36 +733,36 @@
                   weibo: false,
                   instapaper: false,
                   vk: false,
-                  all: ["facebook", "google", "twitter", "weibo", "instapaper"],
+                  all: ['facebook', 'google', 'twitter', 'weibo', 'instapaper'],
                 },
                 redirect: {},
-                "theme-default": {
+                'theme-default': {
                   styles: {
-                    website: "style.css",
-                    pdf: "styles/pdf.css",
-                    epub: "styles/epub.css",
-                    mobi: "styles/mobi.css",
-                    ebook: "styles/ebook.css",
-                    print: "styles/print.css",
+                    website: 'style.css',
+                    pdf: 'styles/pdf.css',
+                    epub: 'styles/epub.css',
+                    mobi: 'styles/mobi.css',
+                    ebook: 'styles/ebook.css',
+                    print: 'styles/print.css',
                   },
                   showLevel: false,
                 },
                 anchorjs: {
-                  icon: "#",
-                  placement: "left",
-                  visible: "always",
+                  icon: '#',
+                  placement: 'left',
+                  visible: 'always',
                 },
-                "search-plus": {},
+                'search-plus': {},
               },
-              theme: "default",
-              author: "chartjs",
+              theme: 'default',
+              author: 'chartjs',
               pdf: {
                 pageNumbers: true,
                 fontSize: 12,
-                fontFamily: "Arial",
-                paperSize: "a4",
-                chapterMark: "pagebreak",
-                pageBreaksBefore: "/",
+                fontFamily: 'Arial',
+                paperSize: 'a4',
+                chapterMark: 'pagebreak',
+                pageBreaksBefore: '/',
                 margin: {
                   right: 62,
                   left: 62,
@@ -778,27 +771,27 @@
                 },
               },
               structure: {
-                langs: "LANGS.md",
-                readme: "README.md",
-                glossary: "GLOSSARY.md",
-                summary: "SUMMARY.md",
+                langs: 'LANGS.md',
+                readme: 'README.md',
+                glossary: 'GLOSSARY.md',
+                summary: 'SUMMARY.md',
               },
               variables: {},
-              title: "Chart.js documentation",
-              gitbook: "3.2.2",
+              title: 'Chart.js documentation',
+              gitbook: '3.2.2',
             },
             file: {
-              path: "developers/updates.md",
-              mtime: "2019-12-23T03:27:10.497Z",
-              type: "markdown",
+              path: 'developers/updates.md',
+              mtime: '2019-12-23T03:27:10.497Z',
+              type: 'markdown',
             },
             gitbook: {
-              version: "3.2.2",
-              time: "2019-12-23T03:29:40.428Z",
+              version: '3.2.2',
+              time: '2019-12-23T03:29:40.428Z',
             },
-            basePath: "..",
+            basePath: '..',
             book: {
-              language: "",
+              language: '',
             },
           });
         });
